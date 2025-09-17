@@ -119,8 +119,23 @@ console.log(`\n🟢 Custom report generado y abierto en: ${this.outputFile}\n`);
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>QA Report</title>
+  <title>QA Reporte - VidaFIT</title>
   <style>
+      .chart-card {
+      background: var(--panel);
+      border-radius: 20px;
+      padding: 16px;
+      margin: 16px 0 24px;
+      display: flex;
+      justify-content: center; /* 👈 gráfico centrado */
+    }
+      .qa-owner {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
     :root { --bg:#0b1020; --panel:#121832; --ink:#e9eefc; --muted:#9fb0e3; --ok:#2fd285; --ko:#ff5d6a; --card:#0f142a; }
     html,body { margin:0; background:var(--bg); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     .wrap { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
@@ -148,17 +163,21 @@ console.log(`\n🟢 Custom report generado y abierto en: ${this.outputFile}\n`);
 </head>
 <body>
   <div class="wrap">
-    <div class="header">
-      <h1 style="margin:0;">QA Report</h1>
-      <span class="pill">Generado: <span id="genAt"></span></span>
-      <span class="pill">Duración total: <span id="dur"></span> s</span>
-      <div class="stats">
-        <span class="stat">Total: <b id="total"></b></span>
-        <span class="stat">Passed: <b id="passed" style="color:var(--ok)"></b></span>
-        <span class="stat">Failed: <b id="failed" style="color:var(--ko)"></b></span>
-      </div>
-    </div>
+ <div class="header">
+  <h1 style="margin:0;">QA Reporte - VidaFIT</h1>
+  <span class="pill">Generado: <span id="genAt"></span></span>
+  <span class="pill">Duración total: <span id="dur"></span> s</span>
+  <div class="stats">
+    <span class="stat">Total: <b id="total"></b></span>
+    <span class="stat">Passed: <b id="passed" style="color:var(--ok)"></b></span>
+    <span class="stat">Failed: <b id="failed" style="color:var(--ko)"></b></span>
+  </div>
+</div>
 
+<!-- 👇 Nuevo bloque bien separado -->
+<div class="qa-owner">
+  QA Especialista: <b>Andrea Rijana</b>
+</div>
     <div class="chart-card">
       <canvas id="bar" height="100"></canvas>
     </div>
