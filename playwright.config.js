@@ -1,17 +1,18 @@
 // playwright.config.js
-const { defineConfig } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 
-module.exports = defineConfig({
+export default defineConfig({
   use: {
-    headless: false,
-    slowMo: 300,
+    headless: true,
+    slowMo: 250,
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',  // MUY IMPORTANTE para que se guarde en los fails
-    trace: 'on-first-retry'
+    video: 'retain-on-failure',
+    trace: 'on-first-retry',
+    storageState: undefined
   },
   reporter: [
     ['list'],
-    ['./reporters/my-reporter.ts']  // tu reporter custom
+    ['./reporters/my-reporter.ts'],
+    ['json', { outputFile: 'playwright-report/results.json' }] 
   ]
 });
-

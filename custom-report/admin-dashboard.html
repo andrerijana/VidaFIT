@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrativo - VidaFIT QA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .summary div {
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    canvas {
+      margin-top: 40px;
+    }
+
+    #loading {
+      text-align: center;
+      font-style: italic;
+      color: #777;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px auto;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #145ca1;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Panel Administrativo - VidaFIT QA</h1>
+
+  <div class="summary">
+    <div>
+      <h3>Total de Ejecuciones</h3>
+      <p id="totalRuns">0</p>
+    </div>
+    <div>
+      <h3>Última Ejecución</h3>
+      <p id="lastRun">-</p>
+    </div>
+    <div>
+      <h3>Promedio de Éxito</h3>
+      <p id="avgSuccess">0%</p>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
+  </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Tests Totales</th>
+      <th>Pasados</th>
+      <th>Fallidos</th>
+      <th>Duración (s)</th>
+      <th>Reporte HTML</th>
+      <th>Reporte PDF</th>
+    </tr>
+  </thead>
+  <tbody id="historyBody"></tbody>
+</table>
+
+  <canvas id="chart" width="600" height="250"></canvas>
+
+<script>
+  async function cargarHistorial() {
+    try {
+      const res = await fetch('./history.json');
+      const data = await res.json();
+
+      if (!Array.isArray(data) || data.length === 0) {
+        document.getElementById('historyBody').innerHTML =
+          '<tr><td colspan="7">No hay datos disponibles.</td></tr>';
+        return;
+      }
+
+      const tbody = document.getElementById("historyBody");
+      tbody.innerHTML = "";
+
+      data.forEach((run) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${run.date}</td>
+          <td>${run.total}</td>
+          <td style="color:green;">${run.passed}</td>
+          <td style="color:red;">${run.failed}</td>
+          <td>${run.duration}</td>
+          <td>
+            ${run.htmlFile
+              ? `<a href="${run.htmlFile}" target="_blank">Ver HTML</a>`
+              : '<span style="color:#888;">No disponible</span>'}
+          </td>
+          <td>
+            ${run.pdfFile
+              ? `<a href="${run.pdfFile}" target="_blank">Ver PDF</a>`
+              : '<span style="color:#888;">No disponible</span>'}
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      // Resumen general
+      const totalRuns = data.length;
+      const lastRun = data[data.length - 1];
+      document.getElementById('totalRuns').textContent = totalRuns;
+      document.getElementById('lastRun').textContent = lastRun.date;
+
+      const totalPassed = data.reduce((acc, r) => acc + r.passed, 0);
+      const totalTests = data.reduce((acc, r) => acc + r.total, 0);
+      const avgSuccess = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
+      document.getElementById('avgSuccess').textContent = avgSuccess + '%';
+
+      // Botón de descarga (último PDF)
+      const btn = document.getElementById('btnDescargar');
+      if (lastRun.pdfFile) {
+        btn.href = lastRun.pdfFile;
+        btn.style.display = 'inline-block';
+      } else {
+        btn.style.display = 'none';
+      }
+
+      // Gráfico
+      const ctx = document.getElementById('chart').getContext('2d');
+      const labels = data.map(r => r.date.split(',')[0]);
+      const passed = data.map(r => r.passed);
+      const failed = data.map(r => r.failed);
+
+      if (window.chartInstance) window.chartInstance.destroy();
+
+      window.chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Pasados',
+              data: passed,
+              backgroundColor: 'rgba(46, 204, 113, 0.8)',
+            },
+            {
+              label: 'Fallidos',
+              data: failed,
+              backgroundColor: 'rgba(231, 76, 60, 0.8)',
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: { display: true, text: 'Resultados por ejecución' },
+          },
+          scales: {
+            y: { beginAtZero: true },
+          },
+        },
+      });
+
+      console.log(`Historial cargado: ${data.length} registros.`);
+
+    } catch (error) {
+      console.error('Error cargando history.json:', error);
+      document.getElementById('historyBody').innerHTML =
+        '<tr><td colspan="7">Error al cargar el historial.</td></tr>';
+    }
+  }
+
+  cargarHistorial();
+</script>
+</body>
+</html>

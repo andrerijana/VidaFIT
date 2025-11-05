@@ -1,0 +1,88 @@
+[
+  {
+    "date": "4/11/2025, 9:49:05 a. m.",
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "duration": 0,
+    "pdfFile": "./custom-report/pdfs/reporte_2025-11-04T13-49-07-512Z.pdf"
+  },
+  {
+    "date": "4/11/2025, 10:28:54 a. m.",
+    "total": 43,
+    "passed": 35,
+    "failed": 8,
+    "duration": 156,
+    "pdfFile": "./custom-report/pdfs/reporte_2025-11-04T14-28-54-122Z.pdf"
+  },
+  {
+    "date": "4/11/2025, 10:58:48 a. m.",
+    "total": 43,
+    "passed": 36,
+    "failed": 7,
+    "duration": 168,
+    "pdfFile": "./pdfs/reporte_2025-11-04T14-58-49-006Z.pdf"
+  },
+  {
+    "date": "4/11/2025, 11:08:38 a. m.",
+    "total": 43,
+    "passed": 36,
+    "failed": 7,
+    "duration": 162,
+    "pdfFile": "./pdfs/reporte_2025-11-04T15-08-38-861Z.pdf"
+  },
+  {
+    "date": "4/11/2025, 11:33:25 a. m.",
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "duration": 0,
+    "pdfFile": "./pdfs/reporte_2025-11-04T15-33-26-047Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-04T15-33-26-047Z.html"
+  },
+  {
+    "date": "4/11/2025, 11:43:24 a. m.",
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "duration": 0,
+    "pdfFile": "./pdfs/reporte_2025-11-04T15-43-24-447Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-04T15-43-24-447Z.html"
+  },
+  {
+    "date": "4/11/2025, 11:52:14 a. m.",
+    "total": 43,
+    "passed": 35,
+    "failed": 8,
+    "duration": 176,
+    "pdfFile": "./pdfs/reporte_2025-11-04T15-52-15-024Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-04T15-52-15-024Z.html"
+  },
+  {
+    "date": "4/11/2025, 12:32:30 p. m.",
+    "total": 43,
+    "passed": 36,
+    "failed": 7,
+    "duration": 148,
+    "pdfFile": "./pdfs/reporte_2025-11-04T16-32-30-901Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-04T16-32-30-901Z.html"
+  },
+  {
+    "date": "5/11/2025, 9:31:06 a. m.",
+    "total": 43,
+    "passed": 36,
+    "failed": 7,
+    "duration": 157,
+    "pdfFile": "./pdfs/reporte_2025-11-05T13-31-06-760Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-05T13-31-06-760Z.html"
+  },
+  {
+    "date": "5/11/2025, 7:14:00 p. m.",
+    "total": 43,
+    "passed": 37,
+    "failed": 6,
+    "duration": 152,
+    "pdfFile": "./pdfs/reporte_2025-11-05T23-14-00-162Z.pdf",
+    "htmlFile": "./reports/reporte_2025-11-05T23-14-00-162Z.html"
+  }
+]

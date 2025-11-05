@@ -1,0 +1,1871 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\playwright.config.js",
+    "rootDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\reporters\\my-reporter.ts",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "aqustico.spec.js",
+      "file": "aqustico.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AQUSTICO - Validaciones de inicio de sesión",
+          "file": "aqustico.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Validación 1: número con menos de 10 dígitos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17215,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:11:17.322Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0c2ad228b46a34b073b-0d30b789650bc449aaed",
+              "file": "aqustico.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "Validación 2: número con 10 dígitos (formato inválido)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6059,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:11:35.864Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0c2ad228b46a34b073b-52c45b98f949ca3844eb",
+              "file": "aqustico.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "Validación 3: número válido pero no registrado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14589,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:11:41.938Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0c2ad228b46a34b073b-24bb91f2e0b14adea8f0",
+              "file": "aqustico.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "Validación 4: inicio de sesión exitoso",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7833,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:11:56.536Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0c2ad228b46a34b073b-b31a55164608ff80dd5f",
+              "file": "aqustico.spec.js",
+              "line": 37,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "menu.spec.js",
+      "file": "menu.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Abrir menú hamburguesa y hacer click en Mi Inicio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14726,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:17.337Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-2667513f3e395c80dcff",
+          "file": "menu.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 27481,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:33.394Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-59add79c37915c775584",
+          "file": "menu.spec.js",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Buscar recursos usando el buscador del menú lateral con \"creatina\"",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9402,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Textos en el menú: [\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search close'\u001b[39m,\n  \u001b[32m' search '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'Potencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Recetas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Recetas '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' familiar_face_and_zone COACH IA '\u001b[39m,\n  \u001b[32m' familiar_face_and_zone '\u001b[39m,\n  \u001b[32m'COACH IA '\u001b[39m,\n  \u001b[32m'Tienda'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  ... 61 more items\n]\n"
+                    },
+                    {
+                      "text": "Resultados de búsqueda: [\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:00.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "217198a80e852077fe39-52c9c4c51b4d40d5494e",
+          "file": "menu.spec.js",
+          "line": 118,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "menuandroid.spec.js",
+      "file": "menuandroid.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test responsive S23+",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 13655,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:17.324Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61a1367c8cc6a3d6c234-124839b465d63c23260d",
+          "file": "menuandroid.spec.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Abrir menú hamburguesa y hacer click en Mi Inicio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 9960,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:32.322Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61a1367c8cc6a3d6c234-856e2689ee68a1334dc4",
+          "file": "menuandroid.spec.js",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 26664,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                      "column": 35,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m abrirMenu() {\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m menuHamburguesa \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(menuHamburguesa)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m menuHamburguesa\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-navigation-hamburger-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                        "column": 35,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:42.291Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                    "column": 35,
+                    "line": 53
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "61a1367c8cc6a3d6c234-97ff00e5bedcd1a06ee5",
+          "file": "menuandroid.spec.js",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "Buscar recursos usando el buscador del menú lateral con \"creatina\"",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 26486,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Textos en el menú: [\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search close'\u001b[39m,\n  \u001b[32m' search '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'Potencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Recetas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Recetas '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' familiar_face_and_zone COACH IA '\u001b[39m,\n  \u001b[32m' familiar_face_and_zone '\u001b[39m,\n  \u001b[32m'COACH IA '\u001b[39m,\n  \u001b[32m'Tienda'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  ... 61 more items\n]\n"
+                    },
+                    {
+                      "text": "Resultados de búsqueda: [\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:13.015Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61a1367c8cc6a3d6c234-d975bec628a2b396c560",
+          "file": "menuandroid.spec.js",
+          "line": 125,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "recursoresponsive.spec.js",
+      "file": "recursoresponsive.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Flujo completo del formulario responsive: vacíos, inválidos y éxito",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 21768,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Títulos en recursos: []\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:17.324Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-76cf9c30430d2d90e3cc",
+          "file": "recursoresponsive.spec.js",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Click en el logo de Vidafit lleva al home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 8380,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:40.358Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-25e3f3bbc41896e5568d",
+          "file": "recursoresponsive.spec.js",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "Navegar por varias tarjetas de recurso y regresar con back",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 14009,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:11:48.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-04ed883dde73dc5d5922",
+          "file": "recursoresponsive.spec.js",
+          "line": 115,
+          "column": 1
+        },
+        {
+          "title": "Filtro responsive: Entrenamiento",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 1516,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 1,
+                      "line": 162
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m test(\u001b[32m'Filtro responsive: Entrenamiento'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 162 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m\n \u001b[90m 165 |\u001b[39m   \u001b[90m// Abre panel de filtros\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 1,
+                        "line": 162
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  160 |\n  161 | test('Filtro responsive: Entrenamiento', async ({ page }) => {\n> 162 | await context.grantPermissions(['geolocation']);\n      | ^\n  163 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  164 |\n  165 |   // Abre panel de filtros\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:02.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 1,
+                    "line": 162
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-20ecd0caafd3c008bd43",
+          "file": "recursoresponsive.spec.js",
+          "line": 161,
+          "column": 1
+        },
+        {
+          "title": "Filtro responsive: Nutrición",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 1550,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 1,
+                      "line": 182
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 180 |\u001b[39m \u001b[90m/** Nutrición */\u001b[39m\n \u001b[90m 181 |\u001b[39m test(\u001b[32m'Filtro responsive: Nutrición'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 182 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 183 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 184 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 185 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 1,
+                        "line": 182
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  180 | /** Nutrición */\n  181 | test('Filtro responsive: Nutrición', async ({ page }) => {\n> 182 | await context.grantPermissions(['geolocation']);\n      | ^\n  183 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  184 |   await page.getByText('Filtros', { exact: true }).click();\n  185 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:07.894Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 1,
+                    "line": 182
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-82c5267c1801e3622dd3",
+          "file": "recursoresponsive.spec.js",
+          "line": 181,
+          "column": 1
+        },
+        {
+          "title": "Filtro responsive: Recetas Fitness",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 1516,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 196
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 194 |\u001b[39m \u001b[90m/** Recetas Fitness */\u001b[39m\n \u001b[90m 195 |\u001b[39m test(\u001b[32m'Filtro responsive: Recetas Fitness'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 197 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 198 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 199 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 196
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  194 | /** Recetas Fitness */\n  195 | test('Filtro responsive: Recetas Fitness', async ({ page }) => {\n> 196 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  197 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  198 |   await page.getByText('Filtros', { exact: true }).click();\n  199 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:13.305Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 196
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-cadb45cedbd6d570eff0",
+          "file": "recursoresponsive.spec.js",
+          "line": 195,
+          "column": 1
+        },
+        {
+          "title": "Filtro responsive: Vive Fit",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 772,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 210
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 208 |\u001b[39m \u001b[90m/** Vive Fit */\u001b[39m\n \u001b[90m 209 |\u001b[39m test(\u001b[32m'Filtro responsive: Vive Fit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 210 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 211 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 212 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 210
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  208 | /** Vive Fit */\n  209 | test('Filtro responsive: Vive Fit', async ({ page }) => {\n> 210 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  211 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  212 |   await page.getByText('Filtros', { exact: true }).click();\n  213 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:18.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 210
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-e1c5123372e64cb9bf3e",
+          "file": "recursoresponsive.spec.js",
+          "line": 209,
+          "column": 1
+        },
+        {
+          "title": "Filtro responsive: Rutinas de Ejercicios",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 538,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 224
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 222 |\u001b[39m \u001b[90m/** Rutinas de Ejercicios */\u001b[39m\n \u001b[90m 223 |\u001b[39m test(\u001b[32m'Filtro responsive: Rutinas de Ejercicios'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m\n \u001b[90m 227 |\u001b[39m   \u001b[90m// CORREGIDO: Busca el botón Filtros por texto, no por clase\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 224
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  222 | /** Rutinas de Ejercicios */\n  223 | test('Filtro responsive: Rutinas de Ejercicios', async ({ page }) => {\n> 224 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  225 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  226 |\n  227 |   // CORREGIDO: Busca el botón Filtros por texto, no por clase\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:20.690Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 224
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3751a7fbcbf64b4952c0-234e2af05b4f66b5aa92",
+          "file": "recursoresponsive.spec.js",
+          "line": 223,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "recursos.spec.js",
+      "file": "recursos.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Formulario Recursos",
+          "file": "recursos.spec.js",
+          "line": 121,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Campos vacíos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7523,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:04.489Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-ef2f06262e262a9c0ccb",
+              "file": "recursos.spec.js",
+              "line": 122,
+              "column": 3
+            },
+            {
+              "title": "2. Nombre y Apellido con números",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13720,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:12.030Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-b5e631cf60c4f5d8654d",
+              "file": "recursos.spec.js",
+              "line": 138,
+              "column": 3
+            },
+            {
+              "title": "3. Email inválido",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5481,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:25.757Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-980309af9d71d7cda522",
+              "file": "recursos.spec.js",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "4. Caso exitoso",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6321,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:31.244Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-7d9e9573ad1c77a514df",
+              "file": "recursos.spec.js",
+              "line": 165,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Navegación menú hamburguesa (Vidafit)",
+          "file": "recursos.spec.js",
+          "line": 179,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Ir a Rutinas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5468,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:37.571Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-78464ad6723a84ca258d",
+              "file": "recursos.spec.js",
+              "line": 185,
+              "column": 3
+            },
+            {
+              "title": "2. Ir a Recetas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3954,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:43.043Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-8e38d20295586912c77d",
+              "file": "recursos.spec.js",
+              "line": 191,
+              "column": 3
+            },
+            {
+              "title": "3. Ir a Recursos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3262,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:47.001Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-89f65ab2db2ef0cbd168",
+              "file": "recursos.spec.js",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "4. Ir a Blog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3385,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:50.267Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-4c92e8f890ea33d298e7",
+              "file": "recursos.spec.js",
+              "line": 203,
+              "column": 3
+            },
+            {
+              "title": "5. Abrir Perfil muestra botón Únete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3329,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:53.656Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-2f37ee56cfc1d1c36029",
+              "file": "recursos.spec.js",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "6. Ir a Únete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3736,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:12:56.990Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-db05dcb4cc29d8cb780e",
+              "file": "recursos.spec.js",
+              "line": 215,
+              "column": 3
+            },
+            {
+              "title": "7. Ir a Iniciar sesión y cerrar modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4150,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:00.731Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-ddf9f1d1c7911e76028a",
+              "file": "recursos.spec.js",
+              "line": 222,
+              "column": 3
+            },
+            {
+              "title": "8. Volver al Home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3331,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:04.886Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-986d1fdc31888226da89",
+              "file": "recursos.spec.js",
+              "line": 229,
+              "column": 3
+            },
+            {
+              "title": "9. Abrir y cerrar Términos y Condiciones",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4247,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:08.221Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-9c8b6ea0b55ae5cdf6fb",
+              "file": "recursos.spec.js",
+              "line": 235,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Filtros de recursos",
+          "file": "recursos.spec.js",
+          "line": 246,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Filtrar por Entrenamiento",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2930,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:12.473Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-b53d14a9aa33d4ff7d18",
+              "file": "recursos.spec.js",
+              "line": 252,
+              "column": 3
+            },
+            {
+              "title": "Filtrar por Nutrición",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3336,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:15.408Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-a80469edce491c4b9746",
+              "file": "recursos.spec.js",
+              "line": 257,
+              "column": 3
+            },
+            {
+              "title": "Filtrar por Recetas Fitness",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3767,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:18.748Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-50746fb78303be63a643",
+              "file": "recursos.spec.js",
+              "line": 264,
+              "column": 2
+            },
+            {
+              "title": "Filtrar por Vive Fit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3709,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:22.519Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-9d5c4e17c103bf4d6d2f",
+              "file": "recursos.spec.js",
+              "line": 271,
+              "column": 3
+            },
+            {
+              "title": "Filtrar por Rutinas de Ejercicios",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2848,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:26.231Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-0917eca083b28ddcaf41",
+              "file": "recursos.spec.js",
+              "line": 278,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Registro de usuario",
+          "file": "recursos.spec.js",
+          "line": 287,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Movistar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3535,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:29.083Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-9e6def964838ab8ef2d5",
+              "file": "recursos.spec.js",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "Digitel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10034,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:32.622Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-13eadd91cd842a3c857b",
+              "file": "recursos.spec.js",
+              "line": 307,
+              "column": 1
+            },
+            {
+              "title": "Prueba gratis Movistar 2",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5603,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-05T23:13:42.659Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4230db46ec7bad0e53d0-17e155592ce1200a534b",
+              "file": "recursos.spec.js",
+              "line": 331,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "registro.spec.js",
+      "file": "registro.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Prueba gratis con Movistar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5515,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Usuario creado (Movistar): arijana+1762384330492@androvent.com | Tel: 9504904\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:10.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1098c23971260b33563e-1ac01d69064ccd50d921",
+          "file": "registro.spec.js",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "Prueba gratis con Digitel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11233,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Usuario creado (Digitel): arijana+1762384336284@androvent.com | Tel: 9205323\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:15.857Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1098c23971260b33563e-d7095d2a7a4de435d879",
+          "file": "registro.spec.js",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "prueba gratis movistar 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 38863,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Usuario creado (Movistar 2): arijana+1762384347216@androvent.com | Tel: 9342874\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T23:12:27.097Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1098c23971260b33563e-95ad77de8cc04e10d08e",
+          "file": "registro.spec.js",
+          "line": 130,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-05T23:11:16.047Z",
+    "duration": 152307.361,
+    "expected": 37,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

@@ -1,9 +1,11 @@
 {
-  "name": "playwrigtht---vidafit",
+  "name": "playwright--vidafit",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "start:scheduler": "node scheduler.js"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +13,15 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
+    "@types/node": "^24.5.2",
     "allure-commandline": "^2.34.1",
-    "allure-playwright": "^3.3.3"
+    "allure-playwright": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-cron": "^4.2.1",
+    "puppeteer": "^24.28.0"
   }
 }

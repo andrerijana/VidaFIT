@@ -1,0 +1,594 @@
+﻿
+Running 43 tests using 4 workers
+
+T├¡tulos en recursos: []
+  Γ£ô  1 menuandroid.spec.js:14:1 ΓÇ║ Test responsive S23+ (13.7s)
+  Γ£ô  4 menu.spec.js:3:1 ΓÇ║ Abrir men├║ hamburguesa y hacer click en Mi Inicio (14.7s)
+  Γ£ô  2 aqustico.spec.js:18:3 ΓÇ║ AQUSTICO - Validaciones de inicio de sesi├│n ΓÇ║ Validaci├│n 1: n├║mero con menos de 10 d├¡gitos (17.2s)
+  Γ£ô  3 recursoresponsive.spec.js:17:1 ΓÇ║ Flujo completo del formulario responsive: vac├¡os, inv├ílidos y ├⌐xito (21.8s)
+  Γ£ô  7 aqustico.spec.js:25:3 ΓÇ║ AQUSTICO - Validaciones de inicio de sesi├│n ΓÇ║ Validaci├│n 2: n├║mero con 10 d├¡gitos (formato inv├ílido) (6.1s)
+  Γ£ô  5 menuandroid.spec.js:19:1 ΓÇ║ Abrir men├║ hamburguesa y hacer click en Mi Inicio (10.0s)
+  Γ£ô  8 recursoresponsive.spec.js:99:1 ΓÇ║ Click en el logo de Vidafit lleva al home (8.4s)
+  Γ£ô  9 aqustico.spec.js:31:3 ΓÇ║ AQUSTICO - Validaciones de inicio de sesi├│n ΓÇ║ Validaci├│n 3: n├║mero v├ílido pero no registrado (14.6s)
+  Γ£ô  6 menu.spec.js:30:1 ΓÇ║ Flujo completo de navegaci├│n por el men├║ hamburguesa (Vidafit) (27.5s)
+  Γ£ô  11 recursoresponsive.spec.js:115:1 ΓÇ║ Navegar por varias tarjetas de recurso y regresar con back (14.0s)
+  Γ£ô  12 aqustico.spec.js:37:3 ΓÇ║ AQUSTICO - Validaciones de inicio de sesi├│n ΓÇ║ Validaci├│n 4: inicio de sesi├│n exitoso (7.8s)
+  Γ£ÿ  14 recursoresponsive.spec.js:161:1 ΓÇ║ Filtro responsive: Entrenamiento (1.5s)
+Textos en el men├║: [
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m' search close'[39m,
+  [32m' search '[39m,
+  [32m''[39m,
+  [32m'close'[39m,
+  [32m'close'[39m,
+  [32m'Potencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m'Potencia tu f├¡sico'[39m,
+  [32m''[39m,
+  [32m'Potencia tu f├¡sico'[39m,
+  [32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Cuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Cuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'C├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit'[39m,
+  [32m''[39m,
+  [32m'C├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit'[39m,
+  [32m'creatina'[39m,
+  [32m'┬┐Con Qu├⌐ se Puede Tomar la Creatina? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐Con Qu├⌐ se Puede Tomar la Creatina? | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Mejor creatina monohidrato | Vida-Fit'[39m,
+  [32m''[39m,
+  [32m'Mejor creatina monohidrato | Vida-Fit'[39m,
+  [32m'creatina'[39m,
+  [32m'Mejor creatina Micronizada | Vida-Fit'[39m,
+  [32m''[39m,
+  [32m'Mejor creatina Micronizada | Vida-Fit'[39m,
+  [32m'creatina'[39m,
+  [32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Descubre la Mejor Creatina para Mujeres | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre la Mejor Creatina para Mujeres | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'┬┐La creatina quema grasa abdominal? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐La creatina quema grasa abdominal? | Vidafit'[39m,
+  [32m'creatina'[39m,
+  [32m'Para Qu├⌐ Sirve y C├│mo se Toma Creatina | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Para Qu├⌐ Sirve y C├│mo se Toma Creatina | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Desentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'[39m,
+  [32m''[39m,
+  [32m'Desentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'[39m,
+  [32m'El Poder de la Creatina en el Entrenamiento de Pesas'[39m,
+  [32m''[39m,
+  [32m'El Poder de la Creatina en el Entrenamiento de Pesas'[39m,
+  [32m'Creatina'[39m,
+  [32m'La creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m''[39m,
+  [32m'La creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m'creatina'[39m,
+  [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m'\n\n\n\n\n\n\n Mi Inicio '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Mi Inicio '[39m,
+  [32m'\n\n\n\n\n\n\n Rutinas '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Rutinas '[39m,
+  [32m'\n\n\n\n\n\n\n Recetas '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Recetas '[39m,
+  [32m''[39m,
+  [32m' familiar_face_and_zone COACH IA '[39m,
+  [32m' familiar_face_and_zone '[39m,
+  [32m'COACH IA '[39m,
+  [32m'Tienda'[39m,
+  [32m''[39m,
+  [32m''[39m,
+  ... 61 more items
+]
+Resultados de b├║squeda: [
+  [32m'Creatina'[39m, [32m'Creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'creatina'[39m, [32m'Creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'Creatina'[39m, [32m'Creatina'[39m,
+  [32m'creatina'[39m
+]
+  Γ£ÿ  10 menuandroid.spec.js:46:1 ΓÇ║ Flujo completo de navegaci├│n por el men├║ hamburguesa (Vidafit) (26.7s)
+  Γ£ô  13 menu.spec.js:118:1 ΓÇ║ Buscar recursos usando el buscador del men├║ lateral con "creatina" (9.4s)
+  Γ£ÿ  16 recursoresponsive.spec.js:181:1 ΓÇ║ Filtro responsive: Nutrici├│n (1.6s)
+  Γ£ô  15 recursos.spec.js:122:3 ΓÇ║ Formulario Recursos ΓÇ║ 1. Campos vac├¡os (7.5s)
+Usuario creado (Movistar): arijana+1762384330492@androvent.com | Tel: 9504904
+  Γ£ô  17 registro.spec.js:77:1 ΓÇ║ Prueba gratis con Movistar (5.5s)
+  Γ£ÿ  20 recursoresponsive.spec.js:195:1 ΓÇ║ Filtro responsive: Recetas Fitness (1.5s)
+  Γ£ÿ  22 recursoresponsive.spec.js:209:1 ΓÇ║ Filtro responsive: Vive Fit (772ms)
+  Γ£ÿ  23 recursoresponsive.spec.js:223:1 ΓÇ║ Filtro responsive: Rutinas de Ejercicios (538ms)
+  Γ£ô  18 recursos.spec.js:138:3 ΓÇ║ Formulario Recursos ΓÇ║ 2. Nombre y Apellido con n├║meros (13.7s)
+Usuario creado (Digitel): arijana+1762384336284@androvent.com | Tel: 9205323
+  Γ£ô  21 registro.spec.js:104:1 ΓÇ║ Prueba gratis con Digitel (11.2s)
+  Γ£ô  24 recursos.spec.js:153:3 ΓÇ║ Formulario Recursos ΓÇ║ 3. Email inv├ílido (5.5s)
+  Γ£ô  26 recursos.spec.js:165:3 ΓÇ║ Formulario Recursos ΓÇ║ 4. Caso exitoso (6.3s)
+Textos en el men├║: [
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m' search closePotencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m' search close'[39m,
+  [32m' search '[39m,
+  [32m''[39m,
+  [32m'close'[39m,
+  [32m'close'[39m,
+  [32m'Potencia tu f├¡sicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | VidafitC├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit┬┐Con Qu├⌐ se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit┬┐La creatina quema grasa abdominal? | VidafitPara Qu├⌐ Sirve y C├│mo se Toma Creatina | VidafitDesentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m'Potencia tu f├¡sico'[39m,
+  [32m''[39m,
+  [32m'Potencia tu f├¡sico'[39m,
+  [32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Cuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Cuando Tomar Creatina ┬┐Antes o Despu├⌐s de Entrenar? | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'C├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit'[39m,
+  [32m''[39m,
+  [32m'C├│mo Tomar Creatina para Aumentar Masa Muscular | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐Cu├ínto tomar creatina por d├¡a?: Dosis recomendada | Vidafit'[39m,
+  [32m'creatina'[39m,
+  [32m'┬┐Con Qu├⌐ se Puede Tomar la Creatina? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐Con Qu├⌐ se Puede Tomar la Creatina? | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Mejor creatina monohidrato | Vida-Fit'[39m,
+  [32m''[39m,
+  [32m'Mejor creatina monohidrato | Vida-Fit'[39m,
+  [32m'creatina'[39m,
+  [32m'Mejor creatina Micronizada | Vida-Fit'[39m,
+  [32m''[39m,
+  [32m'Mejor creatina Micronizada | Vida-Fit'[39m,
+  [32m'creatina'[39m,
+  [32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Descubre la Mejor Creatina para Mujeres | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Descubre la Mejor Creatina para Mujeres | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'┬┐La creatina quema grasa abdominal? | Vidafit'[39m,
+  [32m''[39m,
+  [32m'┬┐La creatina quema grasa abdominal? | Vidafit'[39m,
+  [32m'creatina'[39m,
+  [32m'Para Qu├⌐ Sirve y C├│mo se Toma Creatina | Vidafit'[39m,
+  [32m''[39m,
+  [32m'Para Qu├⌐ Sirve y C├│mo se Toma Creatina | Vidafit'[39m,
+  [32m'Creatina'[39m,
+  [32m'Desentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'[39m,
+  [32m''[39m,
+  [32m'Desentra├▒ando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'[39m,
+  [32m'El Poder de la Creatina en el Entrenamiento de Pesas'[39m,
+  [32m''[39m,
+  [32m'El Poder de la Creatina en el Entrenamiento de Pesas'[39m,
+  [32m'Creatina'[39m,
+  [32m'La creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m''[39m,
+  [32m'La creatina y el incremento de┬áfuerza en el GYM'[39m,
+  [32m'creatina'[39m,
+  [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Mi Inicio \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Rutinas \n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Recetas  familiar_face_and_zone COACH IA Tienda\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m'\n'[39m +
+    [32m' Perfil  arrow_circle_down  Recursos  Blog '[39m,
+  [32m'\n\n\n\n\n\n\n Mi Inicio '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Mi Inicio '[39m,
+  [32m'\n\n\n\n\n\n\n Rutinas '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Rutinas '[39m,
+  [32m'\n\n\n\n\n\n\n Recetas '[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n\n\n\n\n\n'[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m'\n\n'[39m,
+  [32m''[39m,
+  [32m' Recetas '[39m,
+  [32m''[39m,
+  [32m' familiar_face_and_zone COACH IA '[39m,
+  [32m' familiar_face_and_zone '[39m,
+  [32m'COACH IA '[39m,
+  [32m'Tienda'[39m,
+  [32m''[39m,
+  [32m''[39m,
+  ... 61 more items
+]
+Resultados de b├║squeda: [
+  [32m'Creatina'[39m, [32m'Creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'creatina'[39m, [32m'Creatina'[39m,
+  [32m'Creatina'[39m, [32m'creatina'[39m,
+  [32m'Creatina'[39m, [32m'Creatina'[39m,
+  [32m'creatina'[39m
+]
+  Γ£ô  19 menuandroid.spec.js:125:1 ΓÇ║ Buscar recursos usando el buscador del men├║ lateral con "creatina" (26.5s)
+  Γ£ô  27 recursos.spec.js:185:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 1. Ir a Rutinas (5.5s)
+  Γ£ô  28 recursos.spec.js:191:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 2. Ir a Recetas (4.0s)
+  Γ£ô  29 recursos.spec.js:197:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 3. Ir a Recursos (3.3s)
+  Γ£ô  30 recursos.spec.js:203:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 4. Ir a Blog (3.4s)
+  Γ£ô  31 recursos.spec.js:209:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 5. Abrir Perfil muestra bot├│n ├Ünete (3.3s)
+  Γ£ô  32 recursos.spec.js:215:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 6. Ir a ├Ünete (3.7s)
+Usuario creado (Movistar 2): arijana+1762384347216@androvent.com | Tel: 9342874
+  Γ£ô  33 recursos.spec.js:222:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 7. Ir a Iniciar sesi├│n y cerrar modal (4.2s)
+  Γ£ô  25 registro.spec.js:130:1 ΓÇ║ prueba gratis movistar 2 (38.9s)
+  Γ£ô  34 recursos.spec.js:229:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 8. Volver al Home (3.3s)
+  Γ£ô  35 recursos.spec.js:235:3 ΓÇ║ Navegaci├│n men├║ hamburguesa (Vidafit) ΓÇ║ 9. Abrir y cerrar T├⌐rminos y Condiciones (4.2s)
+  Γ£ô  36 recursos.spec.js:252:3 ΓÇ║ Filtros de recursos ΓÇ║ Filtrar por Entrenamiento (2.9s)
+  Γ£ô  37 recursos.spec.js:257:3 ΓÇ║ Filtros de recursos ΓÇ║ Filtrar por Nutrici├│n (3.3s)
+  Γ£ô  38 recursos.spec.js:264:2 ΓÇ║ Filtros de recursos ΓÇ║ Filtrar por Recetas Fitness (3.8s)
+  Γ£ô  39 recursos.spec.js:271:3 ΓÇ║ Filtros de recursos ΓÇ║ Filtrar por Vive Fit (3.7s)
+  Γ£ô  40 recursos.spec.js:278:3 ΓÇ║ Filtros de recursos ΓÇ║ Filtrar por Rutinas de Ejercicios (2.8s)
+  Γ£ô  41 recursos.spec.js:288:3 ΓÇ║ Registro de usuario ΓÇ║ Movistar (3.5s)
+  Γ£ô  42 recursos.spec.js:307:1 ΓÇ║ Registro de usuario ΓÇ║ Digitel (10.0s)
+  Γ£ô  43 recursos.spec.js:331:1 ΓÇ║ Registro de usuario ΓÇ║ Prueba gratis Movistar 2 (5.6s)
+
+
+  1) menuandroid.spec.js:46:1 ΓÇ║ Flujo completo de navegaci├│n por el men├║ hamburguesa (Vidafit) ΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('mat-icon[data-mat-icon-name="my-icon-menu-ham"]')
+    Expected: visible
+    Received: hidden
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('mat-icon[data-mat-icon-name="my-icon-menu-ham"]')[22m
+    [2m    8 ├ù locator resolved to <mat-icon role="img" aria-hidden="true" data-mat-icon-type="svg" svgicon="my-icon-menu-ham" _ngcontent-ng-c1959954278="" data-mat-icon-name="my-icon-menu-ham" class="mat-icon notranslate mat-icon-no-color">ΓÇª</mat-icon>[22m
+    [2m      - unexpected value "hidden"[22m
+
+
+      51 |   async function abrirMenu() {
+      52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name="my-icon-menu-ham"]');
+    > 53 |     await expect(menuHamburguesa).toBeVisible();
+         |                                   ^
+      54 |     await menuHamburguesa.click();
+      55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();
+      56 |   }
+        at abrirMenu (C:\Users\arijana\Desktop\Playwrigtht - vidafit\menuandroid.spec.js:53:35)
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\menuandroid.spec.js:104:9
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\menuandroid-Flujo-completo-3b5ba-l-men├║-hamburguesa-Vidafit-\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\menuandroid-Flujo-completo-3b5ba-l-men├║-hamburguesa-Vidafit-\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    Error Context: test-results\menuandroid-Flujo-completo-3b5ba-l-men├║-hamburguesa-Vidafit-\error-context.md
+
+  2) recursoresponsive.spec.js:161:1 ΓÇ║ Filtro responsive: Entrenamiento ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    ReferenceError: context is not defined
+
+      160 |
+      161 | test('Filtro responsive: Entrenamiento', async ({ page }) => {
+    > 162 | await context.grantPermissions(['geolocation']);
+          | ^
+      163 |   await page.goto('https://front-qa.vida-fit.com/recursos/');
+      164 |
+      165 |   // Abre panel de filtros
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\recursoresponsive.spec.js:162:1
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Entrenamiento\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Entrenamiento\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  3) recursoresponsive.spec.js:181:1 ΓÇ║ Filtro responsive: Nutrici├│n ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    ReferenceError: context is not defined
+
+      180 | /** Nutrici├│n */
+      181 | test('Filtro responsive: Nutrici├│n', async ({ page }) => {
+    > 182 | await context.grantPermissions(['geolocation']);
+          | ^
+      183 |   await page.goto('https://front-qa.vida-fit.com/recursos/');
+      184 |   await page.getByText('Filtros', { exact: true }).click();
+      185 |
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\recursoresponsive.spec.js:182:1
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Nutrici├│n\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Nutrici├│n\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  4) recursoresponsive.spec.js:195:1 ΓÇ║ Filtro responsive: Recetas Fitness ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    ReferenceError: context is not defined
+
+      194 | /** Recetas Fitness */
+      195 | test('Filtro responsive: Recetas Fitness', async ({ page }) => {
+    > 196 |     await context.grantPermissions(['geolocation']);
+          |     ^
+      197 |   await page.goto('https://front-qa.vida-fit.com/recursos/');
+      198 |   await page.getByText('Filtros', { exact: true }).click();
+      199 |
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\recursoresponsive.spec.js:196:5
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Recetas-Fitness\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Recetas-Fitness\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  5) recursoresponsive.spec.js:209:1 ΓÇ║ Filtro responsive: Vive Fit ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    ReferenceError: context is not defined
+
+      208 | /** Vive Fit */
+      209 | test('Filtro responsive: Vive Fit', async ({ page }) => {
+    > 210 |     await context.grantPermissions(['geolocation']);
+          |     ^
+      211 |   await page.goto('https://front-qa.vida-fit.com/recursos/');
+      212 |   await page.getByText('Filtros', { exact: true }).click();
+      213 |
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\recursoresponsive.spec.js:210:5
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Vive-Fit\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Vive-Fit\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  6) recursoresponsive.spec.js:223:1 ΓÇ║ Filtro responsive: Rutinas de Ejercicios ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    ReferenceError: context is not defined
+
+      222 | /** Rutinas de Ejercicios */
+      223 | test('Filtro responsive: Rutinas de Ejercicios', async ({ page }) => {
+    > 224 |     await context.grantPermissions(['geolocation']);
+          |     ^
+      225 |   await page.goto('https://front-qa.vida-fit.com/recursos/');
+      226 |
+      227 |   // CORREGIDO: Busca el bot├│n Filtros por texto, no por clase
+        at C:\Users\arijana\Desktop\Playwrigtht - vidafit\recursoresponsive.spec.js:224:5
+
+    attachment #1: screenshot (image/png) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\test-failed-1.png
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    attachment #2: video (video/webm) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\video.webm
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  6 failed
+    menuandroid.spec.js:46:1 ΓÇ║ Flujo completo de navegaci├│n por el men├║ hamburguesa (Vidafit) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    recursoresponsive.spec.js:161:1 ΓÇ║ Filtro responsive: Entrenamiento ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    recursoresponsive.spec.js:181:1 ΓÇ║ Filtro responsive: Nutrici├│n ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    recursoresponsive.spec.js:195:1 ΓÇ║ Filtro responsive: Recetas Fitness ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    recursoresponsive.spec.js:209:1 ΓÇ║ Filtro responsive: Vive Fit ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    recursoresponsive.spec.js:223:1 ΓÇ║ Filtro responsive: Rutinas de Ejercicios ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  37 passed (2.5m)
+
+≡ƒƒó Custom report generado y abierto en: custom-report/index.html
+

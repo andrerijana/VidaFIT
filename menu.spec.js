@@ -1,5 +1,4 @@
-const { test, expect } = require('@playwright/test');
-
+import { test, expect } from '@playwright/test';
 
 test('Abrir menú hamburguesa y hacer click en Mi Inicio', async ({ page, context }) => {
   await context.grantPermissions(['geolocation']);

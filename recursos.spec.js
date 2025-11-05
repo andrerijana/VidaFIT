@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 const url_base = 'https://front-qa.vida-fit.com';
 const u = (path = '') => `${url_base}${path.startsWith('/') ? path : `/${path}`}`;
@@ -105,7 +105,7 @@ async function completarFormularioRegistro(page, { nombre, apellido, phone, emai
   await safeFill(passInput, password);
 }
 
-module.exports = {
+export {
   u,
   abrirMenu,
   irAlFormulario,

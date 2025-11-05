@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login VidaFIT QA</title>
+
+  <style>
+    body {
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .login {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #145ca1;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h2>Acceso VidaFIT QA</h2>
+    <input id="email" type="email" placeholder="Correo electrónico" />
+    <input id="password" type="password" placeholder="Contraseña" />
+    <button id="btnLogin">Ingresar</button>
+    <p id="msg" style="color:red;"></p>
+  </div>
+
+  <script type="module">
+    import { auth, db } from "./firebase-config.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    const btn = document.getElementById("btnLogin");
+    const msg = document.getElementById("msg");
+
+    btn.addEventListener("click", async () => {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      msg.textContent = "";
+
+      if (!email || !password) {
+        msg.textContent = "Completa todos los campos.";
+        return;
+      }
+
+      try {
+        const userCred = await signInWithEmailAndPassword(auth, email, password);
+        const uid = userCred.user.uid;
+
+        // Leer rol desde Firestore
+        const docRef = doc(db, "users", uid);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+          msg.textContent = "Usuario sin rol asignado. Contacta al administrador.";
+          return;
+        }
+
+        const role = docSnap.data().role;
+        localStorage.setItem("userRole", role);
+        localStorage.setItem("uid", uid);
+
+        // Redirigir al dashboard
+        window.location.href = "admin-dashboard.html";
+      } catch (error) {
+        msg.textContent = "Error: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
