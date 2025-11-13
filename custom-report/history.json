@@ -163,5 +163,15 @@
     "htmlFile": "http://localhost:5000/reports/index.html",
     "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
     "createdAt": "2025-11-12T18:51:11.399Z"
+  },
+  {
+    "date": "2025-11-13T17:10:25.673Z",
+    "total": 49,
+    "passed": 37,
+    "failed": 12,
+    "duration": 179,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T17:10:25.673Z"
   }
 ]

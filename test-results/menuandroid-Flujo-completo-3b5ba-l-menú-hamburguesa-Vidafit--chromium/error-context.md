@@ -1,10 +1,37 @@
 # Page snapshot
 
 ```yaml
-- dialog:
-  - button "arrow_back"
-  - img "Vida Fit"
-  - button "close"
-  - heading "Únete a VidaFIT en Venezuela" [level=1]
-  - text: "Prueba gratis de 3 días con tu operadora Activa tu prueba gratuita y descubre rutinas, recetas y bienestar personalizado sin costo. ¡Tu mejor versión empieza hoy! Crea tu cuenta gratis Desbloquea una parte del contenido de Vida Fit: rutinas, recetas y tips seleccionados, y accede a la comunidad Vida Fit."
+- text: Comienza gratis hoy
+- img
+- textbox "Buscar..."
+- button
+- navigation:
+  - list:
+    - listitem:
+      - link "Mi Inicio":
+        - /url: /
+    - listitem:
+      - link "Rutinas":
+        - /url: /rutinas-ejercicios
+    - listitem:
+      - link "Recetas":
+        - /url: /recetas-fitness
+      - separator
+    - listitem:
+      - link "COACH IA":
+        - /url: https://entrenador-personal.vida-fit.com/
+    - listitem: Perfil
+    - listitem:
+      - link "Tienda":
+        - /url: https://tienda.vida-fit.com/
+- img
+- button
+- button
+- button
+- text: Términos Privacidad Cookies Powered by
+- link "conectium":
+  - /url: https://conectium.com/
+  - img "conectium"
+- text: ©VidaFit 2025
+- img
 ```

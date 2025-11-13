@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráficas - VidaFIT QA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      padding: 10px 30px;
+      border-bottom: 3px solid #1565c0;
+      position: sticky;
+      top: 0;
+      z-index: 800;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    #userInfo {
+      font-weight: 500;
+    }
+
+    #logoutBtn {
+      background-color: white;
+      color: #1976d2;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    #logoutBtn:hover {
+      background-color: #e3f2fd;
+    }
+
+    /* ====== MENÚ HAMBURGUESA / SIDEBAR ====== */
+    .menu-toggle {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100%;
+      background-color: #1f2937;
+      color: #fff;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+      padding: 20px 16px;
+      box-sizing: border-box;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 10px;
+    }
+
+    .menu-link,
+    .menu-button {
+      width: 100%;
+      display: block;
+      text-align: left;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: #e5e7eb;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-link:hover,
+    .menu-button:hover {
+      background-color: #2563eb;
+      color: #fff;
+    }
+
+    #sidebarOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: none;
+      z-index: 900;
+    }
+
+    #sidebarOverlay.show {
+      display: block;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    canvas {
+      margin-top: 40px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay y Sidebar -->
+  <div id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar">
+    <h2>VidaFIT QA</h2>
+    <ul class="menu-list">
+      <li>
+        <a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a>
+      </li>
+      <li>
+        <a href="./charts.html" class="menu-link">Ver gráficas</a>
+      </li>
+      <li>
+        <button class="menu-button" id="menuLogout">Cerrar sesión</button>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="header-left">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <h1>Gráficas - VidaFIT QA</h1>
+    </div>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <span id="userInfo"></span>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>📊 Estadísticas del mes actual</h2>
+    <canvas id="monthlyBarChart" height="120"></canvas>
+    <canvas id="trendLineChart" height="120" style="margin-top:50px;"></canvas>
+  </main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import {
+    getFirestore, collection, getDocs, query, orderBy
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  import {
+    getAuth, onAuthStateChanged, signOut
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
+    authDomain: "app-gestion-de-pruebas.firebaseapp.com",
+    projectId: "app-gestion-de-pruebas",
+    storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
+    messagingSenderId: "580009585775",
+    appId: "1:580009585775:web:e086fb73d1381cb4edb19a",
+    measurementId: "G-ED9KFV6FZ5"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const auth = getAuth(app);
+
+  const nombre = localStorage.getItem("nombre") || "";
+  const apellido = localStorage.getItem("apellido") || "";
+  const rol = localStorage.getItem("userRole") || "";
+  document.getElementById("userInfo").textContent = `${nombre} ${apellido} (${rol})`;
+
+  async function cerrarSesion() {
+    try {
+      await signOut(auth);
+    } catch (e) {
+      console.error("Error al cerrar sesión:", e);
+    } finally {
+      localStorage.clear();
+      window.location.href = "./login.html";
+    }
+  }
+
+  document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+  document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
+
+  // Sidebar
+  const sidebar = document.getElementById("sidebar");
+  const sidebarOverlay = document.getElementById("sidebarOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+
+  function openSidebar() {
+    sidebar.classList.add("open");
+    sidebarOverlay.classList.add("show");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("open");
+    sidebarOverlay.classList.remove("show");
+  }
+
+  menuToggle.addEventListener("click", () => {
+    if (sidebar.classList.contains("open")) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  sidebarOverlay.addEventListener("click", closeSidebar);
+
+  document.querySelectorAll(".menu-link").forEach(link => {
+    link.addEventListener("click", closeSidebar);
+  });
+  document.getElementById("menuLogout").addEventListener("click", closeSidebar);
+
+  // Auth guard
+  onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      window.location.href = "./login.html";
+      return;
+    }
+    await cargarYGraficar();
+  });
+
+  async function cargarYGraficar() {
+    try {
+      const q = query(collection(db, "reports"), orderBy("date", "desc"));
+      const snap = await getDocs(q);
+      const data = snap.docs.map(d => d.data());
+      window.reportsData = data;
+      renderizarGraficos();
+    } catch (err) {
+      console.error("Error al cargar reportes para gráficas:", err);
+    }
+  }
+
+  function renderizarGraficos() {
+    const data = window.reportsData || [];
+    if (!data.length) return;
+
+    const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+
+    const monthReports = data.filter(r => {
+      if (!r.date) return false;
+      const d = new Date(r.date);
+      return d.getMonth() === currentMonth && d.getFullYear() === currentYear;
+    });
+
+    if (!monthReports.length) return;
+
+    const daily = {};
+    monthReports.forEach(r => {
+      const d = new Date(r.date);
+      const day = d.getDate();
+      if (!daily[day]) daily[day] = { passed: 0, failed: 0, total: 0 };
+      daily[day].passed += r.passed || 0;
+      daily[day].failed += r.failed || 0;
+      daily[day].total  += r.total  || 0;
+    });
+
+    const labels = Object.keys(daily).sort((a, b) => Number(a) - Number(b));
+    const passed = labels.map(d => daily[d].passed);
+    const failed = labels.map(d => daily[d].failed);
+    const successRate = labels.map(d => {
+      const { passed, total } = daily[d];
+      return total ? (passed / total) * 100 : 0;
+    });
+
+    const barCtx = document.getElementById("monthlyBarChart").getContext("2d");
+    if (window.barChart) window.barChart.destroy();
+    window.barChart = new Chart(barCtx, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          { label: "Pasados", data: passed, backgroundColor: "rgba(46, 204, 113, 0.8)" },
+          { label: "Fallidos", data: failed, backgroundColor: "rgba(231, 76, 60, 0.8)" },
+        ],
+      },
+      options: { responsive: true, scales: { y: { beginAtZero: true } } },
+    });
+
+    const lineCtx = document.getElementById("trendLineChart").getContext("2d");
+    if (window.lineChart) window.lineChart.destroy();
+    window.lineChart = new Chart(lineCtx, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "% Éxito diario",
+            data: successRate,
+            borderColor: "rgba(25, 118, 210, 1)",
+            backgroundColor: "rgba(25, 118, 210, 0.2)",
+            tension: 0.2,
+            fill: true,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true, max: 100, ticks: { callback: value => value + "%" } }
+        }
+      }
+    });
+  }
+</script>
+</body>
+</html>

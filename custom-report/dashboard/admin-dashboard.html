@@ -22,6 +22,9 @@
       color: white;
       padding: 10px 30px;
       border-bottom: 3px solid #1565c0;
+      position: sticky;
+      top: 0;
+      z-index: 800;
     }
 
     header h1 {
@@ -48,6 +51,91 @@
       background-color: #e3f2fd;
     }
 
+    /* ====== MENÚ HAMBURGUESA / SIDEBAR ====== */
+    .menu-toggle {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100%;
+      background-color: #1f2937;
+      color: #fff;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+      padding: 20px 16px;
+      box-sizing: border-box;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 10px;
+    }
+
+    .menu-link,
+    .menu-button {
+      width: 100%;
+      display: block;
+      text-align: left;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: #e5e7eb;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-link:hover,
+    .menu-button:hover {
+      background-color: #2563eb;
+      color: #fff;
+    }
+
+    #sidebarOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: none;
+      z-index: 900;
+    }
+
+    #sidebarOverlay.show {
+      display: block;
+    }
+
     main {
       padding: 20px;
     }
@@ -56,6 +144,8 @@
       display: flex;
       justify-content: space-around;
       margin: 20px 0;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .summary div {
@@ -65,6 +155,7 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
       flex: 1;
+      min-width: 200px;
       margin: 0 10px;
     }
 
@@ -121,8 +212,28 @@
 </head>
 
 <body>
+  <!-- Overlay y Sidebar -->
+  <div id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar">
+    <h2>VidaFIT QA</h2>
+    <ul class="menu-list">
+      <li>
+        <a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a>
+      </li>
+      <li>
+        <a href="./charts.html" class="menu-link" id="menuGraficas">Ver gráficas</a>
+      </li>
+      <li>
+        <button class="menu-button" id="menuLogout">Cerrar sesión</button>
+      </li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>Panel Administrativo - VidaFIT QA</h1>
+    <div class="header-left">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <h1>Panel Administrativo - VidaFIT QA</h1>
+    </div>
     <div style="display: flex; align-items: center; gap: 15px;">
       <span id="userInfo"></span>
       <button id="logoutBtn">Cerrar sesión</button>
@@ -147,7 +258,6 @@
 
   <div class="btn-container">
     <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
-    <button id="btnVisualizar" class="btn" style="margin-left:10px;">Visualizar gráficas</button>
     <button id="btnEjecutar" class="btn" style="margin-left:10px;background:#2ecc71;">Ejecutar ahora</button>
   </div>
 
@@ -165,13 +275,6 @@
     </thead>
     <tbody id="historyBody"></tbody>
   </table>
-
-  <!-- Contenedor de las gráficas -->
-  <section id="chartsSection" style="display:none; margin-top:40px;">
-    <h3 style="text-align:center; margin-bottom:20px;">📊 Estadísticas del mes actual</h3>
-    <canvas id="monthlyBarChart" height="120"></canvas>
-    <canvas id="trendLineChart" height="120" style="margin-top:50px;"></canvas>
-  </section>
 </main>
 
 <script type="module">
@@ -204,12 +307,51 @@
   const rol = localStorage.getItem("userRole") || "";
   document.getElementById("userInfo").textContent = `${nombre} ${apellido} (${rol})`;
 
-  // === CERRAR SESIÓN ===
-  document.getElementById("logoutBtn").addEventListener("click", async () => {
-    await signOut(auth);
-    localStorage.clear();
-    window.location.href = "./login.html";
+  // === FUNCIÓN COMPARTIDA PARA CERRAR SESIÓN ===
+  async function cerrarSesion() {
+    try {
+      await signOut(auth);
+    } catch (e) {
+      console.error("Error al cerrar sesión:", e);
+    } finally {
+      localStorage.clear();
+      window.location.href = "./login.html";
+    }
+  }
+
+  document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+  document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
+
+  // === SIDEBAR (MENÚ HAMBURGUESA) ===
+  const sidebar = document.getElementById("sidebar");
+  const sidebarOverlay = document.getElementById("sidebarOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+
+  function openSidebar() {
+    sidebar.classList.add("open");
+    sidebarOverlay.classList.add("show");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("open");
+    sidebarOverlay.classList.remove("show");
+  }
+
+  menuToggle.addEventListener("click", () => {
+    if (sidebar.classList.contains("open")) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
   });
+
+  sidebarOverlay.addEventListener("click", closeSidebar);
+
+  // Cerrar sidebar al hacer click en algún enlace del menú
+  document.querySelectorAll(".menu-link").forEach(link => {
+    link.addEventListener("click", closeSidebar);
+  });
+  document.getElementById("menuLogout").addEventListener("click", closeSidebar);
 
   // === VERIFICAR SESIÓN ===
   onAuthStateChanged(auth, async (user) => {
@@ -253,21 +395,20 @@
       })
     : "-"
 }</td>
-
           <td>${run.total ?? 0}</td>
           <td style="color:green;">${run.passed ?? 0}</td>
           <td style="color:red;">${run.failed ?? 0}</td>
           <td>${run.duration ?? 0}</td>
           <td>
-  ${run.htmlFile
-    ? `<a href="http://localhost:5000/reports/${run.htmlFile.split('/').pop()}" target="_blank">Ver HTML</a>`
-    : '-'}
-</td>
-<td>
-  ${run.pdfFile
-    ? `<a href="http://localhost:5000/pdfs/${run.pdfFile.split('/').pop()}" target="_blank">Ver PDF</a>`
-    : '-'}
-</td>
+            ${run.htmlFile
+              ? `<a href="http://localhost:5000/reports/${run.htmlFile.split('/').pop()}" target="_blank">Ver HTML</a>`
+              : '-'}
+          </td>
+          <td>
+            ${run.pdfFile
+              ? `<a href="http://localhost:5000/pdfs/${run.pdfFile.split('/').pop()}" target="_blank">Ver PDF</a>`
+              : '-'}
+          </td>
         `;
         tbody.appendChild(row);
       });
@@ -291,8 +432,6 @@
         btn.style.display = 'none';
       }
 
-      window.reportsData = data;
-
     } catch (err) {
       console.error("❌ Error al cargar reportes:", err);
       document.getElementById("historyBody").innerHTML =
@@ -301,110 +440,52 @@
     }
   }
 
-  // === VISUALIZAR GRÁFICAS ===
-  const btnVisualizar = document.getElementById("btnVisualizar");
-  btnVisualizar.addEventListener("click", () => {
-    const section = document.getElementById("chartsSection");
-    section.style.display = section.style.display === "none" ? "block" : "none";
-    if (section.style.display === "block") renderizarGraficos();
-  });
-
   // === BOTÓN: Ejecutar ahora ===
-// === BOTÓN: Ejecutar ahora ===
-const btnEjecutar = document.getElementById("btnEjecutar");
+  const btnEjecutar = document.getElementById("btnEjecutar");
 
-if (btnEjecutar) {
-  btnEjecutar.addEventListener("click", async () => {
-    const uid = localStorage.getItem("uid");
-    const role = localStorage.getItem("userRole") || "qa";
+  if (btnEjecutar) {
+    btnEjecutar.addEventListener("click", async () => {
+      const uid = localStorage.getItem("uid");
+      const role = localStorage.getItem("userRole") || "qa";
 
-    // Confirmación antes de ejecutar
-    if (!confirm("¿Deseas ejecutar las pruebas ahora? Esto puede tardar varios minutos.")) {
-      return;
-    }
-
-    btnEjecutar.textContent = "Ejecutando...";
-    btnEjecutar.disabled = true;
-    btnEjecutar.style.backgroundColor = "#43a047";
-
-    try {
-      // Llamada al servidor local
-      const resp = await fetch("http://localhost:5000/run-tests", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-User-Role": role
-        },
-        body: JSON.stringify({ by: uid })
-      });
-
-      const result = await resp.json();
-
-      if (!resp.ok) {
-        throw new Error(result.message || "Error desconocido durante la ejecución.");
+      if (!confirm("¿Deseas ejecutar las pruebas ahora? Esto puede tardar varios minutos.")) {
+        return;
       }
 
-      alert(result.message);
+      btnEjecutar.textContent = "Ejecutando...";
+      btnEjecutar.disabled = true;
+      btnEjecutar.style.backgroundColor = "#43a047";
 
-      // Esperar unos segundos antes de recargar los reportes
-      setTimeout(async () => {
-        await cargarReportes();
-      }, 4000);
+      try {
+        const resp = await fetch("http://localhost:5000/run-tests", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-User-Role": role
+          },
+          body: JSON.stringify({ by: uid })
+        });
 
-    } catch (err) {
-      console.error("Error al ejecutar pruebas:", err);
-      alert("No se pudieron ejecutar las pruebas. Ver consola para más detalles.");
-    } finally {
-      btnEjecutar.textContent = "Ejecutar ahora";
-      btnEjecutar.disabled = false;
-      btnEjecutar.style.backgroundColor = "#2ecc71";
-    }
-  });
-}
+        const result = await resp.json();
 
+        if (!resp.ok) {
+          throw new Error(result.message || "Error desconocido durante la ejecución.");
+        }
 
-  // === GRÁFICOS ===
-  function renderizarGraficos() {
-    const data = window.reportsData || [];
-    if (!data.length) return;
+        alert(result.message);
 
-    const now = new Date();
-    const currentMonth = now.getMonth();
-    const currentYear = now.getFullYear();
+        setTimeout(async () => {
+          await cargarReportes();
+        }, 4000);
 
-    const monthReports = data.filter(r => {
-      if (!r.date) return false;
-      const d = new Date(r.date);
-      return d.getMonth() === currentMonth && d.getFullYear() === currentYear;
-    });
-
-    if (!monthReports.length) return;
-
-    const daily = {};
-    monthReports.forEach(r => {
-      const d = new Date(r.date);
-      const day = d.getDate();
-      if (!daily[day]) daily[day] = { passed: 0, failed: 0 };
-      daily[day].passed += r.passed || 0;
-      daily[day].failed += r.failed || 0;
-    });
-
-    const labels = Object.keys(daily).sort((a, b) => a - b);
-    const passed = labels.map(d => daily[d].passed);
-    const failed = labels.map(d => daily[d].failed);
-
-    const barCtx = document.getElementById("monthlyBarChart").getContext("2d");
-    if (window.barChart) window.barChart.destroy();
-    window.barChart = new Chart(barCtx, {
-      type: "bar",
-      data: {
-        labels,
-        datasets: [
-          { label: "Pasados", data: passed, backgroundColor: "rgba(46, 204, 113, 0.8)" },
-          { label: "Fallidos", data: failed, backgroundColor: "rgba(231, 76, 60, 0.8)" },
-        ],
-      },
-      options: { responsive: true, scales: { y: { beginAtZero: true } } },
+      } catch (err) {
+        console.error("Error al ejecutar pruebas:", err);
+        alert("No se pudieron ejecutar las pruebas. Ver consola para más detalles.");
+      } finally {
+        btnEjecutar.textContent = "Ejecutar ahora";
+        btnEjecutar.disabled = false;
+        btnEjecutar.style.backgroundColor = "#2ecc71";
+      }
     });
   }
 </script>

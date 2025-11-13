@@ -97,12 +97,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 23862,
+                      "duration": 14504,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:45:58.489Z",
+                      "startTime": "2025-11-13T17:07:26.726Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -131,12 +131,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13356,
+                      "duration": 6362,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:46:24.210Z",
+                      "startTime": "2025-11-13T17:07:42.492Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -165,12 +165,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 14229,
+                      "duration": 10100,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:46:37.611Z",
+                      "startTime": "2025-11-13T17:07:48.892Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -199,12 +199,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 21059,
+                      "duration": 20438,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:46:51.869Z",
+                      "startTime": "2025-11-13T17:07:59.010Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -243,12 +243,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 24108,
+                  "duration": 17091,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:45:58.546Z",
+                  "startTime": "2025-11-13T17:07:26.758Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -263,7 +263,7 @@
         },
         {
           "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -276,92 +276,18 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "timedOut",
-                  "duration": 31967,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.spec.js",
-                        "column": 19,
-                        "line": 98
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('mat-icon.material-icons').filter({ hasText: 'close' })\u001b[22m\n\u001b[2m    - locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"font\" _ngcontent-ng-c164842100=\"\" class=\"mat-icon notranslate material-symbols-rounded font-extralight material-icons mat-ligature-font mat-icon-no-color\">close</mat-icon>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n\n   96 |   const closeIcon = page.locator('mat-icon.material-icons', { hasText: 'close' });\n   97 |   await expect(closeIcon).toBeVisible();\n>  98 |   await closeIcon.click();\n      |                   ^\n   99 |   await page.waitForTimeout(700);\n  100 |\n  101 |   // --- 8. Volver al Home ---\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.spec.js:98:19"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 24212,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:46:24.439Z",
+                  "startTime": "2025-11-13T17:07:45.155Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\error-context.md"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 1,
-                  "status": "timedOut",
-                  "duration": 44140,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-12T18:47:04.225Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "217198a80e852077fe39-d591cb1310efdeb9ad8e",
@@ -382,10 +308,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11544,
+                  "duration": 20958,
                   "errors": [],
                   "stdout": [
                     {
@@ -397,7 +323,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:48:04.591Z",
+                  "startTime": "2025-11-13T17:08:09.379Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -434,12 +360,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 19201,
+                  "duration": 14320,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:45:58.510Z",
+                  "startTime": "2025-11-13T17:07:26.780Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -468,12 +394,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 14499,
+                  "duration": 10758,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:46:19.467Z",
+                  "startTime": "2025-11-13T17:07:42.411Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -501,32 +427,29 @@
                 {
                   "workerIndex": 2,
                   "parallelIndex": 2,
-                  "status": "failed",
-                  "duration": 26570,
+                  "status": "timedOut",
+                  "duration": 32208,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                      "column": 35,
-                      "line": 53
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m abrirMenu() {\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m menuHamburguesa \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(menuHamburguesa)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m menuHamburguesa\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-navigation-hamburger-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m   }\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
                         "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                        "column": 35,
-                        "line": 53
+                        "column": 22,
+                        "line": 72
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://front-qa.vida-fit.com/r\u001b[7mecetas-fitnes\u001b[27ms/\"\u001b[39m\nReceived string: \u001b[31m\"https://front-qa.vida-fit.com/r\u001b[7mutinas-ejercicio\u001b[27ms/\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    4 × unexpected value \"https://front-qa.vida-fit.com/rutinas-ejercicios/\"\u001b[22m\n\n\n  70 |   await expect(menu.getByRole('link', { name: 'Recetas' })).toBeVisible();\n  71 |   await menu.getByRole('link', { name: 'Recetas' }).click();\n> 72 |   await expect(page).toHaveURL('https://front-qa.vida-fit.com/recetas-fitness/');\n     |                      ^\n  73 |   await page.waitForTimeout(700);\n  74 |\n  75 |   // --- 3. Recursos ---\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:72:22"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:46:33.991Z",
+                  "startTime": "2025-11-13T17:07:53.226Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -544,39 +467,37 @@
                       "contentType": "text/markdown",
                       "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\error-context.md"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                    "column": 35,
-                    "line": 53
-                  }
+                  ]
                 },
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 2,
-                  "status": "timedOut",
-                  "duration": 37916,
+                  "status": "failed",
+                  "duration": 32336,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                      "column": 35,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m abrirMenu() {\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m menuHamburguesa \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(menuHamburguesa)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m menuHamburguesa\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-navigation-hamburger-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                        "column": 14,
-                        "line": 101
+                        "column": 35,
+                        "line": 53
                       },
-                      "message": "Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n   99 |   await botonUnete.click();\n  100 |   await expect(page).toHaveURL('https://front-qa.vida-fit.com/auth/signup/');\n> 101 |   await page.waitForTimeout(700);\n      |              ^\n  102 |\n  103 |   // --- 7. Iniciar sesión (y cerrar con X) ---\n  104 |   await abrirMenu();\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:101:14"
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:47:11.048Z",
+                  "startTime": "2025-11-13T17:08:29.257Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -599,7 +520,12 @@
                       "contentType": "application/zip",
                       "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                    "column": 35,
+                    "line": 53
+                  }
                 }
               ],
               "status": "unexpected"
@@ -623,10 +549,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 14,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 13844,
+                  "duration": 12343,
                   "errors": [],
                   "stdout": [
                     {
@@ -638,7 +564,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:48:02.420Z",
+                  "startTime": "2025-11-13T17:09:09.012Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -675,7 +601,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 27136,
+                  "duration": 25671,
                   "errors": [],
                   "stdout": [
                     {
@@ -684,7 +610,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:45:58.634Z",
+                  "startTime": "2025-11-13T17:07:26.749Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -713,12 +639,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 26987,
+                  "duration": 11964,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:46:27.489Z",
+                  "startTime": "2025-11-13T17:07:53.700Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -747,12 +673,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 12888,
+                  "duration": 19282,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:46:54.499Z",
+                  "startTime": "2025-11-13T17:08:05.676Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -781,7 +707,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1385,
+                  "duration": 1143,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
@@ -805,7 +731,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:47:07.400Z",
+                  "startTime": "2025-11-13T17:08:24.970Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -826,10 +752,10 @@
                   }
                 },
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 5,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 978,
+                  "duration": 1011,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
@@ -853,7 +779,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:47:28.123Z",
+                  "startTime": "2025-11-13T17:08:29.311Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -900,10 +826,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 6,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1059,
+                  "duration": 404,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
@@ -927,18 +853,13 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:47:50.084Z",
+                  "startTime": "2025-11-13T17:08:36.506Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\video.webm"
                     }
                   ],
                   "errorLocation": {
@@ -948,10 +869,10 @@
                   }
                 },
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 7,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 699,
+                  "duration": 686,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
@@ -975,7 +896,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:47:54.635Z",
+                  "startTime": "2025-11-13T17:08:38.866Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1022,10 +943,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 8,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 680,
+                  "duration": 679,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
@@ -1049,7 +970,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:47:58.688Z",
+                  "startTime": "2025-11-13T17:08:42.175Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1070,10 +991,10 @@
                   }
                 },
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 9,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1055,
+                  "duration": 808,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
@@ -1097,7 +1018,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:48:03.354Z",
+                  "startTime": "2025-11-13T17:08:44.817Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1144,10 +1065,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 10,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 812,
+                  "duration": 1017,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
@@ -1171,7 +1092,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:48:12.025Z",
+                  "startTime": "2025-11-13T17:08:47.281Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1192,10 +1113,10 @@
                   }
                 },
                 {
-                  "workerIndex": 14,
+                  "workerIndex": 11,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 755,
+                  "duration": 1077,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
@@ -1219,7 +1140,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:48:16.263Z",
+                  "startTime": "2025-11-13T17:08:52.247Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1266,10 +1187,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 15,
-                  "parallelIndex": 1,
+                  "workerIndex": 12,
+                  "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 703,
+                  "duration": 878,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
@@ -1293,7 +1214,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:48:19.531Z",
+                  "startTime": "2025-11-13T17:08:55.135Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1314,10 +1235,10 @@
                   }
                 },
                 {
-                  "workerIndex": 16,
-                  "parallelIndex": 1,
+                  "workerIndex": 13,
+                  "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 728,
+                  "duration": 537,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
@@ -1341,7 +1262,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-11-12T18:48:23.312Z",
+                  "startTime": "2025-11-13T17:08:58.332Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1406,12 +1327,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15298,
+                      "duration": 7429,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:47:13.030Z",
+                      "startTime": "2025-11-13T17:08:19.537Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1440,12 +1361,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17997,
+                      "duration": 5703,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:47:28.371Z",
+                      "startTime": "2025-11-13T17:08:26.978Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1474,12 +1395,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9267,
+                      "duration": 21080,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:47:46.377Z",
+                      "startTime": "2025-11-13T17:08:32.690Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1508,12 +1429,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6334,
+                      "duration": 7134,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:47:55.655Z",
+                      "startTime": "2025-11-13T17:08:53.783Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1550,12 +1471,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10904,
+                      "duration": 5387,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:01.998Z",
+                      "startTime": "2025-11-13T17:09:00.927Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1584,12 +1505,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10808,
+                      "duration": 11533,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:12.935Z",
+                      "startTime": "2025-11-13T17:09:06.321Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1618,12 +1539,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4614,
+                      "duration": 4468,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:23.779Z",
+                      "startTime": "2025-11-13T17:09:17.860Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1652,12 +1573,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7840,
+                      "duration": 3439,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:28.417Z",
+                      "startTime": "2025-11-13T17:09:22.334Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1686,12 +1607,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13925,
+                      "duration": 3989,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:36.266Z",
+                      "startTime": "2025-11-13T17:09:25.777Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1720,12 +1641,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6319,
+                      "duration": 4138,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:50.197Z",
+                      "startTime": "2025-11-13T17:09:29.774Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1754,12 +1675,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16689,
+                      "duration": 3950,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:48:56.522Z",
+                      "startTime": "2025-11-13T17:09:33.917Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1788,12 +1709,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7180,
+                      "duration": 4409,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:13.218Z",
+                      "startTime": "2025-11-13T17:09:37.871Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1822,12 +1743,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5534,
+                      "duration": 4381,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:20.404Z",
+                      "startTime": "2025-11-13T17:09:42.284Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1864,12 +1785,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8149,
+                      "duration": 3718,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:25.942Z",
+                      "startTime": "2025-11-13T17:09:46.671Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1898,12 +1819,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7490,
+                      "duration": 2906,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:34.097Z",
+                      "startTime": "2025-11-13T17:09:50.394Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1932,12 +1853,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7104,
+                      "duration": 3186,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:41.593Z",
+                      "startTime": "2025-11-13T17:09:53.304Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1966,12 +1887,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6136,
+                      "duration": 4189,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:48.702Z",
+                      "startTime": "2025-11-13T17:09:56.495Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2000,12 +1921,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 14796,
+                      "duration": 4853,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:49:54.843Z",
+                      "startTime": "2025-11-13T17:10:00.688Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2042,12 +1963,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4962,
+                      "duration": 3734,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:50:09.644Z",
+                      "startTime": "2025-11-13T17:10:05.545Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2075,69 +1996,18 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 31609,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js",
-                            "column": 10,
-                            "line": 323
-                          },
-                          "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  321 |   const joinButton = page.getByRole('button', { name: /unirme a vida ?fit/i });\n  322 |   await Promise.all([\n> 323 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  324 |     joinButton.click(),\n  325 |   ]);\n  326 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js:323:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-12T18:50:14.613Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\error-context.md"
-                        }
-                      ]
-                    },
-                    {
-                      "workerIndex": 18,
-                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10388,
+                      "duration": 8275,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
-                      "retry": 1,
-                      "startTime": "2025-11-12T18:50:47.194Z",
+                      "retry": 0,
+                      "startTime": "2025-11-13T17:10:09.283Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\trace.zip"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "flaky"
+                  "status": "expected"
                 }
               ],
               "id": "4230db46ec7bad0e53d0-c4f8167a67b78d8e8fda",
@@ -2158,15 +2028,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11324,
+                      "duration": 7152,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-12T18:50:58.842Z",
+                      "startTime": "2025-11-13T17:10:17.563Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2202,83 +2072,24 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 10,
-                  "parallelIndex": 2,
-                  "status": "failed",
-                  "duration": 38709,
-                  "error": {
-                    "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-                    "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:93:10",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                      "column": 10,
-                      "line": 93
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 91 |\u001b[39m   \u001b[36mawait\u001b[39m centerInView(joinButton)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/auth\\/account-success\\/?$/i\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m     joinButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 95 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                        "column": 10,
-                        "line": 93
-                      },
-                      "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  91 |   await centerInView(joinButton);\n  92 |   await Promise.all([\n> 93 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n     |          ^\n  94 |     joinButton.click(),\n  95 |   ]);\n  96 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:93:10"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-12T18:48:16.503Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                    "column": 10,
-                    "line": 93
-                  }
-                },
-                {
-                  "workerIndex": 17,
+                  "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 14081,
+                  "duration": 18211,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Movistar): arijana+1762973336735@androvent.com | Tel: 9284113\n"
+                      "text": "Usuario creado (Movistar): arijana+1763053710652@androvent.com | Tel: 9841449\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-12T18:48:56.450Z",
+                  "retry": 0,
+                  "startTime": "2025-11-13T17:08:30.433Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium-retry1\\trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "1098c23971260b33563e-d29783957568e50cb384",
@@ -2299,19 +2110,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11244,
+                  "duration": 14323,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Digitel): arijana+1762973351983@androvent.com | Tel: 9174424\n"
+                      "text": "Usuario creado (Digitel): arijana+1763053728886@androvent.com | Tel: 9817267\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:49:11.860Z",
+                  "startTime": "2025-11-13T17:08:48.666Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2337,19 +2148,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 43597,
+                  "duration": 38327,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Movistar 2): arijana+1762973363228@androvent.com | Tel: 9531656\n"
+                      "text": "Usuario creado (Movistar 2): arijana+1763053743115@androvent.com | Tel: 9350429\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-12T18:49:23.118Z",
+                  "startTime": "2025-11-13T17:09:03.013Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2367,11 +2178,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-12T18:45:56.223Z",
-    "duration": 314052.54000000004,
-    "expected": 34,
+    "startTime": "2025-11-13T17:07:25.426Z",
+    "duration": 179391.397,
+    "expected": 37,
     "skipped": 0,
-    "unexpected": 7,
-    "flaky": 2
+    "unexpected": 6,
+    "flaky": 0
   }
 }
