@@ -28,6 +28,13 @@
         {
           "outputFile": "playwright-report/results.json"
         }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "custom-report/reports",
+          "open": "never"
+        }
       ]
     ],
     "reportSlowTests": {
@@ -39,12 +46,12 @@
       {
         "outputDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {
           "actualWorkers": 4
         },
-        "id": "",
-        "name": "",
+        "id": "chromium",
+        "name": "chromium",
         "testDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit",
         "testIgnore": [],
         "testMatch": [
@@ -83,19 +90,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17215,
+                      "duration": 23862,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:11:17.322Z",
+                      "startTime": "2025-11-12T18:45:58.489Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -103,7 +110,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "c0c2ad228b46a34b073b-0d30b789650bc449aaed",
+              "id": "c0c2ad228b46a34b073b-938cc3ce736b179842f3",
               "file": "aqustico.spec.js",
               "line": 18,
               "column": 3
@@ -117,19 +124,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6059,
+                      "duration": 13356,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:11:35.864Z",
+                      "startTime": "2025-11-12T18:46:24.210Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -137,7 +144,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "c0c2ad228b46a34b073b-52c45b98f949ca3844eb",
+              "id": "c0c2ad228b46a34b073b-08a9bc6d570c85e46656",
               "file": "aqustico.spec.js",
               "line": 25,
               "column": 3
@@ -151,19 +158,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 14589,
+                      "duration": 14229,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:11:41.938Z",
+                      "startTime": "2025-11-12T18:46:37.611Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -171,7 +178,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "c0c2ad228b46a34b073b-24bb91f2e0b14adea8f0",
+              "id": "c0c2ad228b46a34b073b-a9d739a2e3140b762368",
               "file": "aqustico.spec.js",
               "line": 31,
               "column": 3
@@ -185,19 +192,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7833,
+                      "duration": 21059,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:11:56.536Z",
+                      "startTime": "2025-11-12T18:46:51.869Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -205,7 +212,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "c0c2ad228b46a34b073b-b31a55164608ff80dd5f",
+              "id": "c0c2ad228b46a34b073b-8be1c1583068698df63a",
               "file": "aqustico.spec.js",
               "line": 37,
               "column": 3
@@ -229,19 +236,19 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 14726,
+                  "duration": 24108,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:17.337Z",
+                  "startTime": "2025-11-12T18:45:58.546Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -249,41 +256,115 @@
               "status": "expected"
             }
           ],
-          "id": "217198a80e852077fe39-2667513f3e395c80dcff",
+          "id": "217198a80e852077fe39-045670b294e5d94816e8",
           "file": "menu.spec.js",
           "line": 3,
           "column": 1
         },
         {
           "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 27481,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 31967,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.spec.js",
+                        "column": 19,
+                        "line": 98
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('mat-icon.material-icons').filter({ hasText: 'close' })\u001b[22m\n\u001b[2m    - locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"font\" _ngcontent-ng-c164842100=\"\" class=\"mat-icon notranslate material-symbols-rounded font-extralight material-icons mat-ligature-font mat-icon-no-color\">close</mat-icon>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n\n   96 |   const closeIcon = page.locator('mat-icon.material-icons', { hasText: 'close' });\n   97 |   await expect(closeIcon).toBeVisible();\n>  98 |   await closeIcon.click();\n      |                   ^\n   99 |   await page.waitForTimeout(700);\n  100 |\n  101 |   // --- 8. Volver al Home ---\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.spec.js:98:19"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:33.394Z",
+                  "startTime": "2025-11-12T18:46:24.439Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 44140,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:47:04.225Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium-retry1\\trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "217198a80e852077fe39-59add79c37915c775584",
+          "id": "217198a80e852077fe39-d591cb1310efdeb9ad8e",
           "file": "menu.spec.js",
           "line": 30,
           "column": 1
@@ -297,14 +378,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 12,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 9402,
+                  "duration": 11544,
                   "errors": [],
                   "stdout": [
                     {
@@ -316,7 +397,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:00.887Z",
+                  "startTime": "2025-11-12T18:48:04.591Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -324,7 +405,7 @@
               "status": "expected"
             }
           ],
-          "id": "217198a80e852077fe39-52c9c4c51b4d40d5494e",
+          "id": "217198a80e852077fe39-2bd18cc5915d8256197e",
           "file": "menu.spec.js",
           "line": 118,
           "column": 1
@@ -346,19 +427,19 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 13655,
+                  "duration": 19201,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:17.324Z",
+                  "startTime": "2025-11-12T18:45:58.510Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -366,7 +447,7 @@
               "status": "expected"
             }
           ],
-          "id": "61a1367c8cc6a3d6c234-124839b465d63c23260d",
+          "id": "61a1367c8cc6a3d6c234-3b665ccde69956e1bbfc",
           "file": "menuandroid.spec.js",
           "line": 14,
           "column": 1
@@ -380,19 +461,19 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 9960,
+                  "duration": 14499,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:32.322Z",
+                  "startTime": "2025-11-12T18:46:19.467Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -400,7 +481,7 @@
               "status": "expected"
             }
           ],
-          "id": "61a1367c8cc6a3d6c234-856e2689ee68a1334dc4",
+          "id": "61a1367c8cc6a3d6c234-f978274d12f19f594848",
           "file": "menuandroid.spec.js",
           "line": 19,
           "column": 1
@@ -414,17 +495,17 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "failed",
-                  "duration": 26664,
+                  "duration": 26570,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
                     "location": {
                       "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
                       "column": 35,
@@ -439,29 +520,29 @@
                         "column": 35,
                         "line": 53
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:42.291Z",
+                  "startTime": "2025-11-12T18:46:33.991Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\video.webm"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit-\\error-context.md"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\error-context.md"
                     }
                   ],
                   "errorLocation": {
@@ -469,12 +550,62 @@
                     "column": 35,
                     "line": 53
                   }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 37916,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
+                        "column": 14,
+                        "line": 101
+                      },
+                      "message": "Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n   99 |   await botonUnete.click();\n  100 |   await expect(page).toHaveURL('https://front-qa.vida-fit.com/auth/signup/');\n> 101 |   await page.waitForTimeout(700);\n      |              ^\n  102 |\n  103 |   // --- 7. Iniciar sesión (y cerrar con X) ---\n  104 |   await abrirMenu();\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:101:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:47:11.048Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "61a1367c8cc6a3d6c234-97ff00e5bedcd1a06ee5",
+          "id": "61a1367c8cc6a3d6c234-740ae8d2ff46b3c32a60",
           "file": "menuandroid.spec.js",
           "line": 46,
           "column": 1
@@ -488,14 +619,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 10,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 26486,
+                  "duration": 13844,
                   "errors": [],
                   "stdout": [
                     {
@@ -507,7 +638,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:13.015Z",
+                  "startTime": "2025-11-12T18:48:02.420Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -515,7 +646,7 @@
               "status": "expected"
             }
           ],
-          "id": "61a1367c8cc6a3d6c234-d975bec628a2b396c560",
+          "id": "61a1367c8cc6a3d6c234-bbdbc71fe789bd879f63",
           "file": "menuandroid.spec.js",
           "line": 125,
           "column": 1
@@ -537,14 +668,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 21768,
+                  "duration": 27136,
                   "errors": [],
                   "stdout": [
                     {
@@ -553,7 +684,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:17.324Z",
+                  "startTime": "2025-11-12T18:45:58.634Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -561,7 +692,7 @@
               "status": "expected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-76cf9c30430d2d90e3cc",
+          "id": "3751a7fbcbf64b4952c0-e831ad705eb6a9520c1b",
           "file": "recursoresponsive.spec.js",
           "line": 17,
           "column": 1
@@ -575,19 +706,19 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 8380,
+                  "duration": 26987,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:40.358Z",
+                  "startTime": "2025-11-12T18:46:27.489Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -595,7 +726,7 @@
               "status": "expected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-25e3f3bbc41896e5568d",
+          "id": "3751a7fbcbf64b4952c0-6fe5eaac0aaf141cf146",
           "file": "recursoresponsive.spec.js",
           "line": 99,
           "column": 1
@@ -609,19 +740,19 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 14009,
+                  "duration": 12888,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:11:48.756Z",
+                  "startTime": "2025-11-12T18:46:54.499Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -629,7 +760,7 @@
               "status": "expected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-04ed883dde73dc5d5922",
+          "id": "3751a7fbcbf64b4952c0-caf4915ad402c4ae2817",
           "file": "recursoresponsive.spec.js",
           "line": 115,
           "column": 1
@@ -643,14 +774,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1516,
+                  "duration": 1385,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
@@ -674,18 +805,71 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:02.793Z",
+                  "startTime": "2025-11-12T18:47:07.400Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 1,
+                    "line": 162
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 978,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 1,
+                      "line": 162
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m test(\u001b[32m'Filtro responsive: Entrenamiento'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 162 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m\n \u001b[90m 165 |\u001b[39m   \u001b[90m// Abre panel de filtros\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 1,
+                        "line": 162
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  160 |\n  161 | test('Filtro responsive: Entrenamiento', async ({ page }) => {\n> 162 | await context.grantPermissions(['geolocation']);\n      | ^\n  163 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  164 |\n  165 |   // Abre panel de filtros\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:47:28.123Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
@@ -698,7 +882,7 @@
               "status": "unexpected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-20ecd0caafd3c008bd43",
+          "id": "3751a7fbcbf64b4952c0-07723d8489570ac01130",
           "file": "recursoresponsive.spec.js",
           "line": 161,
           "column": 1
@@ -712,14 +896,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 7,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1550,
+                  "duration": 1059,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
@@ -743,18 +927,71 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:07.894Z",
+                  "startTime": "2025-11-12T18:47:50.084Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 1,
+                    "line": 182
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 699,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 1,
+                      "line": 182
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 180 |\u001b[39m \u001b[90m/** Nutrición */\u001b[39m\n \u001b[90m 181 |\u001b[39m test(\u001b[32m'Filtro responsive: Nutrición'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 182 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 183 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 184 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 185 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 1,
+                        "line": 182
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  180 | /** Nutrición */\n  181 | test('Filtro responsive: Nutrición', async ({ page }) => {\n> 182 | await context.grantPermissions(['geolocation']);\n      | ^\n  183 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  184 |   await page.getByText('Filtros', { exact: true }).click();\n  185 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:47:54.635Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
@@ -767,7 +1004,7 @@
               "status": "unexpected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-82c5267c1801e3622dd3",
+          "id": "3751a7fbcbf64b4952c0-a9acaa4281dbf7785508",
           "file": "recursoresponsive.spec.js",
           "line": 181,
           "column": 1
@@ -781,14 +1018,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 9,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 1516,
+                  "duration": 680,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
@@ -812,18 +1049,71 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:13.305Z",
+                  "startTime": "2025-11-12T18:47:58.688Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 196
+                  }
+                },
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 1055,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 196
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 194 |\u001b[39m \u001b[90m/** Recetas Fitness */\u001b[39m\n \u001b[90m 195 |\u001b[39m test(\u001b[32m'Filtro responsive: Recetas Fitness'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 197 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 198 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 199 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 196
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  194 | /** Recetas Fitness */\n  195 | test('Filtro responsive: Recetas Fitness', async ({ page }) => {\n> 196 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  197 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  198 |   await page.getByText('Filtros', { exact: true }).click();\n  199 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:48:03.354Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
@@ -836,7 +1126,7 @@
               "status": "unexpected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-cadb45cedbd6d570eff0",
+          "id": "3751a7fbcbf64b4952c0-22e042a37ccb1077e0df",
           "file": "recursoresponsive.spec.js",
           "line": 195,
           "column": 1
@@ -850,14 +1140,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 13,
                   "parallelIndex": 3,
                   "status": "failed",
-                  "duration": 772,
+                  "duration": 812,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
@@ -881,18 +1171,71 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:18.372Z",
+                  "startTime": "2025-11-12T18:48:12.025Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 210
+                  }
+                },
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 755,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 210
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 208 |\u001b[39m \u001b[90m/** Vive Fit */\u001b[39m\n \u001b[90m 209 |\u001b[39m test(\u001b[32m'Filtro responsive: Vive Fit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 210 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 211 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 212 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 210
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  208 | /** Vive Fit */\n  209 | test('Filtro responsive: Vive Fit', async ({ page }) => {\n> 210 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  211 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  212 |   await page.getByText('Filtros', { exact: true }).click();\n  213 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:48:16.263Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
@@ -905,7 +1248,7 @@
               "status": "unexpected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-e1c5123372e64cb9bf3e",
+          "id": "3751a7fbcbf64b4952c0-6859da7596443bcfdb0d",
           "file": "recursoresponsive.spec.js",
           "line": 209,
           "column": 1
@@ -919,14 +1262,14 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 3,
+                  "workerIndex": 15,
+                  "parallelIndex": 1,
                   "status": "failed",
-                  "duration": 538,
+                  "duration": 703,
                   "error": {
                     "message": "ReferenceError: context is not defined",
                     "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
@@ -950,18 +1293,71 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:20.690Z",
+                  "startTime": "2025-11-12T18:48:19.531Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\\test-failed-1.png"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios\\video.webm"
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                    "column": 5,
+                    "line": 224
+                  }
+                },
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 728,
+                  "error": {
+                    "message": "ReferenceError: context is not defined",
+                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                      "column": 5,
+                      "line": 224
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 222 |\u001b[39m \u001b[90m/** Rutinas de Ejercicios */\u001b[39m\n \u001b[90m 223 |\u001b[39m test(\u001b[32m'Filtro responsive: Rutinas de Ejercicios'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m\n \u001b[90m 227 |\u001b[39m   \u001b[90m// CORREGIDO: Busca el botón Filtros por texto, no por clase\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
+                        "column": 5,
+                        "line": 224
+                      },
+                      "message": "ReferenceError: context is not defined\n\n  222 | /** Rutinas de Ejercicios */\n  223 | test('Filtro responsive: Rutinas de Ejercicios', async ({ page }) => {\n> 224 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  225 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  226 |\n  227 |   // CORREGIDO: Busca el botón Filtros por texto, no por clase\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:48:23.312Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
@@ -974,7 +1370,7 @@
               "status": "unexpected"
             }
           ],
-          "id": "3751a7fbcbf64b4952c0-234e2af05b4f66b5aa92",
+          "id": "3751a7fbcbf64b4952c0-d2c6adea0a05398c1820",
           "file": "recursoresponsive.spec.js",
           "line": 223,
           "column": 1
@@ -1003,19 +1399,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7523,
+                      "duration": 15298,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:04.489Z",
+                      "startTime": "2025-11-12T18:47:13.030Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1023,7 +1419,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-ef2f06262e262a9c0ccb",
+              "id": "4230db46ec7bad0e53d0-94d3b4c2567938e82bc4",
               "file": "recursos.spec.js",
               "line": 122,
               "column": 3
@@ -1037,19 +1433,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13720,
+                      "duration": 17997,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:12.030Z",
+                      "startTime": "2025-11-12T18:47:28.371Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1057,7 +1453,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-b5e631cf60c4f5d8654d",
+              "id": "4230db46ec7bad0e53d0-23d087d27a3d11d8c89b",
               "file": "recursos.spec.js",
               "line": 138,
               "column": 3
@@ -1071,19 +1467,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5481,
+                      "duration": 9267,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:25.757Z",
+                      "startTime": "2025-11-12T18:47:46.377Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1091,7 +1487,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-980309af9d71d7cda522",
+              "id": "4230db46ec7bad0e53d0-efe8eb45455ee420d5c5",
               "file": "recursos.spec.js",
               "line": 153,
               "column": 3
@@ -1105,19 +1501,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6321,
+                      "duration": 6334,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:31.244Z",
+                      "startTime": "2025-11-12T18:47:55.655Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1125,7 +1521,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-7d9e9573ad1c77a514df",
+              "id": "4230db46ec7bad0e53d0-e20acc1a2ae9e5975811",
               "file": "recursos.spec.js",
               "line": 165,
               "column": 3
@@ -1147,19 +1543,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5468,
+                      "duration": 10904,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:37.571Z",
+                      "startTime": "2025-11-12T18:48:01.998Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1167,7 +1563,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-78464ad6723a84ca258d",
+              "id": "4230db46ec7bad0e53d0-d40bf25471e7c7cd64f6",
               "file": "recursos.spec.js",
               "line": 185,
               "column": 3
@@ -1181,19 +1577,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3954,
+                      "duration": 10808,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:43.043Z",
+                      "startTime": "2025-11-12T18:48:12.935Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1201,7 +1597,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-8e38d20295586912c77d",
+              "id": "4230db46ec7bad0e53d0-5d27e4c162c3f1d517f8",
               "file": "recursos.spec.js",
               "line": 191,
               "column": 3
@@ -1215,19 +1611,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3262,
+                      "duration": 4614,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:47.001Z",
+                      "startTime": "2025-11-12T18:48:23.779Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1235,7 +1631,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-89f65ab2db2ef0cbd168",
+              "id": "4230db46ec7bad0e53d0-20b3269e8970e5826764",
               "file": "recursos.spec.js",
               "line": 197,
               "column": 3
@@ -1249,19 +1645,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3385,
+                      "duration": 7840,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:50.267Z",
+                      "startTime": "2025-11-12T18:48:28.417Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1269,7 +1665,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-4c92e8f890ea33d298e7",
+              "id": "4230db46ec7bad0e53d0-ee66b4215389e0ccd194",
               "file": "recursos.spec.js",
               "line": 203,
               "column": 3
@@ -1283,19 +1679,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3329,
+                      "duration": 13925,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:53.656Z",
+                      "startTime": "2025-11-12T18:48:36.266Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1303,7 +1699,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-2f37ee56cfc1d1c36029",
+              "id": "4230db46ec7bad0e53d0-468e0f40f6247e934d67",
               "file": "recursos.spec.js",
               "line": 209,
               "column": 3
@@ -1317,19 +1713,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3736,
+                      "duration": 6319,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:12:56.990Z",
+                      "startTime": "2025-11-12T18:48:50.197Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1337,7 +1733,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-db05dcb4cc29d8cb780e",
+              "id": "4230db46ec7bad0e53d0-f7659f1faa04a9bdef72",
               "file": "recursos.spec.js",
               "line": 215,
               "column": 3
@@ -1351,19 +1747,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4150,
+                      "duration": 16689,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:00.731Z",
+                      "startTime": "2025-11-12T18:48:56.522Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1371,7 +1767,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-ddf9f1d1c7911e76028a",
+              "id": "4230db46ec7bad0e53d0-0b86a10bfefe0895500c",
               "file": "recursos.spec.js",
               "line": 222,
               "column": 3
@@ -1385,19 +1781,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3331,
+                      "duration": 7180,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:04.886Z",
+                      "startTime": "2025-11-12T18:49:13.218Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1405,7 +1801,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-986d1fdc31888226da89",
+              "id": "4230db46ec7bad0e53d0-5fea349618d09e999420",
               "file": "recursos.spec.js",
               "line": 229,
               "column": 3
@@ -1419,19 +1815,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4247,
+                      "duration": 5534,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:08.221Z",
+                      "startTime": "2025-11-12T18:49:20.404Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1439,7 +1835,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-9c8b6ea0b55ae5cdf6fb",
+              "id": "4230db46ec7bad0e53d0-94a28974dccfb2464f47",
               "file": "recursos.spec.js",
               "line": 235,
               "column": 3
@@ -1461,19 +1857,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2930,
+                      "duration": 8149,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:12.473Z",
+                      "startTime": "2025-11-12T18:49:25.942Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1481,7 +1877,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-b53d14a9aa33d4ff7d18",
+              "id": "4230db46ec7bad0e53d0-0bf7bf3f432febbb01fd",
               "file": "recursos.spec.js",
               "line": 252,
               "column": 3
@@ -1495,19 +1891,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3336,
+                      "duration": 7490,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:15.408Z",
+                      "startTime": "2025-11-12T18:49:34.097Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1515,7 +1911,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-a80469edce491c4b9746",
+              "id": "4230db46ec7bad0e53d0-514a14f563fbfc57c9f1",
               "file": "recursos.spec.js",
               "line": 257,
               "column": 3
@@ -1529,19 +1925,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3767,
+                      "duration": 7104,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:18.748Z",
+                      "startTime": "2025-11-12T18:49:41.593Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1549,7 +1945,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-50746fb78303be63a643",
+              "id": "4230db46ec7bad0e53d0-f9677474080938cda9da",
               "file": "recursos.spec.js",
               "line": 264,
               "column": 2
@@ -1563,19 +1959,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3709,
+                      "duration": 6136,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:22.519Z",
+                      "startTime": "2025-11-12T18:49:48.702Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1583,7 +1979,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-9d5c4e17c103bf4d6d2f",
+              "id": "4230db46ec7bad0e53d0-46405c118995135b5e78",
               "file": "recursos.spec.js",
               "line": 271,
               "column": 3
@@ -1597,19 +1993,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2848,
+                      "duration": 14796,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:26.231Z",
+                      "startTime": "2025-11-12T18:49:54.843Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1617,7 +2013,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-0917eca083b28ddcaf41",
+              "id": "4230db46ec7bad0e53d0-098324ca66be9ec2d8e4",
               "file": "recursos.spec.js",
               "line": 278,
               "column": 3
@@ -1639,19 +2035,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3535,
+                      "duration": 4962,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:29.083Z",
+                      "startTime": "2025-11-12T18:50:09.644Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1659,7 +2055,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-9e6def964838ab8ef2d5",
+              "id": "4230db46ec7bad0e53d0-47952975bc00e46d70f4",
               "file": "recursos.spec.js",
               "line": 288,
               "column": 3
@@ -1673,27 +2069,78 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10034,
-                      "errors": [],
+                      "status": "timedOut",
+                      "duration": 31609,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js",
+                            "column": 10,
+                            "line": 323
+                          },
+                          "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  321 |   const joinButton = page.getByRole('button', { name: /unirme a vida ?fit/i });\n  322 |   await Promise.all([\n> 323 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  324 |     joinButton.click(),\n  325 |   ]);\n  326 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js:323:10"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:32.622Z",
+                      "startTime": "2025-11-12T18:50:14.613Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\error-context.md"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10388,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-12T18:50:47.194Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "status": "expected"
+                  "status": "flaky"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-13eadd91cd842a3c857b",
+              "id": "4230db46ec7bad0e53d0-c4f8167a67b78d8e8fda",
               "file": "recursos.spec.js",
               "line": 307,
               "column": 1
@@ -1707,19 +2154,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 18,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5603,
+                      "duration": 11324,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-05T23:13:42.659Z",
+                      "startTime": "2025-11-12T18:50:58.842Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1727,7 +2174,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-17e155592ce1200a534b",
+              "id": "4230db46ec7bad0e53d0-ca52bc718c18aae82b79",
               "file": "recursos.spec.js",
               "line": 331,
               "column": 1
@@ -1751,31 +2198,90 @@
               "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 10,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 38709,
+                  "error": {
+                    "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:93:10",
+                    "location": {
+                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
+                      "column": 10,
+                      "line": 93
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 91 |\u001b[39m   \u001b[36mawait\u001b[39m centerInView(joinButton)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/auth\\/account-success\\/?$/i\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m     joinButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 95 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
+                        "column": 10,
+                        "line": 93
+                      },
+                      "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  91 |   await centerInView(joinButton);\n  92 |   await Promise.all([\n> 93 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n     |          ^\n  94 |     joinButton.click(),\n  95 |   ]);\n  96 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:93:10"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T18:48:16.503Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
+                    "column": 10,
+                    "line": 93
+                  }
+                },
+                {
+                  "workerIndex": 17,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5515,
+                  "duration": 14081,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Movistar): arijana+1762384330492@androvent.com | Tel: 9504904\n"
+                      "text": "Usuario creado (Movistar): arijana+1762973336735@androvent.com | Tel: 9284113\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-05T23:12:10.332Z",
+                  "retry": 1,
+                  "startTime": "2025-11-12T18:48:56.450Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium-retry1\\trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
-          "id": "1098c23971260b33563e-1ac01d69064ccd50d921",
+          "id": "1098c23971260b33563e-d29783957568e50cb384",
           "file": "registro.spec.js",
           "line": 77,
           "column": 1
@@ -1789,23 +2295,23 @@
               "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 17,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11233,
+                  "duration": 11244,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Digitel): arijana+1762384336284@androvent.com | Tel: 9205323\n"
+                      "text": "Usuario creado (Digitel): arijana+1762973351983@androvent.com | Tel: 9174424\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:15.857Z",
+                  "startTime": "2025-11-12T18:49:11.860Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1813,7 +2319,7 @@
               "status": "expected"
             }
           ],
-          "id": "1098c23971260b33563e-d7095d2a7a4de435d879",
+          "id": "1098c23971260b33563e-1ade262a40a1744102e5",
           "file": "registro.spec.js",
           "line": 104,
           "column": 1
@@ -1827,23 +2333,23 @@
               "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 17,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 38863,
+                  "duration": 43597,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Usuario creado (Movistar 2): arijana+1762384347216@androvent.com | Tel: 9342874\n"
+                      "text": "Usuario creado (Movistar 2): arijana+1762973363228@androvent.com | Tel: 9531656\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-05T23:12:27.097Z",
+                  "startTime": "2025-11-12T18:49:23.118Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1851,7 +2357,7 @@
               "status": "expected"
             }
           ],
-          "id": "1098c23971260b33563e-95ad77de8cc04e10d08e",
+          "id": "1098c23971260b33563e-5e22382a5b4b3d93785a",
           "file": "registro.spec.js",
           "line": 130,
           "column": 1
@@ -1861,11 +2367,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-05T23:11:16.047Z",
-    "duration": 152307.361,
-    "expected": 37,
+    "startTime": "2025-11-12T18:45:56.223Z",
+    "duration": 314052.54000000004,
+    "expected": 34,
     "skipped": 0,
-    "unexpected": 6,
-    "flaky": 0
+    "unexpected": 7,
+    "flaky": 2
   }
 }

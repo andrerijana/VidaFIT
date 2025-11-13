@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrativo - VidaFIT QA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      padding: 10px 30px;
+      border-bottom: 3px solid #1565c0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    #userInfo {
+      font-weight: 500;
+    }
+
+    #logoutBtn {
+      background-color: white;
+      color: #1976d2;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    #logoutBtn:hover {
+      background-color: #e3f2fd;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .summary div {
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    canvas {
+      margin-top: 40px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #145ca1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Panel Administrativo - VidaFIT QA</h1>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <span id="userInfo"></span>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </header>
+
+<main>
+  <div class="summary">
+    <div>
+      <h3>Total de Ejecuciones</h3>
+      <p id="totalRuns">0</p>
+    </div>
+    <div>
+      <h3>Última Ejecución</h3>
+      <p id="lastRun">-</p>
+    </div>
+    <div>
+      <h3>Promedio de Éxito</h3>
+      <p id="avgSuccess">0%</p>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
+    <button id="btnVisualizar" class="btn" style="margin-left:10px;">Visualizar gráficas</button>
+    <button id="btnEjecutar" class="btn" style="margin-left:10px;background:#2ecc71;">Ejecutar ahora</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Tests Totales</th>
+        <th>Pasados</th>
+        <th>Fallidos</th>
+        <th>Duración (s)</th>
+        <th>Reporte HTML</th>
+        <th>Reporte PDF</th>
+      </tr>
+    </thead>
+    <tbody id="historyBody"></tbody>
+  </table>
+
+  <!-- Contenedor de las gráficas -->
+  <section id="chartsSection" style="display:none; margin-top:40px;">
+    <h3 style="text-align:center; margin-bottom:20px;">📊 Estadísticas del mes actual</h3>
+    <canvas id="monthlyBarChart" height="120"></canvas>
+    <canvas id="trendLineChart" height="120" style="margin-top:50px;"></canvas>
+  </section>
+</main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import {
+    getFirestore, collection, getDocs, query, orderBy
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  import {
+    getAuth, onAuthStateChanged, signOut
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+  // === 🔥 CONFIGURACIÓN FIREBASE ===
+  const firebaseConfig = {
+    apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
+    authDomain: "app-gestion-de-pruebas.firebaseapp.com",
+    projectId: "app-gestion-de-pruebas",
+    storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
+    messagingSenderId: "580009585775",
+    appId: "1:580009585775:web:e086fb73d1381cb4edb19a",
+    measurementId: "G-ED9KFV6FZ5"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const auth = getAuth(app);
+
+  // === USUARIO ACTUAL ===
+  const nombre = localStorage.getItem("nombre") || "";
+  const apellido = localStorage.getItem("apellido") || "";
+  const rol = localStorage.getItem("userRole") || "";
+  document.getElementById("userInfo").textContent = `${nombre} ${apellido} (${rol})`;
+
+  // === CERRAR SESIÓN ===
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await signOut(auth);
+    localStorage.clear();
+    window.location.href = "./login.html";
+  });
+
+  // === VERIFICAR SESIÓN ===
+  onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      window.location.href = "./login.html";
+      return;
+    }
+    await cargarReportes();
+  });
+
+  // === CARGAR REPORTES DESDE FIRESTORE ===
+  async function cargarReportes() {
+    try {
+      const q = query(collection(db, "reports"), orderBy("date", "desc"));
+      const snap = await getDocs(q);
+      const data = snap.docs.map(d => d.data());
+
+      const tbody = document.getElementById("historyBody");
+      tbody.innerHTML = "";
+
+      if (data.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7">No hay reportes disponibles.</td></tr>';
+        document.getElementById('btnDescargar').style.display = 'none';
+        return;
+      }
+
+      // === Renderizar la tabla ===
+      data.forEach(run => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${
+  run.date
+    ? new Date(run.date).toLocaleString("es-VE", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      })
+    : "-"
+}</td>
+
+          <td>${run.total ?? 0}</td>
+          <td style="color:green;">${run.passed ?? 0}</td>
+          <td style="color:red;">${run.failed ?? 0}</td>
+          <td>${run.duration ?? 0}</td>
+          <td>
+  ${run.htmlFile
+    ? `<a href="http://localhost:5000/reports/${run.htmlFile.split('/').pop()}" target="_blank">Ver HTML</a>`
+    : '-'}
+</td>
+<td>
+  ${run.pdfFile
+    ? `<a href="http://localhost:5000/pdfs/${run.pdfFile.split('/').pop()}" target="_blank">Ver PDF</a>`
+    : '-'}
+</td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      // === Resumen general ===
+      document.getElementById('totalRuns').textContent = data.length;
+      document.getElementById('lastRun').textContent = data[0].date || '-';
+      const totalPassed = data.reduce((acc, r) => acc + (r.passed || 0), 0);
+      const totalTests  = data.reduce((acc, r) => acc + (r.total  || 0), 0);
+      const avgSuccess  = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
+      document.getElementById('avgSuccess').textContent = `${avgSuccess}%`;
+
+      // === Botón: Descargar último PDF ===
+      const btn = document.getElementById('btnDescargar');
+      const lastPdf = data[0]?.pdfFile;
+      if (lastPdf) {
+        btn.href = lastPdf;
+        btn.style.display = 'inline-block';
+      } else {
+        btn.removeAttribute('href');
+        btn.style.display = 'none';
+      }
+
+      window.reportsData = data;
+
+    } catch (err) {
+      console.error("❌ Error al cargar reportes:", err);
+      document.getElementById("historyBody").innerHTML =
+        `<tr><td colspan="7">Error al cargar los reportes: ${err.code || err.message}</td></tr>`;
+      document.getElementById('btnDescargar').style.display = 'none';
+    }
+  }
+
+  // === VISUALIZAR GRÁFICAS ===
+  const btnVisualizar = document.getElementById("btnVisualizar");
+  btnVisualizar.addEventListener("click", () => {
+    const section = document.getElementById("chartsSection");
+    section.style.display = section.style.display === "none" ? "block" : "none";
+    if (section.style.display === "block") renderizarGraficos();
+  });
+
+  // === BOTÓN: Ejecutar ahora ===
+// === BOTÓN: Ejecutar ahora ===
+const btnEjecutar = document.getElementById("btnEjecutar");
+
+if (btnEjecutar) {
+  btnEjecutar.addEventListener("click", async () => {
+    const uid = localStorage.getItem("uid");
+    const role = localStorage.getItem("userRole") || "qa";
+
+    // Confirmación antes de ejecutar
+    if (!confirm("¿Deseas ejecutar las pruebas ahora? Esto puede tardar varios minutos.")) {
+      return;
+    }
+
+    btnEjecutar.textContent = "Ejecutando...";
+    btnEjecutar.disabled = true;
+    btnEjecutar.style.backgroundColor = "#43a047";
+
+    try {
+      // Llamada al servidor local
+      const resp = await fetch("http://localhost:5000/run-tests", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-User-Role": role
+        },
+        body: JSON.stringify({ by: uid })
+      });
+
+      const result = await resp.json();
+
+      if (!resp.ok) {
+        throw new Error(result.message || "Error desconocido durante la ejecución.");
+      }
+
+      alert(result.message);
+
+      // Esperar unos segundos antes de recargar los reportes
+      setTimeout(async () => {
+        await cargarReportes();
+      }, 4000);
+
+    } catch (err) {
+      console.error("Error al ejecutar pruebas:", err);
+      alert("No se pudieron ejecutar las pruebas. Ver consola para más detalles.");
+    } finally {
+      btnEjecutar.textContent = "Ejecutar ahora";
+      btnEjecutar.disabled = false;
+      btnEjecutar.style.backgroundColor = "#2ecc71";
+    }
+  });
+}
+
+
+  // === GRÁFICOS ===
+  function renderizarGraficos() {
+    const data = window.reportsData || [];
+    if (!data.length) return;
+
+    const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+
+    const monthReports = data.filter(r => {
+      if (!r.date) return false;
+      const d = new Date(r.date);
+      return d.getMonth() === currentMonth && d.getFullYear() === currentYear;
+    });
+
+    if (!monthReports.length) return;
+
+    const daily = {};
+    monthReports.forEach(r => {
+      const d = new Date(r.date);
+      const day = d.getDate();
+      if (!daily[day]) daily[day] = { passed: 0, failed: 0 };
+      daily[day].passed += r.passed || 0;
+      daily[day].failed += r.failed || 0;
+    });
+
+    const labels = Object.keys(daily).sort((a, b) => a - b);
+    const passed = labels.map(d => daily[d].passed);
+    const failed = labels.map(d => daily[d].failed);
+
+    const barCtx = document.getElementById("monthlyBarChart").getContext("2d");
+    if (window.barChart) window.barChart.destroy();
+    window.barChart = new Chart(barCtx, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          { label: "Pasados", data: passed, backgroundColor: "rgba(46, 204, 113, 0.8)" },
+          { label: "Fallidos", data: failed, backgroundColor: "rgba(231, 76, 60, 0.8)" },
+        ],
+      },
+      options: { responsive: true, scales: { y: { beginAtZero: true } } },
+    });
+  }
+</script>
+</body>
+</html>

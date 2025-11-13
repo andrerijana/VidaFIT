@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "start:scheduler": "node scheduler.js"
+    "start:scheduler": "node scheduler.js",
+  "start:server": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,9 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
+    "firebase": "^12.5.0",
     "node-cron": "^4.2.1",
     "puppeteer": "^24.28.0"
   }
