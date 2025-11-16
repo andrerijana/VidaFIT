@@ -153,25 +153,75 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 10px;
     }
+
+    .loader {
+  display: none;
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #1976d2;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Hace que button.menu-link se vea igual a a.menu-link */
+.menu-button-link {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.menu-button-link:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Caja de versión */
+.version-box {
+  margin-top: 25px;
+  padding-left: 4px;
+  font-size: 12px;
+  opacity: 0.85;
+  color: #e5e7eb;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   </style>
 </head>
 <body>
   <!-- Overlay y Sidebar -->
   <div id="sidebarOverlay"></div>
-  <nav class="sidebar" id="sidebar">
-    <h2>VidaFIT QA</h2>
-    <ul class="menu-list">
-      <li>
-        <a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a>
-      </li>
-      <li>
-        <a href="./charts.html" class="menu-link">Ver gráficas</a>
-      </li>
-      <li>
-        <button class="menu-button" id="menuLogout">Cerrar sesión</button>
-      </li>
-    </ul>
-  </nav>
+<nav class="sidebar" id="sidebar">
+  <h2>VidaFIT QA</h2>
+
+  <ul class="menu-list">
+    <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+    <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
+    <li>
+      <button id="menuLogout" class="menu-link menu-button-link">
+        Cerrar sesión
+      </button>
+    </li>
+  </ul>
+
+  <div class="version-box">
+    <strong>Versión:</strong> v2.3 – Nov 2025
+  </div>
+</nav>
+
+
+
 
   <header>
     <div class="header-left">
@@ -186,6 +236,7 @@
 
   <main>
     <h2>📊 Estadísticas del mes actual</h2>
+    <div id="chartsLoader" class="loader"></div>
     <canvas id="monthlyBarChart" height="120"></canvas>
     <canvas id="trendLineChart" height="120" style="margin-top:50px;"></canvas>
   </main>
@@ -271,17 +322,23 @@
     await cargarYGraficar();
   });
 
-  async function cargarYGraficar() {
-    try {
-      const q = query(collection(db, "reports"), orderBy("date", "desc"));
-      const snap = await getDocs(q);
-      const data = snap.docs.map(d => d.data());
-      window.reportsData = data;
-      renderizarGraficos();
-    } catch (err) {
-      console.error("Error al cargar reportes para gráficas:", err);
-    }
+async function cargarYGraficar() {
+  document.getElementById("chartsLoader").style.display = "block";
+
+  try {
+    const q = query(collection(db, "reports"), orderBy("date", "desc"));
+    const snap = await getDocs(q);
+    const data = snap.docs.map(d => d.data());
+
+    window.reportsData = data;
+    renderizarGraficos();
+  } catch (err) {
+    console.error("Error al cargar reportes para gráficas:", err);
+  } finally {
+    document.getElementById("chartsLoader").style.display = "none";
   }
+}
+
 
   function renderizarGraficos() {
     const data = window.reportsData || [];

@@ -173,5 +173,115 @@
     "htmlFile": "http://localhost:5000/reports/index.html",
     "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
     "createdAt": "2025-11-13T17:10:25.673Z"
+  },
+  {
+    "date": "2025-11-13T17:33:12.474Z",
+    "total": 50,
+    "passed": 37,
+    "failed": 13,
+    "duration": 209,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T17:33:12.474Z"
+  },
+  {
+    "date": "2025-11-13T18:02:04.406Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 224,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T18:02:04.406Z"
+  },
+  {
+    "date": "2025-11-13T18:09:23.569Z",
+    "total": 53,
+    "passed": 34,
+    "failed": 19,
+    "duration": 273,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T18:09:23.569Z"
+  },
+  {
+    "date": "2025-11-13T18:29:47.040Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 225,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T18:29:47.040Z"
+  },
+  {
+    "date": "2025-11-13T18:36:03.122Z",
+    "total": 51,
+    "passed": 36,
+    "failed": 15,
+    "duration": 216,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T18:36:03.122Z"
+  },
+  {
+    "date": "2025-11-13T20:14:25.734Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 229,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T20:14:25.734Z"
+  },
+  {
+    "date": "2025-11-13T20:21:55.455Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 204,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T20:21:55.455Z"
+  },
+  {
+    "date": "2025-11-13T20:40:20.710Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 230,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T20:40:20.710Z"
+  },
+  {
+    "date": "2025-11-13T21:06:11.628Z",
+    "total": 50,
+    "passed": 36,
+    "failed": 14,
+    "duration": 230,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T21:06:11.628Z"
+  },
+  {
+    "date": "2025-11-13T21:27:06.478Z",
+    "total": 52,
+    "passed": 35,
+    "failed": 17,
+    "duration": 270,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-13T21:27:06.478Z"
+  },
+  {
+    "date": "2025-11-15T15:29:34.207Z",
+    "total": 53,
+    "passed": 33,
+    "failed": 20,
+    "duration": 325,
+    "htmlFile": "http://localhost:5000/reports/index.html",
+    "pdfFile": "http://localhost:5000/pdfs/reporte_2025-11-06T21-53-29-889Z.pdf",
+    "createdAt": "2025-11-15T15:29:34.207Z"
   }
 ]

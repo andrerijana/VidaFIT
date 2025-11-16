@@ -14,6 +14,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
     }
+
     .login {
       background: white;
       padding: 30px;
@@ -22,6 +23,7 @@
       width: 320px;
       text-align: center;
     }
+
     input, button {
       width: 100%;
       padding: 10px;
@@ -29,77 +31,125 @@
       border-radius: 6px;
       border: 1px solid #ccc;
     }
+
     button {
       background-color: #1976d2;
       color: white;
       border: none;
       cursor: pointer;
       font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
     }
+
     button:hover {
       background-color: #145ca1;
+    }
+
+    /* === Loader dentro del botón === */
+    .loader-btn {
+      border: 3px solid #ffffff60;
+      border-top: 3px solid white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
+
   <div class="login">
     <h2>Acceso VidaFIT QA</h2>
+
     <input id="email" type="email" placeholder="Correo electrónico" />
     <input id="password" type="password" placeholder="Contraseña" />
-    <button id="btnLogin">Ingresar</button>
+
+    <!-- Botón con loader -->
+    <button id="btnLogin">
+      <span id="btnText">Ingresar</span>
+      <div id="btnLoader" class="loader-btn"></div>
+    </button>
+
     <p id="msg" style="color:red;"></p>
   </div>
 
   <script type="module">
-  import { auth, db } from "./firebase-config.js";
-  import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-  import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { auth, db } from "./firebase-config.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-  const btn = document.getElementById("btnLogin");
-  const msg = document.getElementById("msg");
+    const btn = document.getElementById("btnLogin");
+    const msg = document.getElementById("msg");
+    const btnText = document.getElementById("btnText");
+    const btnLoader = document.getElementById("btnLoader");
 
-  btn.addEventListener("click", async () => {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    msg.textContent = "";
-
-    if (!email || !password) {
-      msg.textContent = "Completa todos los campos.";
-      return;
+    function activarLoader() {
+      btnText.textContent = "Ingresando...";
+      btnLoader.style.display = "inline-block";
+      btn.disabled = true;
     }
 
-    try {
-      // Autenticación con Firebase Auth
-      const userCred = await signInWithEmailAndPassword(auth, email, password);
-      const uid = userCred.user.uid;
+    function desactivarLoader() {
+      btnText.textContent = "Ingresar";
+      btnLoader.style.display = "none";
+      btn.disabled = false;
+    }
 
-      // Leer datos desde Firestore (colección "users")
-      const docRef = doc(db, "users", uid);
-      const docSnap = await getDoc(docRef);
+    btn.addEventListener("click", async () => {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      msg.textContent = "";
 
-      if (!docSnap.exists()) {
-        msg.textContent = "Usuario sin información en Firestore.";
+      if (!email || !password) {
+        msg.textContent = "Completa todos los campos.";
         return;
       }
 
-      const data = docSnap.data();
+      activarLoader();
 
-      // Guardar datos del usuario en localStorage
-      localStorage.setItem("uid", uid);
-      localStorage.setItem("userRole", data.role);
-      localStorage.setItem("nombre", data.nombre || "");
-      localStorage.setItem("apellido", data.apellido || "");
-      localStorage.setItem("correo", data.correo || "");
+      try {
+        // Autenticación con Firebase Auth
+        const userCred = await signInWithEmailAndPassword(auth, email, password);
+        const uid = userCred.user.uid;
 
-      // Redirigir al dashboard
-      window.location.href = "./admin-dashboard.html";
+        // Leer datos de Firestore
+        const docRef = doc(db, "users", uid);
+        const docSnap = await getDoc(docRef);
 
-    } catch (error) {
-      console.error(error);
-      msg.textContent = "Error al iniciar sesión: " + error.message;
-    }
-  });
-</script>
+        if (!docSnap.exists()) {
+          desactivarLoader();
+          msg.textContent = "Usuario sin información en Firestore.";
+          return;
+        }
+
+        const data = docSnap.data();
+
+        // Guardar sesión
+        localStorage.setItem("uid", uid);
+        localStorage.setItem("userRole", data.role);
+        localStorage.setItem("nombre", data.nombre || "");
+        localStorage.setItem("apellido", data.apellido || "");
+        localStorage.setItem("correo", data.correo || "");
+
+        // Redirigir
+        window.location.href = "./admin-dashboard.html";
+
+      } catch (error) {
+        console.error(error);
+        msg.textContent = "Error al iniciar sesión: " + error.message;
+        desactivarLoader();
+      }
+    });
+  </script>
 
 </body>
 </html>

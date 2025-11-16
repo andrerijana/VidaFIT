@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel Administrativo - VidaFIT QA</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,14 +44,9 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 14px;
-      transition: background-color 0.3s ease;
     }
 
-    #logoutBtn:hover {
-      background-color: #e3f2fd;
-    }
-
-    /* ====== MENÚ HAMBURGUESA / SIDEBAR ====== */
+    /* ========== SIDEBAR ========== */
     .menu-toggle {
       background: transparent;
       border: none;
@@ -59,12 +54,6 @@
       font-size: 24px;
       cursor: pointer;
       margin-right: 15px;
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     .sidebar {
@@ -75,419 +64,465 @@
       height: 100%;
       background-color: #1f2937;
       color: #fff;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
-      padding: 20px 16px;
-      box-sizing: border-box;
+      padding: 20px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
       transition: left 0.3s ease;
-      z-index: 1000;
+      z-index: 900;
     }
 
     .sidebar.open {
       left: 0;
     }
 
-    .sidebar h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      margin-bottom: 16px;
-    }
-
-    .menu-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .menu-list li {
-      margin-bottom: 10px;
-    }
-
-    .menu-link,
-    .menu-button {
-      width: 100%;
-      display: block;
-      text-align: left;
-      padding: 10px 12px;
-      border-radius: 6px;
-      border: none;
-      background: transparent;
-      color: #e5e7eb;
-      font-size: 14px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .menu-link:hover,
-    .menu-button:hover {
-      background-color: #2563eb;
-      color: #fff;
-    }
-
     #sidebarOverlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0,0,0,0.35);
       display: none;
-      z-index: 900;
+      z-index: 800;
     }
 
     #sidebarOverlay.show {
       display: block;
     }
 
-    main {
-      padding: 20px;
+    .menu-list { padding:0; margin:0; list-style:none; }
+    .menu-link, .menu-button {
+      display:block;
+      padding:10px 12px;
+      border-radius:6px;
+      background:transparent;
+      color:#e5e7eb;
+      text-decoration:none;
+      margin-bottom:10px;
+      cursor:pointer;
     }
+    .menu-link:hover, .menu-button:hover {
+      background:#2563eb;
+    }
+    .page-btn {
+  padding: 8px 14px;
+  margin: 0 5px;
+  font-size: 14px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
+.page-btn:disabled {
+  background: #90a4ae;
+  cursor: not-allowed;
+}
+
+
+    /* ========== RESUMEN ========== */
     .summary {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px 0;
-      flex-wrap: wrap;
-      gap: 10px;
+      display:flex;
+      justify-content:space-around;
+      margin:20px 0;
+      flex-wrap:wrap;
+      gap:15px;
     }
-
     .summary div {
-      background: #fff;
-      padding: 15px 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      flex: 1;
-      min-width: 200px;
-      margin: 0 10px;
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      min-width:200px;
+      flex:1;
+      text-align:center;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      margin-top: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-    }
-
-    th {
-      background-color: #1976d2;
-      color: white;
-    }
-
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    canvas {
-      margin-top: 40px;
-    }
-
+    /* ========== BOTONES ========== */
     .btn-container {
-      text-align: center;
-      margin-bottom: 20px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:15px;
+      margin-bottom:20px;
     }
-
     .btn {
-      display: inline-block;
-      background-color: #1976d2;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      text-decoration: none;
+      background-color:#1976d2;
+      color:white;
+      padding:10px 20px;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn:hover { background:#145ca1; }
+
+    /* Loader dentro del botón */
+    .loader-btn {
+      width:16px;
+      height:16px;
+      border:3px solid #ffffff60;
+      border-top:3px solid white;
+      border-radius:50%;
+      animation:spin 0.8s linear infinite;
+      display:none;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
+    /* ========== TABLA ========== */
+    table {
+      width:100%;
+      background:white;
+      border-collapse:collapse;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    th {
+      background:#1976d2;
+      color:white;
+      padding:12px;
+    }
+    td {
+      padding:10px;
+      text-align:center;
+      border-bottom:1px solid #ddd;
     }
 
-    .btn:hover {
-      background-color: #145ca1;
+    tr:hover { background:#f1f1f1; }
+
+    /* Loader de la tabla */
+    #tableLoader {
+      display:none;
+      text-align:center;
+      padding:20px;
+      font-size:18px;
+      font-weight:bold;
     }
+
+/* Hace que button.menu-link se vea igual a a.menu-link */
+.menu-button-link {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.menu-button-link:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Caja de versión */
+.version-box {
+  margin-top: 25px;
+  padding-left: 4px;
+  font-size: 12px;
+  opacity: 0.85;
+  color: #e5e7eb;
+}
+
+
+
   </style>
 </head>
 
 <body>
-  <!-- Overlay y Sidebar -->
-  <div id="sidebarOverlay"></div>
-  <nav class="sidebar" id="sidebar">
-    <h2>VidaFIT QA</h2>
-    <ul class="menu-list">
-      <li>
-        <a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a>
-      </li>
-      <li>
-        <a href="./charts.html" class="menu-link" id="menuGraficas">Ver gráficas</a>
-      </li>
-      <li>
-        <button class="menu-button" id="menuLogout">Cerrar sesión</button>
-      </li>
-    </ul>
-  </nav>
 
-  <header>
-    <div class="header-left">
-      <button class="menu-toggle" id="menuToggle">☰</button>
-      <h1>Panel Administrativo - VidaFIT QA</h1>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px;">
-      <span id="userInfo"></span>
-      <button id="logoutBtn">Cerrar sesión</button>
-    </div>
-  </header>
+<div id="sidebarOverlay"></div>
+
+<nav class="sidebar" id="sidebar">
+  <h2>VidaFIT QA</h2>
+
+  <ul class="menu-list">
+    <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+    <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
+    <li>
+      <button id="menuLogout" class="menu-link menu-button-link">
+        Cerrar sesión
+      </button>
+    </li>
+  </ul>
+
+  <div class="version-box">
+    <strong>Versión:</strong> v2.3 – Nov 2025
+  </div>
+</nav>
+
+
+
+<header>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <h1>Panel Administrativo - VidaFIT QA</h1>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:20px;">
+    <span id="userInfo"></span>
+    <button id="logoutBtn">Cerrar sesión</button>
+  </div>
+</header>
 
 <main>
+
   <div class="summary">
-    <div>
-      <h3>Total de Ejecuciones</h3>
-      <p id="totalRuns">0</p>
-    </div>
-    <div>
-      <h3>Última Ejecución</h3>
-      <p id="lastRun">-</p>
-    </div>
-    <div>
-      <h3>Promedio de Éxito</h3>
-      <p id="avgSuccess">0%</p>
-    </div>
+    <div><h3>Total de Ejecuciones</h3><p id="totalRuns">0</p></div>
+    <div><h3>Última Ejecución</h3><p id="lastRun">-</p></div>
+    <div><h3>Promedio de Éxito</h3><p id="avgSuccess">0%</p></div>
   </div>
 
   <div class="btn-container">
     <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
-    <button id="btnEjecutar" class="btn" style="margin-left:10px;background:#2ecc71;">Ejecutar ahora</button>
+
+    <button id="btnEjecutar" class="btn" style="background:#2ecc71;">
+      <span id="btnText">Ejecutar ahora</span>
+      <div id="btnLoader" class="loader-btn"></div>
+    </button>
   </div>
+
+  <div id="tableLoader">Cargando resultados...</div>
 
   <table>
     <thead>
       <tr>
-        <th>Fecha</th>
-        <th>Tests Totales</th>
-        <th>Pasados</th>
-        <th>Fallidos</th>
-        <th>Duración (s)</th>
-        <th>Reporte HTML</th>
-        <th>Reporte PDF</th>
+        <th>Fecha</th><th>Tests Totales</th><th>Exitosos</th>
+        <th>Fallidos</th><th>Duración (s)</th><th>Reporte</th><th>Reporte PDF</th>
       </tr>
     </thead>
     <tbody id="historyBody"></tbody>
   </table>
+
+  <div id="paginationControls" style="margin: 20px 0; text-align: center;">
+  <button id="prevPage" class="page-btn">⟨ Anterior</button>
+  <span id="pageInfo" style="margin: 0 10px; font-weight: bold;"></span>
+  <button id="nextPage" class="page-btn">Siguiente ⟩</button>
+</div>
+
+
 </main>
 
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-  import {
-    getFirestore, collection, getDocs, query, orderBy
-  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-  import {
-    getAuth, onAuthStateChanged, signOut
-  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-  // === 🔥 CONFIGURACIÓN FIREBASE ===
-  const firebaseConfig = {
-    apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
-    authDomain: "app-gestion-de-pruebas.firebaseapp.com",
-    projectId: "app-gestion-de-pruebas",
-    storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
-    messagingSenderId: "580009585775",
-    appId: "1:580009585775:web:e086fb73d1381cb4edb19a",
-    measurementId: "G-ED9KFV6FZ5"
-  };
+/* FIREBASE */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getFirestore, collection, getDocs, orderBy, query } 
+  from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut }
+  from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  const auth = getAuth(app);
+const firebaseConfig = {
+  apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
+  authDomain: "app-gestion-de-pruebas.firebaseapp.com",
+  projectId: "app-gestion-de-pruebas",
+  storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
+  messagingSenderId: "580009585775",
+  appId: "1:580009585775:web:e086fb73d1381cb4edb19a"
+};
 
-  // === USUARIO ACTUAL ===
-  const nombre = localStorage.getItem("nombre") || "";
-  const apellido = localStorage.getItem("apellido") || "";
-  const rol = localStorage.getItem("userRole") || "";
-  document.getElementById("userInfo").textContent = `${nombre} ${apellido} (${rol})`;
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
 
-  // === FUNCIÓN COMPARTIDA PARA CERRAR SESIÓN ===
-  async function cerrarSesion() {
-    try {
-      await signOut(auth);
-    } catch (e) {
-      console.error("Error al cerrar sesión:", e);
-    } finally {
-      localStorage.clear();
-      window.location.href = "./login.html";
-    }
+/* Mostrar nombre */
+document.getElementById("userInfo").textContent =
+  `${localStorage.getItem("nombre")} ${localStorage.getItem("apellido")} (${localStorage.getItem("userRole")})`;
+
+/* Sidebar */
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebarOverlay");
+document.getElementById("menuToggle").onclick = () => {
+  sidebar.classList.toggle("open");
+  overlay.classList.toggle("show");
+};
+overlay.onclick = () => {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("show");
+};
+
+/* Cerrar sesión */
+async function cerrarSesion() {
+  await signOut(auth);
+  localStorage.clear();
+  window.location.href = "./login.html";
+}
+document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
+
+/* ======== CARGAR REPORTES ======== */
+
+let lastKnownDate = null;
+
+let allReports = [];
+let currentPage = 1;
+const rowsPerPage = 10;
+
+
+async function cargarReportes() {
+  document.getElementById("tableLoader").style.display = "block";
+
+  const q = query(collection(db, "reports"), orderBy("date", "desc"));
+  const snap = await getDocs(q);
+  const data = snap.docs.map(d => d.data());
+
+  if (data.length > 0) {
+    lastKnownDate = data[0].date;
   }
 
-  document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
-  document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
+  // Guardamos todo para paginación
+  allReports = data;
 
-  // === SIDEBAR (MENÚ HAMBURGUESA) ===
-  const sidebar = document.getElementById("sidebar");
-  const sidebarOverlay = document.getElementById("sidebarOverlay");
-  const menuToggle = document.getElementById("menuToggle");
+  // Renderizar primera página
+  renderTablePage();
 
-  function openSidebar() {
-    sidebar.classList.add("open");
-    sidebarOverlay.classList.add("show");
-  }
+  // Datos resumen
+  document.getElementById("totalRuns").textContent = data.length;
 
-  function closeSidebar() {
-    sidebar.classList.remove("open");
-    sidebarOverlay.classList.remove("show");
-  }
+  document.getElementById("lastRun").textContent =
+    data[0]
+      ? new Date(data[0].date).toLocaleString("es-VE", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true
+        })
+      : "-";
 
-  menuToggle.addEventListener("click", () => {
-    if (sidebar.classList.contains("open")) {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
+  const totalPassed = data.reduce((acc, r) => acc + (r.passed || 0), 0);
+  const totalTests = data.reduce((acc, r) => acc + (r.total || 0), 0);
+  const avg = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
+
+  document.getElementById("avgSuccess").textContent = `${avg}%`;
+
+  document.getElementById("tableLoader").style.display = "none";
+}
+
+function renderTablePage() {
+  const tbody = document.getElementById("historyBody");
+  tbody.innerHTML = "";
+
+  const start = (currentPage - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+
+  const pageData = allReports.slice(start, end);
+
+  pageData.forEach(run => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${new Date(run.date).toLocaleString("es-VE")}</td>
+      <td>${run.total}</td>
+      <td style="color:green;">${run.passed}</td>
+      <td style="color:red;">${run.failed}</td>
+      <td>${run.duration}</td>
+      <td>${run.htmlFile ? `<a href="${run.htmlFile}" target="_blank">Ver Reporte</a>` : "-"}</td>
+      <td>${run.pdfFile ? `<a href="${run.pdfFile}" target="_blank">Descargar</a>` : "-"}</td>
+    `;
+    tbody.appendChild(row);
   });
 
-  sidebarOverlay.addEventListener("click", closeSidebar);
+  const totalPages = Math.ceil(allReports.length / rowsPerPage);
+  document.getElementById("pageInfo").textContent =
+    `Página ${currentPage} de ${totalPages}`;
 
-  // Cerrar sidebar al hacer click en algún enlace del menú
-  document.querySelectorAll(".menu-link").forEach(link => {
-    link.addEventListener("click", closeSidebar);
-  });
-  document.getElementById("menuLogout").addEventListener("click", closeSidebar);
+  document.getElementById("prevPage").disabled = currentPage === 1;
+  document.getElementById("nextPage").disabled = currentPage === totalPages;
+}
 
-  // === VERIFICAR SESIÓN ===
-  onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-      window.location.href = "./login.html";
-      return;
-    }
-    await cargarReportes();
-  });
 
-  // === CARGAR REPORTES DESDE FIRESTORE ===
-  async function cargarReportes() {
-    try {
+/* ==== POLLING (SOLO DETECTAR CAMBIO, NO REFRESCAR) ==== */
+async function esperarNuevoReporte() {
+  return new Promise(resolve => {
+    const check = setInterval(async () => {
       const q = query(collection(db, "reports"), orderBy("date", "desc"));
       const snap = await getDocs(q);
       const data = snap.docs.map(d => d.data());
 
-      const tbody = document.getElementById("historyBody");
-      tbody.innerHTML = "";
-
-      if (data.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7">No hay reportes disponibles.</td></tr>';
-        document.getElementById('btnDescargar').style.display = 'none';
-        return;
+      if (!data.length) return;
+      if (data[0].date !== lastKnownDate) {
+        lastKnownDate = data[0].date;
+        clearInterval(check);
+        resolve();
       }
+    }, 5000);
+  });
+}
 
-      // === Renderizar la tabla ===
-      data.forEach(run => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${
-  run.date
-    ? new Date(run.date).toLocaleString("es-VE", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true
-      })
-    : "-"
-}</td>
-          <td>${run.total ?? 0}</td>
-          <td style="color:green;">${run.passed ?? 0}</td>
-          <td style="color:red;">${run.failed ?? 0}</td>
-          <td>${run.duration ?? 0}</td>
-          <td>
-            ${run.htmlFile
-              ? `<a href="http://localhost:5000/reports/${run.htmlFile.split('/').pop()}" target="_blank">Ver HTML</a>`
-              : '-'}
-          </td>
-          <td>
-            ${run.pdfFile
-              ? `<a href="http://localhost:5000/pdfs/${run.pdfFile.split('/').pop()}" target="_blank">Ver PDF</a>`
-              : '-'}
-          </td>
-        `;
-        tbody.appendChild(row);
-      });
+/* ==== BOTÓN EJECUTAR ==== */
+const btnEjecutar = document.getElementById("btnEjecutar");
+const btnText = document.getElementById("btnText");
+const btnLoader = document.getElementById("btnLoader");
 
-      // === Resumen general ===
-      document.getElementById('totalRuns').textContent = data.length;
-      document.getElementById('lastRun').textContent = data[0].date || '-';
-      const totalPassed = data.reduce((acc, r) => acc + (r.passed || 0), 0);
-      const totalTests  = data.reduce((acc, r) => acc + (r.total  || 0), 0);
-      const avgSuccess  = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
-      document.getElementById('avgSuccess').textContent = `${avgSuccess}%`;
+btnEjecutar.onclick = async () => {
+  if (!confirm("¿Deseas ejecutar las pruebas ahora?")) return;
 
-      // === Botón: Descargar último PDF ===
-      const btn = document.getElementById('btnDescargar');
-      const lastPdf = data[0]?.pdfFile;
-      if (lastPdf) {
-        btn.href = lastPdf;
-        btn.style.display = 'inline-block';
-      } else {
-        btn.removeAttribute('href');
-        btn.style.display = 'none';
-      }
+  const uid = localStorage.getItem("uid");
+  const role = localStorage.getItem("userRole") || "qa";
 
-    } catch (err) {
-      console.error("❌ Error al cargar reportes:", err);
-      document.getElementById("historyBody").innerHTML =
-        `<tr><td colspan="7">Error al cargar los reportes: ${err.code || err.message}</td></tr>`;
-      document.getElementById('btnDescargar').style.display = 'none';
-    }
-  }
+  // Activar loader
+  btnText.textContent = "Ejecutando...";
+  btnLoader.style.display = "inline-block";
+  btnEjecutar.disabled = true;
+  btnEjecutar.style.background = "#43a047";
 
-  // === BOTÓN: Ejecutar ahora ===
-  const btnEjecutar = document.getElementById("btnEjecutar");
-
-  if (btnEjecutar) {
-    btnEjecutar.addEventListener("click", async () => {
-      const uid = localStorage.getItem("uid");
-      const role = localStorage.getItem("userRole") || "qa";
-
-      if (!confirm("¿Deseas ejecutar las pruebas ahora? Esto puede tardar varios minutos.")) {
-        return;
-      }
-
-      btnEjecutar.textContent = "Ejecutando...";
-      btnEjecutar.disabled = true;
-      btnEjecutar.style.backgroundColor = "#43a047";
-
-      try {
-        const resp = await fetch("http://localhost:5000/run-tests", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-User-Role": role
-          },
-          body: JSON.stringify({ by: uid })
-        });
-
-        const result = await resp.json();
-
-        if (!resp.ok) {
-          throw new Error(result.message || "Error desconocido durante la ejecución.");
-        }
-
-        alert(result.message);
-
-        setTimeout(async () => {
-          await cargarReportes();
-        }, 4000);
-
-      } catch (err) {
-        console.error("Error al ejecutar pruebas:", err);
-        alert("No se pudieron ejecutar las pruebas. Ver consola para más detalles.");
-      } finally {
-        btnEjecutar.textContent = "Ejecutar ahora";
-        btnEjecutar.disabled = false;
-        btnEjecutar.style.backgroundColor = "#2ecc71";
-      }
+  try {
+    await fetch("http://localhost:5000/run-tests", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-User-Role": role
+      },
+      body: JSON.stringify({ by: uid })
     });
+
+    alert("Pruebas iniciadas… esperando finalización.");
+
+    /* Esperar FINAL REAL */
+    await esperarNuevoReporte();
+
+    /* Solo refrescar tabla una vez (NO PARPADEA) */
+    await cargarReportes();
+
+    alert("✔ Ejecución finalizada.");
+
+  } catch (err) {
+    alert("Error ejecutando pruebas.");
+    console.error(err);
   }
+
+  // Restaurar botón
+  btnText.textContent = "Ejecutar ahora";
+  btnLoader.style.display = "none";
+  btnEjecutar.disabled = false;
+  btnEjecutar.style.background = "#2ecc71";
+};
+
+/* Inicializar tabla al cargar */
+onAuthStateChanged(auth, user => {
+  if (!user) return (window.location.href = "./login.html");
+  cargarReportes();
+});
+
+document.getElementById("prevPage").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderTablePage();
+  }
+});
+
+document.getElementById("nextPage").addEventListener("click", () => {
+  const totalPages = Math.ceil(allReports.length / rowsPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    renderTablePage();
+  }
+});
+
+
 </script>
 </body>
 </html>
+
