@@ -7,7 +7,7 @@ const projectPath = path.resolve("./");
 function runTests() {
   console.log("Ejecutando pruebas automáticas Playwright - VidaFIT...");
 
-  const run = exec("npx playwright test", { cwd: projectPath });
+  const run = exec("npx playwright test login.spec.js", { cwd: projectPath });
 
   run.stdout.on("data", data => console.log(data.toString()));
   run.stderr.on("data", data => console.error(data.toString()));

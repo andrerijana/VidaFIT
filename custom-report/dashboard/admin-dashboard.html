@@ -379,6 +379,17 @@ async function cargarReportes() {
 
   // Datos resumen
   document.getElementById("totalRuns").textContent = data.length;
+  // Actualizar botón de descarga del último PDF
+const btnPDF = document.getElementById("btnDescargar");
+
+if (data[0]?.pdfFile) {
+  btnPDF.href = data[0].pdfFile;
+  btnPDF.style.display = "inline-block";
+} else {
+  btnPDF.href = "#";
+  btnPDF.style.display = "none"; // Si no hay PDF, ocultamos el botón
+}
+
 
   document.getElementById("lastRun").textContent =
     data[0]

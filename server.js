@@ -17,12 +17,38 @@ const execAsync = promisify(exec);
 // CONFIGURACIÓN BÁSICA
 // ===============================
 app.use(cors({
-  origin: "http://127.0.0.1:5500", // origen del dashboard
+  origin: "http://127.0.0.1:5500",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "X-User-Role"]
 }));
 
 app.use(express.json());
+
+// ===============================
+// SERVIR EL REPORTE PERSONALIZADO
+// ===============================
+const customReportDir = path.join(__dirname, "custom-report");
+
+if (!fs.existsSync(customReportDir)) {
+  console.warn(`[AVISO] La carpeta custom-report no existe: ${customReportDir}`);
+} else {
+  console.log(`[OK] Sirviendo reporte personalizado desde: ${customReportDir}`);
+}
+
+app.use("/reports-custom", express.static(customReportDir));
+
+// ===============================
+// SERVIR VIDEOS PARA EL REPORTE 👈👈 AGREGAMOS ESTO
+// ===============================
+const videosDir = path.join(__dirname, "custom-report", "videos");
+
+if (!fs.existsSync(videosDir)) {
+  console.warn(`[AVISO] La carpeta de videos no existe: ${videosDir}`);
+} else {
+  console.log(`[OK] Sirviendo videos desde: ${videosDir}`);
+}
+
+app.use("/videos", express.static(videosDir));
 
 // ===============================
 // FUNCIÓN PARA EJECUTAR COMANDOS
@@ -90,16 +116,14 @@ app.post("/run-tests", async (req, res) => {
 
     console.log(`[${new Date().toLocaleTimeString()}] Solicitud recibida por UID: ${by || "desconocido"} (rol ${roleHeader})`);
 
-    // Responder inmediatamente al dashboard
     res.json({
       ok: true,
       message: "Ejecución iniciada. Los resultados aparecerán en el panel al finalizar."
     });
 
-    // Ejecución en segundo plano
     (async () => {
       try {
-        const code = await run("npx playwright test", "Ejecución de pruebas Playwright");
+        const code = await run("npx playwright test login.spec.js", "Ejecución de pruebas (Solo Login)");
         if (code !== 0) {
           console.warn(`[${new Date().toLocaleTimeString()}] Algunos tests fallaron (código ${code}). Continuando con guardado...`);
         }

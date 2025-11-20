@@ -6,8 +6,9 @@ import type {
   TestCase,
   TestResult
 } from '@playwright/test/reporter';
-import { mkdirSync, writeFileSync } from 'fs';
-import { dirname } from 'path';
+import { mkdirSync, writeFileSync, copyFileSync } from 'fs';
+import { dirname, join } from 'path';
+
 
 type StepLike = {
   title: string;
@@ -39,38 +40,66 @@ class MyCustomHtmlReporter implements Reporter {
     // Ej: this.outputFile = process.env.MY_REPORT_OUT || this.outputFile;
   }
 
-  onTestEnd(test: TestCase, result: TestResult) {
-    const status =
-      (result.status as TestItem['status']) ||
-      (result.error ? 'failed' : 'passed');
+onTestEnd(test: TestCase, result: TestResult) {
+  const status =
+    (result.status as TestItem['status']) ||
+    (result.error ? 'failed' : 'passed');
 
-    if (status === 'passed') this.passed++;
-    else if (status === 'failed' || status === 'timedOut' || status === 'interrupted') this.failed++;
-
-    // Buscar video (Playwright lo adjunta como attachment cuando use.video está activo)
-    const videoAttachment = result.attachments.find(
-      a =>
-        (a.name && a.name.toLowerCase().includes('video')) ||
-        (a.contentType && a.contentType.includes('video')) ||
-        (a.path && a.path.endsWith('.webm'))
-    );
-
-    // Pasos (si usas test.step). En versiones recientes, result.steps está disponible.
-    // Hacemos fallback por si no existiera.
-    // @ts-ignore - algunos tipos no exponen steps públicamente en ciertas versiones
-    const steps = (result.steps as any[] | undefined)?.map(s => this.serializeStep(s));
-
-    this.results.push({
-      title: test.title,
-      file: test.location?.file || '',
-      project: test.parent?.project()?.name,
-      status,
-      duration: result.duration,
-      error: result.error ? (result.error.message || String(result.error)) : undefined,
-      steps,
-      videoPath: videoAttachment?.path
-    });
+  if (status === 'passed') this.passed++;
+  else if (status === 'failed' || status === 'timedOut' || status === 'interrupted') {
+    this.failed++;
   }
+
+  // Buscar el attachment de video que Playwright genera
+  const videoAttachment = result.attachments.find(
+    a =>
+      (a.name && a.name.toLowerCase().includes('video')) ||
+      (a.contentType && a.contentType.includes('video')) ||
+      (a.path && a.path.endsWith('.webm'))
+  );
+
+  // Pasos (si usas test.step)
+  // @ts-ignore
+  const steps = (result.steps as any[] | undefined)?.map(s => this.serializeStep(s));
+
+  // ==========================
+  //  COPIAR VIDEO A /custom-report/videos
+  // ==========================
+  let finalVideoPath: string | undefined = undefined;
+
+  if (videoAttachment?.path) {
+    try {
+      const videosDir = join(process.cwd(), "custom-report", "videos");
+      mkdirSync(videosDir, { recursive: true });
+
+      // Nombre amigable para el archivo de video
+      const safeTitle = test.title.replace(/[^\w\d_-]+/g, "_").slice(0, 40);
+      const videoFileName = `video_${safeTitle}_${Date.now()}.webm`;
+      const destPath = join(videosDir, videoFileName);
+
+      // Copiar el archivo desde la ruta temporal de Playwright
+      copyFileSync(videoAttachment.path, destPath);
+
+      // Ruta relativa que usará el HTML (index.html está en custom-report)
+      finalVideoPath = `videos/${videoFileName}`;
+      console.log("Video copiado a:", finalVideoPath);
+    } catch (e) {
+      console.error("Error copiando video:", e);
+    }
+  }
+
+  this.results.push({
+    title: test.title,
+    file: test.location?.file || '',
+    project: test.parent?.project()?.name,
+    status,
+    duration: result.duration,
+    error: result.error ? (result.error.message || String(result.error)) : undefined,
+    steps,
+    videoPath: finalVideoPath // 👈 AHORA apunta a custom-report/videos/...
+  });
+}
+
 
   private serializeStep(s: any): StepLike {
     const childSteps = (s.steps || []).map((c: any) => this.serializeStep(c));
