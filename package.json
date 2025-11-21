@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx playwright test",
     "start:scheduler": "node scheduler.js",
-  "start:server": "node server.js"
+    "start:server": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "firebase": "^12.5.0",
+    "firebase-admin": "^13.6.0",
     "node-cron": "^4.2.1",
     "puppeteer": "^24.28.0"
   }

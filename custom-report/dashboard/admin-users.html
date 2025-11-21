@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Usuarios - VidaFIT QA</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      padding: 10px 30px;
+      border-bottom: 3px solid #1565c0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    #logoutBtn {
+      background-color: white;
+      color: #1976d2;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* SIDEBAR */
+    .menu-toggle {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100%;
+      background-color: #1f2937;
+      color: #fff;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 900;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    #sidebarOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: none;
+      z-index: 800;
+    }
+
+    #sidebarOverlay.show {
+      display: block;
+    }
+
+    .menu-list { list-style: none; padding: 0; margin: 0; }
+    .menu-link, .menu-button-link {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: #e5e7eb;
+      text-decoration: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .menu-link:hover, .menu-button-link:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    .version-box {
+      margin-top: 25px;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    /* FORMULARIO */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    input, select {
+      width: 95%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #1976d2;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover { background: #145ca1; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      background: white;
+    }
+
+    th {
+      background: #1976d2;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    tr:hover {
+      background: #f9f9f9;
+    }
+
+    .action-btn {
+      padding: 6px 10px;
+      font-size: 12px;
+      margin: 2px;
+    }
+
+    .delete-btn { background: #e53935; }
+    .suspend-btn { background: #ff9800; }
+    .activate-btn { background: #43a047; }
+  </style>
+</head>
+
+<body>
+
+<div id="sidebarOverlay"></div>
+
+<nav class="sidebar" id="sidebar">
+  <h2>VidaFIT QA</h2>
+
+  <ul class="menu-list">
+    <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+
+    <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
+
+    <li><a href="./admin-users.html" class="menu-link">Gestión de usuarios</a></li>
+
+    <li>
+      <button id="menuLogout" class="menu-button-link">Cerrar sesión</button>
+    </li>
+  </ul>
+
+  <div class="version-box">
+    <strong>Versión:</strong> v2.3 – Nov 2025
+  </div>
+</nav>
+
+<header>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <h1>Gestión de Usuarios</h1>
+  </div>
+
+  <button id="logoutBtn">Cerrar sesión</button>
+</header>
+
+<div class="container">
+
+<h2>Crear nuevo usuario</h2>
+
+<input id="newName" type="text" placeholder="Nombre">
+<input id="newLastName" type="text" placeholder="Apellido">
+<input id="newEmail" type="email" placeholder="Correo electrónico">
+
+<!-- Password -->
+<input id="newPassword" type="password" placeholder="Contraseña" autocomplete="new-password">
+
+<div id="passwordRules" style="display:none; margin-left:5px; font-size:13px;">
+  <p id="ruleLength">❌ Mínimo 8 caracteres</p>
+  <p id="ruleUpper">❌ Al menos una mayúscula</p>
+  <p id="ruleLower">❌ Al menos una minúscula</p>
+  <p id="ruleNumber">❌ Al menos un número</p>
+  <p id="ruleSpecial">❌ Al menos un caracter especial (!@#$%^&*)</p>
+</div>
+
+<input id="newPassword2" type="password" placeholder="Confirmar contraseña" autocomplete="new-password">
+
+<select id="newRole">
+  <option value="qa">QA</option>
+  <option value="admin">Administrador</option>
+</select>
+
+<button id="btnCreateUser">Crear usuario</button>
+
+<p id="createMsg" style="font-weight: bold; margin-top: 8px;"></p>
+
+  <hr>
+
+  <h2>Usuarios registrados</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Rol</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody id="usersTable"></tbody>
+  </table>
+
+</div>
+
+<script type="module">
+
+// ===== FIREBASE IMPORT CLIENT (Solo para logout y seguridad básica) =====
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
+  authDomain: "app-gestion-de-pruebas.firebaseapp.com",
+  projectId: "app-gestion-de-pruebas",
+  storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
+  messagingSenderId: "580009585775",
+  appId: "1:580009585775:web:e086fb73d1381cb4edb19a"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+// ========================================
+//   CONTROL DE ACCESO SOLO ADMIN
+// ========================================
+const currentRole = (localStorage.getItem("userRole") || "").toLowerCase();
+
+if (currentRole !== "admin") {
+  alert("Acceso denegado. Solo administradores pueden entrar aquí.");
+  window.location.href = "./admin-dashboard.html";
+}
+
+
+// ========================================
+//   SIDEBAR
+// ========================================
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebarOverlay");
+
+document.getElementById("menuToggle").onclick = () => {
+  sidebar.classList.toggle("open");
+  overlay.classList.toggle("show");
+};
+
+overlay.onclick = () => {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("show");
+};
+
+
+// ========================================
+//   LOGOUT
+// ========================================
+async function cerrarSesion() {
+  await signOut(auth);
+  localStorage.clear();
+  window.location.href = "./login.html";
+}
+
+document.getElementById("logoutBtn").onclick = cerrarSesion;
+document.getElementById("menuLogout").onclick = cerrarSesion;
+
+// ============================
+// VALIDACIÓN EN VIVO CONTRASEÑA
+// ============================
+
+const pass = document.getElementById("newPassword");
+const rules = document.getElementById("passwordRules");
+
+pass.addEventListener("focus", () => {
+  rules.style.display = "block";
+});
+
+pass.addEventListener("input", () => {
+  const val = pass.value;
+
+  const validations = {
+    ruleLength: val.length >= 8,
+    ruleUpper: /[A-Z]/.test(val),
+    ruleLower: /[a-z]/.test(val),
+    ruleNumber: /\d/.test(val),
+    ruleSpecial: /[!@#$%^&*(),.?":{}|<>]/.test(val),
+  };
+
+  Object.entries(validations).forEach(([id, ok]) => {
+    const el = document.getElementById(id);
+    el.style.color = ok ? "green" : "#e53935";
+    el.textContent = `${ok ? "✔" : "❌"} ${el.textContent.slice(2)}`;
+  });
+});
+
+// ========================================
+//   LISTAR USUARIOS
+// ========================================
+async function loadUsers() {
+  const table = document.getElementById("usersTable");
+  table.innerHTML = "<tr><td colspan='5'>Cargando...</td></tr>";
+
+  const resp = await fetch("http://localhost:5000/admin/list-users", {
+    headers: { "X-User-Role": currentRole }
+  });
+
+  const data = await resp.json();
+  if (!data.ok) {
+    table.innerHTML = "<tr><td colspan='5'>Error cargando usuarios</td></tr>";
+    return;
+  }
+
+  table.innerHTML = "";
+
+  data.users.forEach(u => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${u.nombre || ""} ${u.apellido || ""}</td>
+      <td>${u.correo}</td>
+      <td>${u.role.toUpperCase()}</td>
+      <td>${u.status}</td>
+
+      <td>
+        <button class="action-btn" onclick="updateRole('${u.uid}', '${u.role}')">Cambiar rol</button>
+
+        ${u.status === "active"
+          ? `<button class="action-btn suspend-btn" onclick="updateStatus('${u.uid}', 'suspended')">Suspender</button>`
+          : `<button class="action-btn activate-btn" onclick="updateStatus('${u.uid}', 'active')">Activar</button>`
+        }
+
+        <button class="action-btn delete-btn" onclick="deleteUser('${u.uid}')">Eliminar</button>
+      </td>
+    `;
+
+    table.appendChild(row);
+  });
+}
+
+window.updateRole = async function (uid, currentRole) {
+  const newRole = currentRole === "admin" ? "qa" : "admin";
+
+  if (!confirm(`¿Cambiar rol a ${newRole}?`)) return;
+
+  await fetch("http://localhost:5000/admin/update-user-role", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-User-Role": "admin"
+    },
+    body: JSON.stringify({ uid, role: newRole })
+  });
+
+  loadUsers();
+};
+
+window.updateStatus = async function (uid, status) {
+  await fetch("http://localhost:5000/admin/update-user-status", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-User-Role": "admin"
+    },
+    body: JSON.stringify({ uid, status })
+  });
+
+  loadUsers();
+};
+
+window.deleteUser = async function (uid) {
+  if (!confirm("¿Seguro que deseas eliminar este usuario?")) return;
+
+  await fetch("http://localhost:5000/admin/delete-user", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      "X-User-Role": "admin"
+    },
+    body: JSON.stringify({ uid })
+  });
+
+  loadUsers();
+};
+
+
+// ========================================
+//   CREAR USUARIO
+// ========================================
+document.getElementById("btnCreateUser").onclick = async () => {
+  const msg = document.getElementById("createMsg");
+  msg.style.color = "#e53935";
+  msg.textContent = "";
+
+  const nombre = document.getElementById("newName").value.trim();
+  const apellido = document.getElementById("newLastName").value.trim();
+  const correo = document.getElementById("newEmail").value.trim();
+
+  const password = document.getElementById("newPassword").value.trim();
+  const password2 = document.getElementById("newPassword2").value.trim();
+
+  const role = document.getElementById("newRole").value;
+
+  // VALIDACIONES LOCALES
+  if (!nombre || !apellido || !correo || !password || !password2) {
+    msg.textContent = "Todos los campos son obligatorios.";
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(correo)) {
+    msg.textContent = "Correo inválido.";
+    return;
+  }
+
+  if (password !== password2) {
+    msg.textContent = "Las contraseñas no coinciden.";
+    return;
+  }
+
+  const passValid =
+    password.length >= 8 &&
+    /[A-Z]/.test(password) &&
+    /[a-z]/.test(password) &&
+    /\d/.test(password) &&
+    /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+  if (!passValid) {
+    msg.textContent = "La contraseña no cumple los requisitos.";
+    return;
+  }
+
+  // ENVIAR AL SERVIDOR
+  const resp = await fetch("http://localhost:5000/admin/create-user", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-User-Role": "admin"
+    },
+    body: JSON.stringify({
+      nombre,
+      apellido,
+      correo,
+      password,
+      role
+    })
+  });
+
+  const data = await resp.json();
+
+  if (!resp.ok || !data.ok) {
+    msg.textContent = data.message || "Error creando usuario.";
+    return;
+  }
+
+  msg.style.color = "green";
+  msg.textContent = "Usuario creado correctamente.";
+
+  document.getElementById("newName").value = "";
+  document.getElementById("newLastName").value = "";
+  document.getElementById("newEmail").value = "";
+  document.getElementById("newPassword").value = "";
+  document.getElementById("newPassword2").value = "";
+  rules.style.display = "none";
+
+  loadUsers();
+};
+
+
+
+// Inicializar
+loadUsers();
+
+</script>
+
+</body>
+</html>

@@ -6,9 +6,24 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { exec } from "child_process";
 import { promisify } from "util";
+import admin from "firebase-admin";
+import { createRequire } from "module";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// =============== FIREBASE ADMIN (SERVIDOR) ===============
+const require = createRequire(import.meta.url);
+const serviceAccount = require("./serviceAccountKey.json");
+
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+}
+
+const adminAuth = admin.auth();
+const adminDb = admin.firestore();
 
 const app = express();
 const execAsync = promisify(exec);
@@ -18,7 +33,7 @@ const execAsync = promisify(exec);
 // ===============================
 app.use(cors({
   origin: "http://127.0.0.1:5500",
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "X-User-Role"]
 }));
 
@@ -38,7 +53,7 @@ if (!fs.existsSync(customReportDir)) {
 app.use("/reports-custom", express.static(customReportDir));
 
 // ===============================
-// SERVIR VIDEOS PARA EL REPORTE 👈👈 AGREGAMOS ESTO
+// SERVIR VIDEOS PARA EL REPORTE
 // ===============================
 const videosDir = path.join(__dirname, "custom-report", "videos");
 
@@ -49,33 +64,6 @@ if (!fs.existsSync(videosDir)) {
 }
 
 app.use("/videos", express.static(videosDir));
-
-// ===============================
-// FUNCIÓN PARA EJECUTAR COMANDOS
-// ===============================
-async function run(cmd, label = "") {
-  console.log(`[${new Date().toLocaleTimeString()}] Iniciando: ${label || cmd}`);
-
-  return new Promise((resolve) => {
-    const child = exec(cmd, {
-      shell: true,
-      windowsHide: true,
-      maxBuffer: 1024 * 1024 * 10
-    });
-
-    child.stdout.on("data", (data) => process.stdout.write(data));
-    child.stderr.on("data", (data) => process.stderr.write(data));
-
-    child.on("exit", (code) => {
-      if (code === 0) {
-        console.log(`[${new Date().toLocaleTimeString()}] Finalizó correctamente: ${label || cmd}\n`);
-      } else {
-        console.warn(`[${new Date().toLocaleTimeString()}] Comando finalizado con errores (${code}): ${label || cmd}`);
-      }
-      resolve(code);
-    });
-  });
-}
 
 // ===============================
 // SERVIR ARCHIVOS DE REPORTES
@@ -97,6 +85,255 @@ if (!fs.existsSync(pdfsDir)) {
 
 app.use("/reports", express.static(reportsDir));
 app.use("/pdfs", express.static(pdfsDir));
+
+// ===============================
+// FUNCIÓN PARA EJECUTAR COMANDOS
+// ===============================
+async function run(cmd, label = "") {
+  console.log(`[${new Date().toLocaleTimeString()}] Iniciando: ${label || cmd}`);
+
+  return new Promise((resolve) => {
+    const child = exec(cmd, {
+      shell: true,
+      windowsHide: true,
+      maxBuffer: 1024 * 1024 * 10
+    });
+
+    child.stdout.on("data", (data) => process.stdout.write(data));
+    child.stderr.on("data", (data) => process.stderr.write(data));
+
+    child.on("exit", (code) => {
+      if (code === 0) {
+        console.log(
+          `[${new Date().toLocaleTimeString()}] Finalizó correctamente: ${label || cmd}\n`
+        );
+      } else {
+        console.warn(
+          `[${new Date().toLocaleTimeString()}] Comando finalizado con errores (${code}): ${label || cmd}`
+        );
+      }
+      resolve(code);
+    });
+  });
+}
+
+// ===============================
+// ENDPOINTS ADMIN USUARIOS
+// ===============================
+
+// Crear usuario (admin)
+// =======================================================
+//  NUEVA VERSIÓN REAL DE CREAR USUARIO (ADMIN)
+// =======================================================
+app.post("/admin/create-user", async (req, res) => {
+  try {
+    const roleHeader = (req.headers["x-user-role"] || "").toString().toLowerCase();
+
+    if (roleHeader !== "admin") {
+      return res.status(403).json({
+        ok: false,
+        message: "Permiso denegado. Solo administradores pueden crear usuarios."
+      });
+    }
+
+    const { nombre, apellido, correo, password, role } = req.body || {};
+
+    // --------------------------
+    // VALIDACIONES DE CAMPOS
+ 
+    if (!nombre || !apellido || !correo || !password) {
+      return res.status(400).json({
+        ok: false,
+        message: "Todos los campos son obligatorios."
+      });
+    }
+
+    // Validación de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(correo)) {
+      return res.status(400).json({
+        ok: false,
+        message: "Correo inválido."
+      });
+    }
+
+    // Validación de contraseña segura
+    const passValid =
+      password.length >= 8 &&
+      /[A-Z]/.test(password) &&
+      /[a-z]/.test(password) &&
+      /\d/.test(password) &&
+      /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (!passValid) {
+      return res.status(400).json({
+        ok: false,
+        message:
+          "La contraseña debe tener mínimo 8 caracteres, mayúscula, minúscula, número y caracter especial."
+      });
+    }
+
+    const finalRole = role === "admin" ? "admin" : "qa";
+
+    // --------------------------
+    // VALIDAR SI EL CORREO YA EXISTE EN AUTH
+  
+    let emailExists = false;
+    try {
+      await adminAuth.getUserByEmail(correo);
+      emailExists = true;
+    } catch (err) {
+      emailExists = false; // No existe → OK
+    }
+
+    if (emailExists) {
+      return res.status(400).json({
+        ok: false,
+        message: "El correo ya está registrado."
+      });
+    }
+
+    // --------------------------
+  
+    const userRecord = await adminAuth.createUser({
+      email: correo,
+      password,
+      displayName: `${nombre} ${apellido}`,
+      disabled: false
+    });
+
+    console.log(`[ADMIN] Usuario creado: ${userRecord.uid} (${correo})`);
+
+    // --------------------------
+    // GUARDAR EN FIRESTORE
+   
+    await adminDb.collection("users").doc(userRecord.uid).set({
+      nombre,
+      apellido,
+      correo,
+      role: finalRole,
+      status: "active",
+      createdAt: new Date().toISOString(),
+      uid: userRecord.uid
+    });
+
+    return res.json({
+      ok: true,
+      message: "Usuario creado correctamente.",
+      uid: userRecord.uid
+    });
+
+  } catch (err) {
+    console.error("❌ Error creando usuario:", err);
+    return res.status(500).json({
+      ok: false,
+      message: err.message || "Error interno creando usuario."
+    });
+  }
+});
+
+
+// Listar usuarios (admin)
+app.get("/admin/list-users", async (req, res) => {
+  try {
+    const roleHeader = (req.headers["x-user-role"] || "").toString().toLowerCase();
+    if (roleHeader !== "admin") {
+      return res.status(403).json({ ok: false, message: "Solo admin puede listar usuarios." });
+    }
+
+    const snap = await adminDb.collection("users").get();
+    const users = snap.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    res.json({ ok: true, users });
+  } catch (err) {
+    console.error("Error listando usuarios:", err);
+    res.status(500).json({ ok: false, message: err.message || "Error interno" });
+  }
+});
+
+// Actualizar rol (admin)
+app.post("/admin/update-user-role", async (req, res) => {
+  try {
+    const roleHeader = (req.headers["x-user-role"] || "").toString().toLowerCase();
+    if (roleHeader !== "admin") {
+      return res.status(403).json({ ok: false, message: "Solo admin puede cambiar roles." });
+    }
+
+    const { uid, role } = req.body || {};
+    if (!uid || !role) {
+      return res.status(400).json({ ok: false, message: "uid y role son requeridos." });
+    }
+
+    const finalRole = role === "admin" ? "admin" : "qa";
+
+    await adminDb.collection("users").doc(uid).update({
+      role: finalRole
+    });
+
+    res.json({ ok: true, message: "Rol actualizado correctamente." });
+  } catch (err) {
+    console.error("Error actualizando rol:", err);
+    res.status(500).json({ ok: false, message: err.message || "Error interno" });
+  }
+});
+
+// Actualizar estado (suspender / reactivar)
+app.post("/admin/update-user-status", async (req, res) => {
+  try {
+    const roleHeader = (req.headers["x-user-role"] || "").toString().toLowerCase();
+    if (roleHeader !== "admin") {
+      return res.status(403).json({ ok: false, message: "Solo admin puede cambiar estado." });
+    }
+
+    const { uid, status } = req.body || {};
+    if (!uid || !status) {
+      return res.status(400).json({ ok: false, message: "uid y status son requeridos." });
+    }
+
+    const disabled = status === "suspended";
+
+    // Actualizar en Auth
+    await adminAuth.updateUser(uid, { disabled });
+
+    // Actualizar en Firestore
+    await adminDb.collection("users").doc(uid).update({
+      status
+    });
+
+    res.json({ ok: true, message: "Estado actualizado correctamente." });
+  } catch (err) {
+    console.error("Error actualizando estado de usuario:", err);
+    res.status(500).json({ ok: false, message: err.message || "Error interno" });
+  }
+});
+
+// Eliminar usuario
+app.delete("/admin/delete-user", async (req, res) => {
+  try {
+    const roleHeader = (req.headers["x-user-role"] || "").toString().toLowerCase();
+    if (roleHeader !== "admin") {
+      return res.status(403).json({ ok: false, message: "Solo admin puede eliminar usuarios." });
+    }
+
+    const { uid } = req.body || {};
+    if (!uid) {
+      return res.status(400).json({ ok: false, message: "uid es requerido." });
+    }
+
+    // Borrar en Auth
+    await adminAuth.deleteUser(uid);
+    // Borrar en Firestore
+    await adminDb.collection("users").doc(uid).delete();
+
+    res.json({ ok: true, message: "Usuario eliminado correctamente." });
+  } catch (err) {
+    console.error("Error eliminando usuario:", err);
+    res.status(500).json({ ok: false, message: err.message || "Error interno" });
+  }
+});
 
 // ===============================
 // ENDPOINT: EJECUTAR PRUEBAS MANUALMENTE

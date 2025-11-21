@@ -238,13 +238,22 @@
   <h2>VidaFIT QA</h2>
 
   <ul class="menu-list">
+
     <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+
     <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
+
+    <!-- SOLO ADMIN -->
+    <li id="menuUsersItem" style="display:none;">
+      <a href="./admin-users.html" class="menu-link">Gestión de usuarios</a>
+    </li>
+
     <li>
       <button id="menuLogout" class="menu-link menu-button-link">
         Cerrar sesión
       </button>
     </li>
+
   </ul>
 
   <div class="version-box">
@@ -327,8 +336,42 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 /* Mostrar nombre */
+/* Mostrar nombre */
 document.getElementById("userInfo").textContent =
   `${localStorage.getItem("nombre")} ${localStorage.getItem("apellido")} (${localStorage.getItem("userRole")})`;
+
+/* ===== CONTROL DE ROLES ===== */
+const currentRole = (localStorage.getItem("userRole") || "qa").toLowerCase();
+
+window.addEventListener("DOMContentLoaded", () => {
+    const menuUsersItem = document.getElementById("menuUsersItem");
+    const btnEjecutar = document.getElementById("btnEjecutar");
+
+    console.log("ROL DETECTADO:", currentRole);
+
+if (currentRole === "admin") {
+  // Mostrar gestión de usuarios
+  if (menuUsersItem) menuUsersItem.style.display = "block";
+
+  // Ocultar botón Ejecutar ahora
+  if (btnEjecutar) {
+    btnEjecutar.style.display = "none";
+  }
+}
+
+
+    if (currentRole === "qa") {
+        if (menuUsersItem) menuUsersItem.style.display = "none";
+        if (btnEjecutar) {
+            btnEjecutar.disabled = false;
+            btnEjecutar.style.opacity = "1";
+            btnEjecutar.style.cursor = "pointer";
+        }
+    }
+});
+
+
+
 
 /* Sidebar */
 const sidebar = document.getElementById("sidebar");
@@ -463,7 +506,6 @@ async function esperarNuevoReporte() {
 }
 
 /* ==== BOTÓN EJECUTAR ==== */
-const btnEjecutar = document.getElementById("btnEjecutar");
 const btnText = document.getElementById("btnText");
 const btnLoader = document.getElementById("btnLoader");
 
