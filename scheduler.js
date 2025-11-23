@@ -7,7 +7,7 @@ const projectPath = path.resolve("./");
 function runTests() {
   console.log("Ejecutando pruebas automáticas Playwright - VidaFIT...");
 
-  const run = exec("npx playwright test login.spec.js", { cwd: projectPath });
+  const run = exec("npx playwright test", { cwd: projectPath });
 
   run.stdout.on("data", data => console.log(data.toString()));
   run.stderr.on("data", data => console.error(data.toString()));
@@ -29,7 +29,7 @@ function runTests() {
 }
 
 // Programación diaria a las 5 AM
-cron.schedule("0 5 * * *", () => {
+cron.schedule("30 20 * * *", () => {
   console.log("Iniciando ejecución programada...");
   runTests();
 });

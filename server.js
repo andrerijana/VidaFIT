@@ -360,7 +360,7 @@ app.post("/run-tests", async (req, res) => {
 
     (async () => {
       try {
-        const code = await run("npx playwright test login.spec.js", "Ejecución de pruebas (Solo Login)");
+        const code = await run("npx playwright test", "Ejecución de pruebas (Solo Login)");
         if (code !== 0) {
           console.warn(`[${new Date().toLocaleTimeString()}] Algunos tests fallaron (código ${code}). Continuando con guardado...`);
         }

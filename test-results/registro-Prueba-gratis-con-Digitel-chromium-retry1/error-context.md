@@ -1,0 +1,66 @@
+# Page snapshot
+
+```yaml
+- img
+- textbox "Buscar..."
+- button "Venezuela":
+  - img "Venezuela"
+- button
+- navigation:
+  - list:
+    - listitem:
+      - link "Mi Inicio":
+        - /url: /
+    - listitem:
+      - link "Rutinas":
+        - /url: /rutinas-ejercicios
+    - listitem:
+      - link "Recetas":
+        - /url: /recetas-fitness
+      - separator
+    - listitem:
+      - link "COACH IA":
+        - /url: https://entrenador-personal.vida-fit.com/
+    - listitem:
+      - link "Recursos":
+        - /url: /recursos
+    - listitem:
+      - link "Blog":
+        - /url: /vive-fit
+      - separator
+- button "Prueba gratis"
+- img "Vida Fit"
+- heading "Tendrás acceso Freemium en nuestra web" [level=3]
+- heading "Únete a VidaFIT en Venezuela" [level=2]
+- text: "Prueba gratis de 3 días con tu operadora Activa tu prueba gratuita y descubre rutinas, recetas y bienestar personalizado sin costo. ¡Tu mejor versión empieza hoy! Crea tu cuenta gratis Desbloquea una parte del contenido de Vida Fit: rutinas, recetas y tips seleccionados, y accede a la comunidad Vida Fit."
+- img "Movistar"
+- img "Digitel"
+- text: "Fecha de marcaje 11/2023 Costo Bs. 1.00 + IVA 16%: Bs. 0.16 + IVACS 15%: Bs. 0.15 Total a pagar Bs. 1.31 con impuesto Costo diario al terminar la prueba gratuita."
+- heading "Accede a todo el contenido con Digitel" [level=2]
+- textbox "Nombre": QA Esperanza
+- textbox "Apellido": QA Martinez
+- combobox "0412"
+- 'textbox "Ej: 1234567"': "9945006"
+- textbox "Email": arijana+1763857921068@androvent.com
+- textbox "Contraseña": Admin.01
+- button
+- button "Unirme a VidaFit" [disabled]
+- heading "Cancela cuando quieras..." [level=3]
+- heading "Sin compromisos ni sorpresas. Cancela tu suscripción en cualquier momento desde tu Perfil/Manejar Suscripción." [level=4]
+- text: Términos y Condiciones Políticas de privacidad
+- img
+- button
+- button
+- button
+- heading "Legal" [level=3]
+- list:
+  - listitem: Términos y Condiciones
+  - listitem: Políticas de privacidad
+  - listitem: Política de Cookies
+- text: Powered by
+- link "conectium":
+  - /url: https://conectium.com/
+  - img "conectium"
+- text: ©VidaFit 2025
+- img
+```

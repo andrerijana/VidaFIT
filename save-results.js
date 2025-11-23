@@ -89,13 +89,17 @@ async function generarPDF() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    // Cargar tu reporte personalizado
-    const htmlPath = `file://${path.join(REPORTS_DIR, "index.html")}`;
+    // Ruta del HTML original
+    const originalHtmlPath = path.join(REPORTS_DIR, "index.html");
+    const htmlPath = `file://${originalHtmlPath}`;
+
     await page.goto(htmlPath, { waitUntil: "networkidle0" });
 
+    // Generar nombre del PDF
     const pdfName = `reporte_${Date.now()}.pdf`;
     const pdfPath = path.join(PDFS_DIR, pdfName);
 
+    // Crear PDF desde Puppeteer
     await page.pdf({
       path: pdfPath,
       format: "A4",
@@ -105,13 +109,23 @@ async function generarPDF() {
     await browser.close();
 
     console.log("PDF generado correctamente:", pdfName);
-    return pdfName;
+
+    // Renombrar index.html -> reporte_xxx.html
+    const nuevoHtmlName = pdfName.replace(".pdf", ".html");
+    const nuevoHtmlPath = path.join(REPORTS_DIR, nuevoHtmlName);
+
+    fs.renameSync(originalHtmlPath, nuevoHtmlPath);
+
+    console.log("HTML renombrado correctamente:", nuevoHtmlName);
+
+    return { pdf: pdfName, html: nuevoHtmlName };
 
   } catch (err) {
     console.error("❌ Error generando PDF:", err);
     return null;
   }
 }
+
 
 // ===== MAIN =====
 (async () => {
@@ -146,7 +160,8 @@ async function generarPDF() {
   // ===== GENERAR NUEVO PDF =====
   const pdfName = await generarPDF();
   if (pdfName) {
-    newRun.pdfFile = `http://localhost:5000/pdfs/${pdfName}`;
+    newRun.pdfFile = `http://localhost:5000/pdfs/${pdfName.pdf}`;    
+    newRun.htmlFile = `http://localhost:5000/reports-custom/${pdfName.html}`;
   }
 
   // ===== Guardar en history.json =====
