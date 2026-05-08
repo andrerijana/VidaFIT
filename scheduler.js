@@ -4,10 +4,15 @@ import path from "path";
 
 const projectPath = path.resolve("./");
 
-function runTests() {
-  console.log("Ejecutando pruebas automáticas Playwright - VidaFIT...");
+function runTests(moduleName = "login") {
+  console.log(`Ejecutando pruebas automáticas Playwright - VidaFIT [${moduleName}]...`);
 
-  const run = exec("npx playwright test", { cwd: projectPath });
+  const commandMap = {
+    login: "npx playwright test login"
+  };
+
+  const testCommand = commandMap[moduleName] || commandMap.login;
+  const run = exec(testCommand, { cwd: projectPath });
 
   run.stdout.on("data", data => console.log(data.toString()));
   run.stderr.on("data", data => console.error(data.toString()));
@@ -15,8 +20,7 @@ function runTests() {
   run.on("close", code => {
     console.log(`Ejecución de Playwright finalizada (código ${code})`);
 
-    // Ejecutar guardado de resultados
-    exec("node save-results.js", { cwd: projectPath }, (err, stdout, stderr) => {
+    exec(`node save-results.js --module=${moduleName}`, { cwd: projectPath }, (err, stdout, stderr) => {
       if (err) {
         console.error("Error guardando resultados:", err);
       } else {
@@ -28,10 +32,9 @@ function runTests() {
   });
 }
 
-// Programación diaria a las 5 AM
-cron.schedule("30 20 * * *", () => {
+cron.schedule("00 05 * * *", () => {
   console.log("Iniciando ejecución programada...");
-  runTests();
+  runTests("login");
 });
 
 console.log("Programador activo. Esperando hora de ejecución...");

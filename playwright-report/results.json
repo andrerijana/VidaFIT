@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -46,9 +46,9 @@
       {
         "outputDir": "C:/Users/arijana/Desktop/Playwrigtht - vidafit/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {
-          "actualWorkers": 4
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -69,20 +69,20 @@
   },
   "suites": [
     {
-      "title": "login.spec.js",
-      "file": "login.spec.js",
+      "title": "menu.lateral.spec.js",
+      "file": "menu.lateral.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login VidaFIT",
-          "file": "login.spec.js",
+          "title": "Redireccionamientos del menú lateral - VidaFIT",
+          "file": "menu.lateral.spec.js",
           "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Error al intentar iniciar sesión con campos vacíos",
+              "title": "Redirecciona correctamente a Rutinas",
               "ok": true,
               "tags": [],
               "tests": [
@@ -97,32 +97,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13928,
+                      "duration": 8740,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-23T00:30:03.483Z",
+                      "startTime": "2026-05-08T17:31:09.996Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Error--979c0-ar-sesión-con-campos-vacíos-chromium\\video.webm"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-0792a1fb45ff307cc22d",
-              "file": "login.spec.js",
-              "line": 13,
+              "id": "2eadc64dcce2772a3953-78eca6afdad69eba02be",
+              "file": "menu.lateral.spec.js",
+              "line": 10,
               "column": 3
             },
             {
-              "title": "Error cuando la contraseña está vacía",
+              "title": "Redirecciona correctamente a Recetas",
               "ok": true,
               "tags": [],
               "tests": [
@@ -137,32 +131,94 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9859,
+                      "duration": 10517,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-23T00:30:17.664Z",
+                      "startTime": "2026-05-08T17:31:19.252Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Error-cuando-la-contraseña-está-vacía-chromium\\video.webm"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-c94a90ca44d3c1a7c095",
-              "file": "login.spec.js",
-              "line": 21,
+              "id": "2eadc64dcce2772a3953-972e6d8acab0e41c1f9a",
+              "file": "menu.lateral.spec.js",
+              "line": 20,
               "column": 3
             },
             {
-              "title": "Login exitoso con credenciales válidas (forzado a fallar)",
+              "title": "Redirecciona correctamente a Recursos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10713,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-08T17:31:29.785Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2eadc64dcce2772a3953-3e571fc07017096aa3b3",
+              "file": "menu.lateral.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "Redirecciona correctamente a Blog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5764,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-08T17:31:40.517Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2eadc64dcce2772a3953-1416082237e62b058b82",
+              "file": "menu.lateral.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "Redirecciona correctamente desde Perfil a Prueba gratis",
               "ok": false,
               "tags": [],
               "tests": [
@@ -177,1325 +233,66 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 16287,
+                      "duration": 9503,
                       "error": {
-                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n",
-                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js:39:58",
+                        "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Prueba gratis' }) resolved to 4 elements:\n    1) <button class=\"btn-try-and-buy w-full ng-star-inserted\">Prueba gratis</button> aka locator('app-navigation-hamburger-menu').getByRole('button', { name: 'Prueba gratis' })\n    2) <button class=\"btn-prueba-gratis ng-star-inserted\"> Prueba gratis </button> aka locator('app-navigation').getByRole('button', { name: 'Prueba gratis' })\n    3) <mat-expansion-panel-header tabindex=\"0\" role=\"button\" aria-expanded=\"false\" aria-disabled=\"false\" _ngcontent-ng-c3613804477=\"\" id=\"mat-expansion-panel-header-2\" aria-controls=\"cdk-accordion-child-2\" class=\"mat-expansion-panel-header mat-focus-indicator faq-header mat-expansion-toggle-indicator-after\">…</mat-expansion-panel-header> aka getByRole('button', { name: '¿La plataforma ofrece una' })\n    4) <button _ngcontent-ng-c76420218=\"\" class=\"btn-subscribe-user !bg-[#75D7CC] !rounded-full !w-auto ng-tns-c76420218-0\">…</button> aka locator('#mat-menu-panel-0').getByRole('button', { name: 'Prueba gratis' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Prueba gratis' })\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Prueba gratis' }) resolved to 4 elements:\n    1) <button class=\"btn-try-and-buy w-full ng-star-inserted\">Prueba gratis</button> aka locator('app-navigation-hamburger-menu').getByRole('button', { name: 'Prueba gratis' })\n    2) <button class=\"btn-prueba-gratis ng-star-inserted\"> Prueba gratis </button> aka locator('app-navigation').getByRole('button', { name: 'Prueba gratis' })\n    3) <mat-expansion-panel-header tabindex=\"0\" role=\"button\" aria-expanded=\"false\" aria-disabled=\"false\" _ngcontent-ng-c3613804477=\"\" id=\"mat-expansion-panel-header-2\" aria-controls=\"cdk-accordion-child-2\" class=\"mat-expansion-panel-header mat-focus-indicator faq-header mat-expansion-toggle-indicator-after\">…</mat-expansion-panel-header> aka getByRole('button', { name: '¿La plataforma ofrece una' })\n    4) <button _ngcontent-ng-c76420218=\"\" class=\"btn-subscribe-user !bg-[#75D7CC] !rounded-full !w-auto ng-tns-c76420218-0\">…</button> aka locator('#mat-menu-panel-0').getByRole('button', { name: 'Prueba gratis' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Prueba gratis' })\u001b[22m\n\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.lateral.spec.js:46:63",
                         "location": {
-                          "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                          "column": 58,
-                          "line": 39
+                          "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.lateral.spec.js",
+                          "column": 63,
+                          "line": 46
                         },
-                        "snippet": "\u001b[0m \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[90m// 👇 ESTA ASSERTION PROVOCA EL FALLO INTENCIONAL\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Este texto NO EXISTE\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m menuLateral(page)\u001b[33m.\u001b[39mgetByText(\u001b[32m'Perfil'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Prueba gratis'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\n \u001b[90m 49 |\u001b[39m       page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Empezar prueba gratis'\u001b[39m })\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                            "column": 58,
-                            "line": 39
+                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.lateral.spec.js",
+                            "column": 63,
+                            "line": 46
                           },
-                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n\n\n  37 |\n  38 |     // 👇 ESTA ASSERTION PROVOCA EL FALLO INTENCIONAL\n> 39 |     await expect(page.getByText(\"Este texto NO EXISTE\")).toBeVisible();\n     |                                                          ^\n  40 |   });\n  41 |\n  42 | });\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js:39:58"
+                          "message": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Prueba gratis' }) resolved to 4 elements:\n    1) <button class=\"btn-try-and-buy w-full ng-star-inserted\">Prueba gratis</button> aka locator('app-navigation-hamburger-menu').getByRole('button', { name: 'Prueba gratis' })\n    2) <button class=\"btn-prueba-gratis ng-star-inserted\"> Prueba gratis </button> aka locator('app-navigation').getByRole('button', { name: 'Prueba gratis' })\n    3) <mat-expansion-panel-header tabindex=\"0\" role=\"button\" aria-expanded=\"false\" aria-disabled=\"false\" _ngcontent-ng-c3613804477=\"\" id=\"mat-expansion-panel-header-2\" aria-controls=\"cdk-accordion-child-2\" class=\"mat-expansion-panel-header mat-focus-indicator faq-header mat-expansion-toggle-indicator-after\">…</mat-expansion-panel-header> aka getByRole('button', { name: '¿La plataforma ofrece una' })\n    4) <button _ngcontent-ng-c76420218=\"\" class=\"btn-subscribe-user !bg-[#75D7CC] !rounded-full !w-auto ng-tns-c76420218-0\">…</button> aka locator('#mat-menu-panel-0').getByRole('button', { name: 'Prueba gratis' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Prueba gratis' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m menuLateral(page)\u001b[33m.\u001b[39mgetByText(\u001b[32m'Perfil'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Prueba gratis'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\n \u001b[90m 49 |\u001b[39m       page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Empezar prueba gratis'\u001b[39m })\u001b[0m\n\u001b[2m    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.lateral.spec.js:46:63\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-23T00:30:27.532Z",
+                      "startTime": "2026-05-08T17:31:46.295Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium\\test-failed-1.png"
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu.lateral-Redireccionam-a9173-esde-Perfil-a-Prueba-gratis-chromium\\test-failed-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium\\video.webm"
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu.lateral-Redireccionam-a9173-esde-Perfil-a-Prueba-gratis-chromium\\video.webm"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium\\error-context.md"
+                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu.lateral-Redireccionam-a9173-esde-Perfil-a-Prueba-gratis-chromium\\error-context.md"
                         }
                       ],
                       "errorLocation": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                        "column": 58,
-                        "line": 39
-                      }
-                    },
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 19473,
-                      "error": {
-                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n",
-                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js:39:58",
-                        "location": {
-                          "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                          "column": 58,
-                          "line": 39
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[90m// 👇 ESTA ASSERTION PROVOCA EL FALLO INTENCIONAL\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Este texto NO EXISTE\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                            "column": 58,
-                            "line": 39
-                          },
-                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Este texto NO EXISTE')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Este texto NO EXISTE')\u001b[22m\n\n\n  37 |\n  38 |     // 👇 ESTA ASSERTION PROVOCA EL FALLO INTENCIONAL\n> 39 |     await expect(page.getByText(\"Este texto NO EXISTE\")).toBeVisible();\n     |                                                          ^\n  40 |   });\n  41 |\n  42 | });\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js:39:58"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2025-11-23T00:30:47.832Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium-retry1\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium-retry1\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium-retry1\\error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\login-Login-VidaFIT-Login--8233f-s-válidas-forzado-a-fallar--chromium-retry1\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js",
-                        "column": 58,
-                        "line": 39
+                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menu.lateral.spec.js",
+                        "column": 63,
+                        "line": 46
                       }
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "badc1754af1944f68b2b-84804cbe1dd0305431cc",
-              "file": "login.spec.js",
-              "line": 31,
-              "column": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "menu.spec.js",
-      "file": "menu.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Abrir menú hamburguesa y hacer click en Mi Inicio",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 14359,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:03.498Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Abrir-menú-hamburguesa-y-hacer-click-en-Mi-Inicio-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-045670b294e5d94816e8",
-          "file": "menu.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 29461,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:18.045Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Flujo-completo-de-nav-97dc1-l-menú-hamburguesa-Vidafit--chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-d591cb1310efdeb9ad8e",
-          "file": "menu.spec.js",
-          "line": 30,
-          "column": 1
-        },
-        {
-          "title": "Buscar recursos usando el buscador del menú lateral con \"creatina\"",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 8467,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Textos en el menú: [\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search close'\u001b[39m,\n  \u001b[32m' search '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'Potencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Recetas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Recetas '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' familiar_face_and_zone COACH IA '\u001b[39m,\n  \u001b[32m' familiar_face_and_zone '\u001b[39m,\n  \u001b[32m'COACH IA '\u001b[39m,\n  \u001b[32m'Tienda'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  ... 61 more items\n]\n"
-                    },
-                    {
-                      "text": "Resultados de búsqueda: [\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m\n]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:47.522Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menu-Buscar-recursos-usand-4fcd2--menú-lateral-con-creatina--chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "217198a80e852077fe39-2bd18cc5915d8256197e",
-          "file": "menu.spec.js",
-          "line": 118,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "menuandroid.spec.js",
-      "file": "menuandroid.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Test responsive S23+",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 13208,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:03.533Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Test-responsive-S23--chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "61a1367c8cc6a3d6c234-3b665ccde69956e1bbfc",
-          "file": "menuandroid.spec.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Abrir menú hamburguesa y hacer click en Mi Inicio",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 10681,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:16.931Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Abrir-menú-ham-12641--y-hacer-click-en-Mi-Inicio-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "61a1367c8cc6a3d6c234-f978274d12f19f594848",
-          "file": "menuandroid.spec.js",
-          "line": 19,
-          "column": 1
-        },
-        {
-          "title": "Flujo completo de navegación por el menú hamburguesa (Vidafit)",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "failed",
-                  "duration": 26678,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                      "column": 35,
-                      "line": 53
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m abrirMenu() {\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m menuHamburguesa \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(menuHamburguesa)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m menuHamburguesa\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-navigation-hamburger-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m   }\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                        "column": 35,
-                        "line": 53
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:27.621Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                    "column": 35,
-                    "line": 53
-                  }
-                },
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 2,
-                  "status": "failed",
-                  "duration": 29396,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                      "column": 35,
-                      "line": 53
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m abrirMenu() {\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m menuHamburguesa \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(menuHamburguesa)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m menuHamburguesa\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-navigation-hamburger-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m   }\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                        "column": 35,
-                        "line": 53
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <mat-icon role=\"img\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" svgicon=\"my-icon-menu-ham\" _ngcontent-ng-c1959954278=\"\" data-mat-icon-name=\"my-icon-menu-ham\" class=\"mat-icon notranslate mat-icon-no-color\">…</mat-icon>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  51 |   async function abrirMenu() {\n  52 |     const menuHamburguesa = page.locator('mat-icon[data-mat-icon-name=\"my-icon-menu-ham\"]');\n> 53 |     await expect(menuHamburguesa).toBeVisible();\n     |                                   ^\n  54 |     await menuHamburguesa.click();\n  55 |     await expect(page.locator('app-navigation-hamburger-menu')).toBeVisible();\n  56 |   }\n    at abrirMenu (C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:53:35)\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js:104:9"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:30:57.726Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Flujo-completo-3b5ba-l-menú-hamburguesa-Vidafit--chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\menuandroid.spec.js",
-                    "column": 35,
-                    "line": 53
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "61a1367c8cc6a3d6c234-740ae8d2ff46b3c32a60",
-          "file": "menuandroid.spec.js",
-          "line": 46,
-          "column": 1
-        },
-        {
-          "title": "Buscar recursos usando el buscador del menú lateral con \"creatina\"",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 16,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 8891,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Textos en el menú: [\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search closePotencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m' search close'\u001b[39m,\n  \u001b[32m' search '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'close'\u001b[39m,\n  \u001b[32m'Potencia tu físicoDescubre las Mejores Creatinas HCL del Mercado | VidafitCuando Tomar Creatina ¿Antes o Después de Entrenar? | VidafitCómo Tomar Creatina para Aumentar Masa Muscular | Vidafit¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit¿Con Qué se Puede Tomar la Creatina? | VidafitMejor creatina monohidrato | Vida-FitMejor creatina Micronizada | Vida-FitDescubre la Mejor Creatina para Ganar Masa Muscular | VidafitDescubre la Mejor Creatina para Mujeres | Vidafit¿La creatina quema grasa abdominal? | VidafitPara Qué Sirve y Cómo se Toma Creatina | VidafitDesentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesasEl Poder de la Creatina en el Entrenamiento de PesasLa creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Potencia tu físico'\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre las Mejores Creatinas HCL del Mercado | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cuando Tomar Creatina ¿Antes o Después de Entrenar? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Cómo Tomar Creatina para Aumentar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Cuánto tomar creatina por día?: Dosis recomendada | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿Con Qué se Puede Tomar la Creatina? | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina monohidrato | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Mejor creatina Micronizada | Vida-Fit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Ganar Masa Muscular | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Descubre la Mejor Creatina para Mujeres | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'¿La creatina quema grasa abdominal? | Vidafit'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Para Qué Sirve y Cómo se Toma Creatina | Vidafit'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Desentrañando los secretos: Los elementos clave del Pre-Entrenamiento para el levantamiento de pesas'\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'El Poder de la Creatina en el Entrenamiento de Pesas'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'La creatina y el incremento de fuerza en el GYM'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Mi Inicio \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Rutinas \\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Recetas  familiar_face_and_zone COACH IA Tienda\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m' Perfil  arrow_circle_down  Recursos  Blog '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Mi Inicio '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Rutinas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n Recetas '\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n\\n\\n\\n\\n\\n'\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'\\n\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' Recetas '\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m' familiar_face_and_zone COACH IA '\u001b[39m,\n  \u001b[32m' familiar_face_and_zone '\u001b[39m,\n  \u001b[32m'COACH IA '\u001b[39m,\n  \u001b[32m'Tienda'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  ... 61 more items\n]\n"
-                    },
-                    {
-                      "text": "Resultados de búsqueda: [\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'creatina'\u001b[39m,\n  \u001b[32m'Creatina'\u001b[39m, \u001b[32m'Creatina'\u001b[39m,\n  \u001b[32m'creatina'\u001b[39m\n]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:34.852Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\menuandroid-Buscar-recurso-80176--menú-lateral-con-creatina--chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "61a1367c8cc6a3d6c234-bbdbc71fe789bd879f63",
-          "file": "menuandroid.spec.js",
-          "line": 125,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "recursoresponsive.spec.js",
-      "file": "recursoresponsive.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Flujo completo del formulario responsive: vacíos, inválidos y éxito",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 22389,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Títulos en recursos: []\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:03.500Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Flujo-co-99a15-ve-vacíos-inválidos-y-éxito-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-e831ad705eb6a9520c1b",
-          "file": "recursoresponsive.spec.js",
-          "line": 17,
-          "column": 1
-        },
-        {
-          "title": "Click en el logo de Vidafit lleva al home",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 10637,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:26.098Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Click-en-el-logo-de-Vidafit-lleva-al-home-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-6fe5eaac0aaf141cf146",
-          "file": "recursoresponsive.spec.js",
-          "line": 99,
-          "column": 1
-        },
-        {
-          "title": "Navegar por varias tarjetas de recurso y regresar con back",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 10923,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:36.749Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Navegar--bdd5c-recurso-y-regresar-con-back-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-caf4915ad402c4ae2817",
-          "file": "recursoresponsive.spec.js",
-          "line": 115,
-          "column": 1
-        },
-        {
-          "title": "Filtro responsive: Entrenamiento",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 556,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 1,
-                      "line": 162
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m test(\u001b[32m'Filtro responsive: Entrenamiento'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 162 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m\n \u001b[90m 165 |\u001b[39m   \u001b[90m// Abre panel de filtros\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 1,
-                        "line": 162
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  160 |\n  161 | test('Filtro responsive: Entrenamiento', async ({ page }) => {\n> 162 | await context.grantPermissions(['geolocation']);\n      | ^\n  163 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  164 |\n  165 |   // Abre panel de filtros\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:47.687Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 1,
-                    "line": 162
-                  }
-                },
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 704,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 1,
-                      "line": 162
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m test(\u001b[32m'Filtro responsive: Entrenamiento'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 162 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m\n \u001b[90m 165 |\u001b[39m   \u001b[90m// Abre panel de filtros\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 1,
-                        "line": 162
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  160 |\n  161 | test('Filtro responsive: Entrenamiento', async ({ page }) => {\n> 162 | await context.grantPermissions(['geolocation']);\n      | ^\n  163 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  164 |\n  165 |   // Abre panel de filtros\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:162:1"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:30:55.039Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Entrenamiento-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 1,
-                    "line": 162
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-07723d8489570ac01130",
-          "file": "recursoresponsive.spec.js",
-          "line": 161,
-          "column": 1
-        },
-        {
-          "title": "Filtro responsive: Nutrición",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 923,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 1,
-                      "line": 182
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 180 |\u001b[39m \u001b[90m/** Nutrición */\u001b[39m\n \u001b[90m 181 |\u001b[39m test(\u001b[32m'Filtro responsive: Nutrición'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 182 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 183 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 184 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 185 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 1,
-                        "line": 182
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  180 | /** Nutrición */\n  181 | test('Filtro responsive: Nutrición', async ({ page }) => {\n> 182 | await context.grantPermissions(['geolocation']);\n      | ^\n  183 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  184 |   await page.getByText('Filtros', { exact: true }).click();\n  185 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:30:58.425Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 1,
-                    "line": 182
-                  }
-                },
-                {
-                  "workerIndex": 8,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 1054,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 1,
-                      "line": 182
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 180 |\u001b[39m \u001b[90m/** Nutrición */\u001b[39m\n \u001b[90m 181 |\u001b[39m test(\u001b[32m'Filtro responsive: Nutrición'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 182 |\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 183 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 184 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 185 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 1,
-                        "line": 182
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  180 | /** Nutrición */\n  181 | test('Filtro responsive: Nutrición', async ({ page }) => {\n> 182 | await context.grantPermissions(['geolocation']);\n      | ^\n  183 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  184 |   await page.getByText('Filtros', { exact: true }).click();\n  185 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:182:1"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:31:04.539Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Nutrición-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 1,
-                    "line": 182
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-a9acaa4281dbf7785508",
-          "file": "recursoresponsive.spec.js",
-          "line": 181,
-          "column": 1
-        },
-        {
-          "title": "Filtro responsive: Recetas Fitness",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 9,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 985,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 196
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 194 |\u001b[39m \u001b[90m/** Recetas Fitness */\u001b[39m\n \u001b[90m 195 |\u001b[39m test(\u001b[32m'Filtro responsive: Recetas Fitness'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 197 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 198 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 199 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 196
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  194 | /** Recetas Fitness */\n  195 | test('Filtro responsive: Recetas Fitness', async ({ page }) => {\n> 196 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  197 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  198 |   await page.getByText('Filtros', { exact: true }).click();\n  199 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:09.240Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 196
-                  }
-                },
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 738,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 196
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 194 |\u001b[39m \u001b[90m/** Recetas Fitness */\u001b[39m\n \u001b[90m 195 |\u001b[39m test(\u001b[32m'Filtro responsive: Recetas Fitness'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 197 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 198 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 199 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 196
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  194 | /** Recetas Fitness */\n  195 | test('Filtro responsive: Recetas Fitness', async ({ page }) => {\n> 196 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  197 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  198 |   await page.getByText('Filtros', { exact: true }).click();\n  199 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:196:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:31:13.924Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Recetas-Fitness-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 196
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-22e042a37ccb1077e0df",
-          "file": "recursoresponsive.spec.js",
-          "line": 195,
-          "column": 1
-        },
-        {
-          "title": "Filtro responsive: Vive Fit",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 12,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 1337,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 210
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 208 |\u001b[39m \u001b[90m/** Vive Fit */\u001b[39m\n \u001b[90m 209 |\u001b[39m test(\u001b[32m'Filtro responsive: Vive Fit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 210 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 211 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 212 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 210
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  208 | /** Vive Fit */\n  209 | test('Filtro responsive: Vive Fit', async ({ page }) => {\n> 210 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  211 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  212 |   await page.getByText('Filtros', { exact: true }).click();\n  213 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:18.021Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 210
-                  }
-                },
-                {
-                  "workerIndex": 13,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 674,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 210
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 208 |\u001b[39m \u001b[90m/** Vive Fit */\u001b[39m\n \u001b[90m 209 |\u001b[39m test(\u001b[32m'Filtro responsive: Vive Fit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 210 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 211 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 212 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Filtros'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 210
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  208 | /** Vive Fit */\n  209 | test('Filtro responsive: Vive Fit', async ({ page }) => {\n> 210 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  211 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  212 |   await page.getByText('Filtros', { exact: true }).click();\n  213 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:210:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:31:24.297Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Vive-Fit-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 210
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-6859da7596443bcfdb0d",
-          "file": "recursoresponsive.spec.js",
-          "line": 209,
-          "column": 1
-        },
-        {
-          "title": "Filtro responsive: Rutinas de Ejercicios",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 14,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 547,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 224
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 222 |\u001b[39m \u001b[90m/** Rutinas de Ejercicios */\u001b[39m\n \u001b[90m 223 |\u001b[39m test(\u001b[32m'Filtro responsive: Rutinas de Ejercicios'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m\n \u001b[90m 227 |\u001b[39m   \u001b[90m// CORREGIDO: Busca el botón Filtros por texto, no por clase\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 224
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  222 | /** Rutinas de Ejercicios */\n  223 | test('Filtro responsive: Rutinas de Ejercicios', async ({ page }) => {\n> 224 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  225 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  226 |\n  227 |   // CORREGIDO: Busca el botón Filtros por texto, no por clase\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:27.506Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 224
-                  }
-                },
-                {
-                  "workerIndex": 15,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 796,
-                  "error": {
-                    "message": "ReferenceError: context is not defined",
-                    "stack": "ReferenceError: context is not defined\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                      "column": 5,
-                      "line": 224
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 222 |\u001b[39m \u001b[90m/** Rutinas de Ejercicios */\u001b[39m\n \u001b[90m 223 |\u001b[39m test(\u001b[32m'Filtro responsive: Rutinas de Ejercicios'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mgrantPermissions([\u001b[32m'geolocation'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://front-qa.vida-fit.com/recursos/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m\n \u001b[90m 227 |\u001b[39m   \u001b[90m// CORREGIDO: Busca el botón Filtros por texto, no por clase\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                        "column": 5,
-                        "line": 224
-                      },
-                      "message": "ReferenceError: context is not defined\n\n  222 | /** Rutinas de Ejercicios */\n  223 | test('Filtro responsive: Rutinas de Ejercicios', async ({ page }) => {\n> 224 |     await context.grantPermissions(['geolocation']);\n      |     ^\n  225 |   await page.goto('https://front-qa.vida-fit.com/recursos/');\n  226 |\n  227 |   // CORREGIDO: Busca el botón Filtros por texto, no por clase\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js:224:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:31:30.839Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursoresponsive-Filtro-responsive-Rutinas-de-Ejercicios-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursoresponsive.spec.js",
-                    "column": 5,
-                    "line": 224
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3751a7fbcbf64b4952c0-d2c6adea0a05398c1820",
-          "file": "recursoresponsive.spec.js",
-          "line": 223,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "recursos.spec.js",
-      "file": "recursos.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Formulario Recursos",
-          "file": "recursos.spec.js",
-          "line": 121,
-          "column": 6,
-          "specs": [
-            {
-              "title": "1. Campos vacíos",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 6629,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:30:56.082Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Formulario-Recursos-1-Campos-vacíos-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-94d3b4c2567938e82bc4",
-              "file": "recursos.spec.js",
-              "line": 122,
+              "id": "2eadc64dcce2772a3953-fcd44e3c01747d842f3a",
+              "file": "menu.lateral.spec.js",
+              "line": 51,
               "column": 3
             },
             {
-              "title": "2. Nombre y Apellido con números",
+              "title": "Redirecciona correctamente a Iniciar sesión",
               "ok": true,
               "tags": [],
               "tests": [
@@ -1508,1132 +305,72 @@
                   "results": [
                     {
                       "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 5859,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:02.717Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Formulario-Recursos-2-Nombre-y-Apellido-con-números-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-23d087d27a3d11d8c89b",
-              "file": "recursos.spec.js",
-              "line": 138,
-              "column": 3
-            },
-            {
-              "title": "3. Email inválido",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 7365,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:08.585Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Formulario-Recursos-3-Email-inválido-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-efe8eb45455ee420d5c5",
-              "file": "recursos.spec.js",
-              "line": 153,
-              "column": 3
-            },
-            {
-              "title": "4. Caso exitoso",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 5683,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:15.958Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Formulario-Recursos-4-Caso-exitoso-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-e20acc1a2ae9e5975811",
-              "file": "recursos.spec.js",
-              "line": 165,
-              "column": 3
-            }
-          ]
-        },
-        {
-          "title": "Navegación menú hamburguesa (Vidafit)",
-          "file": "recursos.spec.js",
-          "line": 179,
-          "column": 6,
-          "specs": [
-            {
-              "title": "1. Ir a Rutinas",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 7165,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:21.648Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-hamburguesa-Vidafit-1-Ir-a-Rutinas-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-d40bf25471e7c7cd64f6",
-              "file": "recursos.spec.js",
-              "line": 185,
-              "column": 3
-            },
-            {
-              "title": "2. Ir a Recetas",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 5526,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:28.821Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-hamburguesa-Vidafit-2-Ir-a-Recetas-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-5d27e4c162c3f1d517f8",
-              "file": "recursos.spec.js",
-              "line": 191,
-              "column": 3
-            },
-            {
-              "title": "3. Ir a Recursos",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 6416,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:34.360Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-hamburguesa-Vidafit-3-Ir-a-Recursos-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-20b3269e8970e5826764",
-              "file": "recursos.spec.js",
-              "line": 197,
-              "column": 3
-            },
-            {
-              "title": "4. Ir a Blog",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4527,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:40.784Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-hamburguesa-Vidafit-4-Ir-a-Blog-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-ee66b4215389e0ccd194",
-              "file": "recursos.spec.js",
-              "line": 203,
-              "column": 3
-            },
-            {
-              "title": "5. Abrir Perfil muestra botón Únete",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3524,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:45.321Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-h-0afb4--Perfil-muestra-botón-Únete-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-468e0f40f6247e934d67",
-              "file": "recursos.spec.js",
-              "line": 209,
-              "column": 3
-            },
-            {
-              "title": "6. Ir a Únete",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4091,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:48.851Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-hamburguesa-Vidafit-6-Ir-a-Únete-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-f7659f1faa04a9bdef72",
-              "file": "recursos.spec.js",
-              "line": 215,
-              "column": 3
-            },
-            {
-              "title": "7. Ir a Iniciar sesión y cerrar modal",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4319,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:52.947Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-h-e31f1-iciar-sesión-y-cerrar-modal-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-0b86a10bfefe0895500c",
-              "file": "recursos.spec.js",
-              "line": 222,
-              "column": 3
-            },
-            {
-              "title": "8. Volver al Home",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4334,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:31:57.271Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-h-b2c45-sa-Vidafit-8-Volver-al-Home-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-5fea349618d09e999420",
-              "file": "recursos.spec.js",
-              "line": 229,
-              "column": 3
-            },
-            {
-              "title": "9. Abrir y cerrar Términos y Condiciones",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4114,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:01.611Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Navegación-menú-h-c86d9-rrar-Términos-y-Condiciones-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-94a28974dccfb2464f47",
-              "file": "recursos.spec.js",
-              "line": 235,
-              "column": 3
-            }
-          ]
-        },
-        {
-          "title": "Filtros de recursos",
-          "file": "recursos.spec.js",
-          "line": 246,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Filtrar por Entrenamiento",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 2948,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:05.731Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Filtros-de-recursos-Filtrar-por-Entrenamiento-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-0bf7bf3f432febbb01fd",
-              "file": "recursos.spec.js",
-              "line": 252,
-              "column": 3
-            },
-            {
-              "title": "Filtrar por Nutrición",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3547,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:08.683Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Filtros-de-recursos-Filtrar-por-Nutrición-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-514a14f563fbfc57c9f1",
-              "file": "recursos.spec.js",
-              "line": 257,
-              "column": 3
-            },
-            {
-              "title": "Filtrar por Recetas Fitness",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3032,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:12.235Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Filtros-de-recursos-Filtrar-por-Recetas-Fitness-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-f9677474080938cda9da",
-              "file": "recursos.spec.js",
-              "line": 264,
-              "column": 2
-            },
-            {
-              "title": "Filtrar por Vive Fit",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3199,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:15.271Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Filtros-de-recursos-Filtrar-por-Vive-Fit-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-46405c118995135b5e78",
-              "file": "recursos.spec.js",
-              "line": 271,
-              "column": 3
-            },
-            {
-              "title": "Filtrar por Rutinas de Ejercicios",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3266,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:18.474Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Filtros-de-recurs-96f74-r-por-Rutinas-de-Ejercicios-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-098324ca66be9ec2d8e4",
-              "file": "recursos.spec.js",
-              "line": 278,
-              "column": 3
-            }
-          ]
-        },
-        {
-          "title": "Registro de usuario",
-          "file": "recursos.spec.js",
-          "line": 287,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Movistar",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3594,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:21.745Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Movistar-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-47952975bc00e46d70f4",
-              "file": "recursos.spec.js",
-              "line": 288,
-              "column": 3
-            },
-            {
-              "title": "Digitel",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "timedOut",
-                      "duration": 30156,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js",
-                            "column": 10,
-                            "line": 323
-                          },
-                          "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  321 |   const joinButton = page.getByRole('button', { name: /unirme a vida ?fit/i });\n  322 |   await Promise.all([\n> 323 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  324 |     joinButton.click(),\n  325 |   ]);\n  326 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js:323:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-11-23T00:32:25.342Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium\\error-context.md"
-                        }
-                      ]
-                    },
-                    {
-                      "workerIndex": 19,
-                      "parallelIndex": 1,
-                      "status": "timedOut",
-                      "duration": 30820,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js",
-                            "column": 10,
-                            "line": 323
-                          },
-                          "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  321 |   const joinButton = page.getByRole('button', { name: /unirme a vida ?fit/i });\n  322 |   await Promise.all([\n> 323 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  324 |     joinButton.click(),\n  325 |   ]);\n  326 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\recursos.spec.js:323:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2025-11-23T00:32:56.324Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Digitel-chromium-retry1\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "4230db46ec7bad0e53d0-c4f8167a67b78d8e8fda",
-              "file": "recursos.spec.js",
-              "line": 307,
-              "column": 1
-            },
-            {
-              "title": "Prueba gratis Movistar 2",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 20,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5956,
+                      "duration": 11507,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-23T00:33:28.592Z",
+                      "startTime": "2026-05-08T17:31:57.626Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\recursos-Registro-de-usuario-Prueba-gratis-Movistar-2-chromium\\video.webm"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "4230db46ec7bad0e53d0-ca52bc718c18aae82b79",
-              "file": "recursos.spec.js",
-              "line": 331,
-              "column": 1
+              "id": "2eadc64dcce2772a3953-053550ff3e49e7573b22",
+              "file": "menu.lateral.spec.js",
+              "line": 62,
+              "column": 3
+            },
+            {
+              "title": "Redirecciona correctamente a Tienda en nueva pestaña",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12983,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-08T17:32:09.528Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2eadc64dcce2772a3953-37c8e3a4d6b82590b4ee",
+              "file": "menu.lateral.spec.js",
+              "line": 78,
+              "column": 3
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "registro.spec.js",
-      "file": "registro.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Prueba gratis con Movistar",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5385,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Usuario creado (Movistar): arijana+1763857875386@androvent.com | Tel: 9814434\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:14.768Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Movistar-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "1098c23971260b33563e-d29783957568e50cb384",
-          "file": "registro.spec.js",
-          "line": 77,
-          "column": 1
-        },
-        {
-          "title": "Prueba gratis con Digitel",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 38864,
-                  "error": {
-                    "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-                    "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:119:10",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                      "column": 10,
-                      "line": 119
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[36mawait\u001b[39m centerInView(joinButton)\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m     page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/auth\\/account-success\\/?$/i\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m,\u001b[39m\n \u001b[90m     |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m     joinButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 121 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 122 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                        "column": 10,
-                        "line": 119
-                      },
-                      "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  117 |   await centerInView(joinButton);\n  118 |   await Promise.all([\n> 119 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  120 |     joinButton.click(),\n  121 |   ]);\n  122 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:119:10"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:31:20.387Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                    "column": 10,
-                    "line": 119
-                  }
-                },
-                {
-                  "workerIndex": 17,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 39631,
-                  "error": {
-                    "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-                    "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:119:10",
-                    "location": {
-                      "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                      "column": 10,
-                      "line": 119
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[36mawait\u001b[39m centerInView(joinButton)\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m     page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/\\/auth\\/account-success\\/?$/i\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m,\u001b[39m\n \u001b[90m     |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m     joinButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 121 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 122 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                        "column": 10,
-                        "line": 119
-                      },
-                      "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n  117 |   await centerInView(joinButton);\n  118 |   await Promise.all([\n> 119 |     page.waitForURL(/\\/auth\\/account-success\\/?$/i, { timeout: 30000 }),\n      |          ^\n  120 |     joinButton.click(),\n  121 |   ]);\n  122 |\n    at C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js:119:10"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-11-23T00:32:00.741Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium-retry1\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-Prueba-gratis-con-Digitel-chromium-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\registro.spec.js",
-                    "column": 10,
-                    "line": 119
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "1098c23971260b33563e-1ade262a40a1744102e5",
-          "file": "registro.spec.js",
-          "line": 104,
-          "column": 1
-        },
-        {
-          "title": "prueba gratis movistar 2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 18,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 36584,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Usuario creado (Movistar 2): arijana+1763857962610@androvent.com | Tel: 9604954\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-23T00:32:42.406Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\test-results\\registro-prueba-gratis-movistar-2-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "1098c23971260b33563e-5e22382a5b4b3d93785a",
-          "file": "registro.spec.js",
-          "line": 130,
-          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-23T00:30:02.243Z",
-    "duration": 212488.925,
-    "expected": 33,
+    "startTime": "2026-05-08T17:31:08.694Z",
+    "duration": 74465.08,
+    "expected": 6,
     "skipped": 0,
-    "unexpected": 9,
+    "unexpected": 1,
     "flaky": 0
   }
 }

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QA Reporte - VidaFIT</title>
+  <style>
+      .chart-card {
+      background: var(--panel);
+      border-radius: 20px;
+      padding: 16px;
+      margin: 16px 0 24px;
+      display: flex;
+      justify-content: center; /* 👈 gráfico centrado */
+    }
+      .qa-owner {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+    :root { --bg:#0b1020; --panel:#121832; --ink:#e9eefc; --muted:#9fb0e3; --ok:#2fd285; --ko:#ff5d6a; --card:#0f142a; }
+    html,body { margin:0; background:var(--bg); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .wrap { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+    .header { display:flex; gap:16px; align-items:center; margin-bottom: 20px; }
+    .pill { background:var(--panel); padding:8px 12px; border-radius:999px; color:var(--muted); font-size:14px; }
+    .stats { display:flex; gap:12px; flex-wrap: wrap; }
+    .stat { background:var(--panel); border-radius:16px; padding:12px 16px; }
+    .stat b { font-size:20px; }
+    .chart-card { background:var(--panel); border-radius:20px; padding:16px; margin: 16px 0 24px; }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .test-card { grid-column: span 12; background:var(--card); border-radius:16px; padding:14px 16px; border:1px solid #1a2347; }
+    .row { display:flex; gap:10px; align-items:center; flex-wrap: wrap; }
+    .badge { border-radius:10px; padding:4px 8px; font-size:12px; }
+    .passed { background: color-mix(in oklab, var(--ok) 20%, transparent); color: var(--ok); border:1px solid var(--ok); }
+    .failed { background: color-mix(in oklab, var(--ko) 15%, transparent); color: var(--ko); border:1px solid var(--ko); }
+    .muted { color:var(--muted); font-size:12px; }
+    .title { font-weight:600; }
+    details { margin-top:8px; }
+    summary { cursor:pointer; color:var(--muted); }
+    .step { margin: 6px 0 6px 12px; padding-left:8px; border-left:2px solid #29335b; }
+    .video { margin-top: 10px; border-radius: 12px; border:1px solid #1a2347; overflow:hidden; }
+    code { background:#0b1229; padding:2px 6px; border-radius:8px; }
+    .tiny { font-size: 11px; color:#8aa2e2; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+ <div class="header">
+  <h1 style="margin:0;">QA Reporte - VidaFIT</h1>
+  <span class="pill">Generado: <span id="genAt"></span></span>
+  <span class="pill">Duración total: <span id="dur"></span> s</span>
+  <div class="stats">
+    <span class="stat">Total: <b id="total"></b></span>
+    <span class="stat">Passed: <b id="passed" style="color:var(--ok)"></b></span>
+    <span class="stat">Failed: <b id="failed" style="color:var(--ko)"></b></span>
+  </div>
+</div>
+
+<!-- 👇 Nuevo bloque bien separado -->
+<div class="qa-owner">
+  QA Especialista: <b>Andrea Rijana</b>
+</div>
+    <div class="chart-card">
+      <canvas id="bar" height="100"></canvas>
+    </div>
+
+    <div id="tests" class="grid"></div>
+  </div>
+
+<script>
+// Datos embebidos:
+const REPORT_DATA = {"meta":{"generatedAt":"2026-04-14T19:39:47.839Z","durationSec":"82.4","total":18,"passed":16,"failed":2},"tests":[{"title":"1. Caso con campos en blanco","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.claro.spec.js","project":"chromium","status":"passed","duration":22972,"steps":[{"title":"Before Hooks","duration":20258,"steps":[{"title":"beforeEach hook","duration":20257,"steps":[{"title":"browser","duration":336,"steps":[{"title":"Launch browser","duration":329,"steps":[]}]},{"title":"context","duration":18,"steps":[{"title":"Create context","duration":12,"steps":[]}]},{"title":"page","duration":269,"steps":[{"title":"Create page","duration":267,"steps":[]}]},{"title":"Navigate to \"/\"","duration":17688,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":218,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":494,"steps":[]},{"title":"Click locator('svg').nth(4)","duration":1040,"steps":[]},{"title":"Click getByRole('img', { name: 'Claro' })","duration":92,"steps":[]}]}]},{"title":"toBeVisible","duration":966,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":368,"steps":[]},{"title":"toBeVisible","duration":11,"steps":[]},{"title":"After Hooks","duration":1700,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"1. campos vacíos","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"passed","duration":23065,"steps":[{"title":"Before Hooks","duration":20629,"steps":[{"title":"beforeEach hook","duration":20627,"steps":[{"title":"browser","duration":363,"steps":[{"title":"Launch browser","duration":355,"steps":[]}]},{"title":"context","duration":14,"steps":[{"title":"Create context","duration":10,"steps":[]}]},{"title":"page","duration":221,"steps":[{"title":"Create page","duration":217,"steps":[]}]},{"title":"Navigate to \"/\"","duration":18333,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":270,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":353,"steps":[]},{"title":"toBeVisible","duration":984,"steps":[]},{"title":"toBeVisible","duration":49,"steps":[]}]}]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":391,"steps":[]},{"title":"toHaveCount","duration":38,"steps":[]},{"title":"After Hooks","duration":2375,"steps":[{"title":"page","duration":1,"steps":[]},{"title":"context","duration":1,"steps":[]}]}]},{"title":"1. campo en blanco","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.digitel.spec.js","project":"chromium","status":"passed","duration":23549,"steps":[{"title":"Before Hooks","duration":22752,"steps":[{"title":"beforeEach hook","duration":22751,"steps":[{"title":"browser","duration":314,"steps":[{"title":"Launch browser","duration":309,"steps":[]}]},{"title":"context","duration":21,"steps":[{"title":"Create context","duration":17,"steps":[]}]},{"title":"page","duration":351,"steps":[{"title":"Create page","duration":348,"steps":[]}]},{"title":"Navigate to \"/\"","duration":18726,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":275,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":378,"steps":[]},{"title":"Click locator('.country-option > .mat-icon > svg > g > path').first()","duration":2162,"steps":[]},{"title":"Click getByRole('img', { name: 'Digitel' })","duration":94,"steps":[]},{"title":"toBeVisible","duration":389,"steps":[]}]}]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":349,"steps":[]},{"title":"toBeVisible","duration":7,"steps":[]},{"title":"After Hooks","duration":759,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"1. Caso con campos en blanco","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.movistar.spec.js","project":"chromium","status":"passed","duration":28394,"steps":[{"title":"Before Hooks","duration":25686,"steps":[{"title":"beforeEach hook","duration":25684,"steps":[{"title":"browser","duration":317,"steps":[{"title":"Launch browser","duration":309,"steps":[]}]},{"title":"context","duration":17,"steps":[{"title":"Create context","duration":13,"steps":[]}]},{"title":"page","duration":306,"steps":[{"title":"Create page","duration":303,"steps":[]}]},{"title":"Navigate to \"/\"","duration":18683,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":470,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":616,"steps":[]},{"title":"Click locator('svg').nth(3)","duration":4868,"steps":[]},{"title":"Click getByRole('img', { name: 'Movistar' })","duration":325,"steps":[]}]}]},{"title":"toBeVisible","duration":908,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":135,"steps":[]},{"title":"toBeVisible","duration":9,"steps":[]},{"title":"After Hooks","duration":1975,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"2. contraseña vacía","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"passed","duration":10777,"steps":[{"title":"Before Hooks","duration":7811,"steps":[{"title":"beforeEach hook","duration":7810,"steps":[{"title":"context","duration":7,"steps":[{"title":"Create context","duration":4,"steps":[]}]},{"title":"page","duration":98,"steps":[{"title":"Create page","duration":95,"steps":[]}]},{"title":"Navigate to \"/\"","duration":5978,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":468,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":303,"steps":[]},{"title":"toBeVisible","duration":931,"steps":[]},{"title":"toBeVisible","duration":8,"steps":[]}]}]},{"title":"Fill \"arijana+2@androvent.com\" getByRole('textbox', { name: 'Email' })","duration":35,"steps":[]},{"title":"Fill \"\" getByRole('textbox', { name: 'Contraseña' })","duration":78,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":200,"steps":[]},{"title":"toHaveCount","duration":9,"steps":[]},{"title":"After Hooks","duration":2640,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"2. Caso con número inválido","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.claro.spec.js","project":"chromium","status":"passed","duration":12211,"steps":[{"title":"Before Hooks","duration":9349,"steps":[{"title":"beforeEach hook","duration":9348,"steps":[{"title":"context","duration":6,"steps":[{"title":"Create context","duration":4,"steps":[]}]},{"title":"page","duration":109,"steps":[{"title":"Create page","duration":107,"steps":[]}]},{"title":"Navigate to \"/\"","duration":2385,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":3498,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":266,"steps":[]},{"title":"Click locator('svg').nth(4)","duration":2906,"steps":[]},{"title":"Click getByRole('img', { name: 'Claro' })","duration":160,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":1096,"steps":[]},{"title":"Fill \"123\" getByRole('textbox', { name: 'Ej:' })","duration":18,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":185,"steps":[]},{"title":"toBeVisible","duration":31,"steps":[]},{"title":"After Hooks","duration":1528,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"2. Caso con número inválido","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.movistar.spec.js","project":"chromium","status":"passed","duration":12877,"steps":[{"title":"Before Hooks","duration":7956,"steps":[{"title":"beforeEach hook","duration":7955,"steps":[{"title":"context","duration":6,"steps":[{"title":"Create context","duration":5,"steps":[]}]},{"title":"page","duration":639,"steps":[{"title":"Create page","duration":636,"steps":[]}]},{"title":"Navigate to \"/\"","duration":3521,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":2104,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":458,"steps":[]},{"title":"Click locator('svg').nth(3)","duration":856,"steps":[]},{"title":"Click getByRole('img', { name: 'Movistar' })","duration":353,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":922,"steps":[]},{"title":"Fill \"123\" getByRole('textbox', { name: 'Ej:' })","duration":23,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":184,"steps":[]},{"title":"toBeVisible","duration":10,"steps":[]},{"title":"After Hooks","duration":3780,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"2. número inválido","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.digitel.spec.js","project":"chromium","status":"passed","duration":20060,"steps":[{"title":"Before Hooks","duration":18171,"steps":[{"title":"beforeEach hook","duration":18170,"steps":[{"title":"context","duration":7,"steps":[{"title":"Create context","duration":6,"steps":[]}]},{"title":"page","duration":132,"steps":[{"title":"Create page","duration":129,"steps":[]}]},{"title":"Navigate to \"/\"","duration":11012,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":3306,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":313,"steps":[]},{"title":"Click locator('.country-option > .mat-icon > svg > g > path').first()","duration":2179,"steps":[]},{"title":"Click getByRole('img', { name: 'Digitel' })","duration":280,"steps":[]},{"title":"toBeVisible","duration":922,"steps":[]}]}]},{"title":"Fill \"123\" getByRole('textbox', { name: 'Ej:' })","duration":28,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":629,"steps":[]},{"title":"toBeVisible","duration":9,"steps":[]},{"title":"After Hooks","duration":1221,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"3. correo inválido","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"passed","duration":10414,"steps":[{"title":"Before Hooks","duration":8485,"steps":[{"title":"beforeEach hook","duration":8484,"steps":[{"title":"context","duration":33,"steps":[{"title":"Create context","duration":29,"steps":[]}]},{"title":"page","duration":496,"steps":[{"title":"Create page","duration":494,"steps":[]}]},{"title":"Navigate to \"/\"","duration":4225,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":1820,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":977,"steps":[]},{"title":"toBeVisible","duration":443,"steps":[]},{"title":"toBeVisible","duration":465,"steps":[]}]}]},{"title":"Fill \"correo-invalido\" getByRole('textbox', { name: 'Email' })","duration":188,"steps":[]},{"title":"Fill \"Admin.01\" getByRole('textbox', { name: 'Contraseña' })","duration":42,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":518,"steps":[]},{"title":"toBeVisible","duration":8,"steps":[]},{"title":"After Hooks","duration":1168,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"3. Caso con número no registrado","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.claro.spec.js","project":"chromium","status":"passed","duration":16226,"steps":[{"title":"Before Hooks","duration":11684,"steps":[{"title":"beforeEach hook","duration":11683,"steps":[{"title":"context","duration":6,"steps":[{"title":"Create context","duration":3,"steps":[]}]},{"title":"page","duration":352,"steps":[{"title":"Create page","duration":348,"steps":[]}]},{"title":"Navigate to \"/\"","duration":9208,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":187,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":320,"steps":[]},{"title":"Click locator('svg').nth(4)","duration":1396,"steps":[]},{"title":"Click getByRole('img', { name: 'Claro' })","duration":198,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":1187,"steps":[]},{"title":"Fill \"9999999\" getByRole('textbox', { name: 'Ej:' })","duration":22,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":339,"steps":[]},{"title":"toBeVisible","duration":1217,"steps":[]},{"title":"After Hooks","duration":1773,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"3. Caso con número no registrado","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.movistar.spec.js","project":"chromium","status":"passed","duration":11649,"steps":[{"title":"Before Hooks","duration":7226,"steps":[{"title":"beforeEach hook","duration":7225,"steps":[{"title":"context","duration":52,"steps":[{"title":"Create context","duration":51,"steps":[]}]},{"title":"page","duration":624,"steps":[{"title":"Create page","duration":622,"steps":[]}]},{"title":"Navigate to \"/\"","duration":3238,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":944,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":363,"steps":[]},{"title":"Click locator('svg').nth(3)","duration":1860,"steps":[]},{"title":"Click getByRole('img', { name: 'Movistar' })","duration":128,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":1175,"steps":[]},{"title":"Fill \"9999999\" getByRole('textbox', { name: 'Ej:' })","duration":737,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":121,"steps":[]},{"title":"toBeVisible","duration":887,"steps":[]},{"title":"After Hooks","duration":1501,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"4. correo incorrecto","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"passed","duration":11014,"steps":[{"title":"Before Hooks","duration":8456,"steps":[{"title":"beforeEach hook","duration":8456,"steps":[{"title":"context","duration":9,"steps":[{"title":"Create context","duration":6,"steps":[]}]},{"title":"page","duration":156,"steps":[{"title":"Create page","duration":153,"steps":[]}]},{"title":"Navigate to \"/\"","duration":7367,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":191,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":274,"steps":[]},{"title":"toBeVisible","duration":424,"steps":[]},{"title":"toBeVisible","duration":20,"steps":[]}]}]},{"title":"Fill \"arijana+999@androvent.com\" getByRole('textbox', { name: 'Email' })","duration":32,"steps":[]},{"title":"Fill \"Admin.01\" getByRole('textbox', { name: 'Contraseña' })","duration":187,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":448,"steps":[]},{"title":"toBeVisible","duration":447,"steps":[]},{"title":"After Hooks","duration":1433,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"3. número no registrado","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.digitel.spec.js","project":"chromium","status":"passed","duration":16843,"steps":[{"title":"Before Hooks","duration":12651,"steps":[{"title":"beforeEach hook","duration":12650,"steps":[{"title":"context","duration":7,"steps":[{"title":"Create context","duration":5,"steps":[]}]},{"title":"page","duration":3805,"steps":[{"title":"Create page","duration":3803,"steps":[]}]},{"title":"Navigate to \"/\"","duration":4777,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":1362,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":575,"steps":[]},{"title":"Click locator('.country-option > .mat-icon > svg > g > path').first()","duration":1010,"steps":[]},{"title":"Click getByRole('img', { name: 'Digitel' })","duration":107,"steps":[]},{"title":"toBeVisible","duration":988,"steps":[]}]}]},{"title":"Fill \"9999991\" getByRole('textbox', { name: 'Ej:' })","duration":20,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":438,"steps":[]},{"title":"toBeVisible","duration":1129,"steps":[]},{"title":"After Hooks","duration":2604,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"4. Caso exitoso","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.movistar.spec.js","project":"chromium","status":"passed","duration":12552,"steps":[{"title":"Before Hooks","duration":9660,"steps":[{"title":"beforeEach hook","duration":9659,"steps":[{"title":"context","duration":9,"steps":[{"title":"Create context","duration":7,"steps":[]}]},{"title":"page","duration":1451,"steps":[{"title":"Create page","duration":1449,"steps":[]}]},{"title":"Navigate to \"/\"","duration":3780,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":1530,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":368,"steps":[]},{"title":"Click locator('svg').nth(3)","duration":2395,"steps":[]},{"title":"Click getByRole('img', { name: 'Movistar' })","duration":109,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":707,"steps":[]},{"title":"Fill \"0000001\" getByRole('textbox', { name: 'Ej:' })","duration":17,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":383,"steps":[]},{"title":"toBeVisible","duration":972,"steps":[]},{"title":"After Hooks","duration":809,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"4. Caso exitoso","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.claro.spec.js","project":"chromium","status":"failed","duration":15045,"error":"Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#logo').getByRole('img')\nExpected: visible\nReceived: \u003celement(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#logo').getByRole('img')\u001b[22m\n","steps":[{"title":"Before Hooks","duration":7849,"steps":[{"title":"beforeEach hook","duration":7848,"steps":[{"title":"context","duration":6,"steps":[{"title":"Create context","duration":5,"steps":[]}]},{"title":"page","duration":314,"steps":[{"title":"Create page","duration":312,"steps":[]}]},{"title":"Navigate to \"/\"","duration":3442,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":1207,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":584,"steps":[]},{"title":"Click locator('svg').nth(4)","duration":2166,"steps":[]},{"title":"Click getByRole('img', { name: 'Claro' })","duration":112,"steps":[]}]}]},{"title":"Click getByRole('textbox', { name: 'Ej:' })","duration":1007,"steps":[]},{"title":"Fill \"1111111\" getByRole('textbox', { name: 'Ej:' })","duration":20,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":175,"steps":[]},{"title":"toBeVisible","duration":5015,"error":"Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#logo').getByRole('img')\nExpected: visible\nReceived: \u003celement(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#logo').getByRole('img')\u001b[22m\n","steps":[]},{"title":"After Hooks","duration":981,"steps":[{"title":"Screenshot","duration":589,"steps":[]},{"title":"page","duration":0,"steps":[]},{"title":"context","duration":1,"steps":[]}]},{"title":"Worker Cleanup","duration":983,"steps":[{"title":"browser","duration":982,"steps":[]}]}],"videoPath":"videos/video_4_Caso_exitoso_1776195575507.webm"},{"title":"5. contraseña incorrecta","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"passed","duration":12628,"steps":[{"title":"Before Hooks","duration":9594,"steps":[{"title":"beforeEach hook","duration":9594,"steps":[{"title":"context","duration":6,"steps":[{"title":"Create context","duration":3,"steps":[]}]},{"title":"page","duration":325,"steps":[{"title":"Create page","duration":323,"steps":[]}]},{"title":"Navigate to \"/\"","duration":4001,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":4331,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":437,"steps":[]},{"title":"toBeVisible","duration":475,"steps":[]},{"title":"toBeVisible","duration":6,"steps":[]}]}]},{"title":"Fill \"arijana+2@androvent.com\" getByRole('textbox', { name: 'Email' })","duration":30,"steps":[]},{"title":"Fill \"Admin.00\" getByRole('textbox', { name: 'Contraseña' })","duration":21,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":432,"steps":[]},{"title":"toBeVisible","duration":379,"steps":[]},{"title":"After Hooks","duration":2169,"steps":[{"title":"page","duration":1,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"4. caso exitoso","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.digitel.spec.js","project":"chromium","status":"passed","duration":11542,"steps":[{"title":"Before Hooks","duration":9685,"steps":[{"title":"beforeEach hook","duration":9684,"steps":[{"title":"context","duration":5,"steps":[{"title":"Create context","duration":4,"steps":[]}]},{"title":"page","duration":640,"steps":[{"title":"Create page","duration":638,"steps":[]}]},{"title":"Navigate to \"/\"","duration":7244,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":176,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":260,"steps":[]},{"title":"Click locator('.country-option > .mat-icon > svg > g > path').first()","duration":653,"steps":[]},{"title":"Click getByRole('img', { name: 'Digitel' })","duration":251,"steps":[]},{"title":"toBeVisible","duration":438,"steps":[]}]}]},{"title":"Fill \"0000002\" getByRole('textbox', { name: 'Ej:' })","duration":17,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":361,"steps":[]},{"title":"toBeVisible","duration":890,"steps":[]},{"title":"After Hooks","duration":589,"steps":[{"title":"page","duration":0,"steps":[]},{"title":"context","duration":0,"steps":[]}]}]},{"title":"6. caso exitoso","file":"C:\\Users\\arijana\\Desktop\\Playwrigtht - vidafit\\login.spec.js","project":"chromium","status":"failed","duration":11683,"error":"Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#logo').getByRole('img')\nExpected: visible\nReceived: \u003celement(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#logo').getByRole('img')\u001b[22m\n","steps":[{"title":"Before Hooks","duration":5794,"steps":[{"title":"beforeEach hook","duration":5793,"steps":[{"title":"context","duration":5,"steps":[{"title":"Create context","duration":4,"steps":[]}]},{"title":"page","duration":255,"steps":[{"title":"Create page","duration":253,"steps":[]}]},{"title":"Navigate to \"/\"","duration":4633,"steps":[]},{"title":"Click locator('app-header').getByRole('button').nth(1)","duration":185,"steps":[]},{"title":"Click getByRole('button', { name: 'Iniciar sesión' })","duration":302,"steps":[]},{"title":"toBeVisible","duration":393,"steps":[]},{"title":"toBeVisible","duration":6,"steps":[]}]}]},{"title":"Fill \"arijana+2@androvent.com\" getByRole('textbox', { name: 'Email' })","duration":14,"steps":[]},{"title":"Fill \"Admin.01\" getByRole('textbox', { name: 'Contraseña' })","duration":43,"steps":[]},{"title":"Click getByRole('button', { name: /^Iniciar sesión$/ }).last()","duration":196,"steps":[]},{"title":"toBeVisible","duration":5011,"error":"Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#logo').getByRole('img')\nExpected: visible\nReceived: \u003celement(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#logo').getByRole('img')\u001b[22m\n","steps":[]},{"title":"After Hooks","duration":624,"steps":[{"title":"Screenshot","duration":380,"steps":[]},{"title":"page","duration":1,"steps":[]},{"title":"context","duration":0,"steps":[]}]},{"title":"Worker Cleanup","duration":69,"steps":[{"title":"browser","duration":68,"steps":[]}]}],"videoPath":"videos/video_6_caso_exitoso_1776195587788.webm"}]};
+
+function el(tag, attrs={}, children=[]) {
+  const n = document.createElement(tag);
+  Object.entries(attrs).forEach(([k,v]) => {
+    if (k === 'class') n.className = v;
+    else if (k === 'text') n.textContent = v;
+    else n.setAttribute(k, v);
+  });
+  [].concat(children).forEach(c => c && n.appendChild(c));
+  return n;
+}
+
+function renderMeta() {
+  document.getElementById('genAt').textContent = new Date(REPORT_DATA.meta.generatedAt).toLocaleString();
+  document.getElementById('dur').textContent = REPORT_DATA.meta.durationSec;
+  document.getElementById('total').textContent = REPORT_DATA.meta.total;
+  document.getElementById('passed').textContent = REPORT_DATA.meta.passed;
+  document.getElementById('failed').textContent = REPORT_DATA.meta.failed;
+}
+
+function renderChart() {
+  // Mini bar chart sin librerías (canvas API):
+  const canvas = document.getElementById('bar');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const pad = 20;
+  const vals = [REPORT_DATA.meta.passed, REPORT_DATA.meta.failed];
+  const max = Math.max(1, ...vals);
+  const labels = ['Passed', 'Failed'];
+
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle = '#9fb0e3';
+  ctx.font = '12px system-ui';
+
+  const barW = (W - pad*2) / (vals.length * 2);
+  vals.forEach((v, i) => {
+    const h = Math.round((H - pad*2) * (v / max));
+    const x = pad + i * barW * 2 + barW * 0.5;
+    const y = H - pad - h;
+    ctx.fillStyle = i === 0 ? '#2fd285' : '#ff5d6a';
+    ctx.fillRect(x, y, barW, h);
+    ctx.fillStyle = '#9fb0e3';
+    ctx.fillText(labels[i], x, H - pad + 12);
+    ctx.fillText(String(v), x, y - 4);
+  });
+}
+
+function renderSteps(step, container) {
+  const div = el('div', { class: 'step' }, [
+    el('div', { class: 'row' }, [
+      el('span', { class: 'title', text: step.title || 'step' }),
+      el('span', { class: 'tiny' , text: step.duration ? '· ' + step.duration + ' ms' : '' }),
+      step.error ? el('span', { class: 'badge failed', text: 'error' }) : null
+    ])
+  ]);
+  container.appendChild(div);
+  (step.steps || []).forEach(s => renderSteps(s, container));
+}
+
+function renderTests() {
+  const root = document.getElementById('tests');
+  REPORT_DATA.tests.forEach(t => {
+    const statusBadge = el('span', { class: 'badge ' + (t.status === 'passed' ? 'passed' : 'failed'), text: t.status });
+    const head = el('div', { class: 'row' }, [
+      el('div', { class: 'title', text: t.title }),
+      statusBadge,
+      el('span', { class: 'muted', text: t.project ? '· ' + t.project : '' }),
+      el('span', { class: 'muted', text: '· ' + (t.duration||0) + ' ms' })
+    ]);
+
+    const meta = el('div', { class: 'muted' }, [
+      el('span', { text: t.file || '' })
+    ]);
+
+    const card = el('div', { class: 'test-card' }, [head, meta]);
+
+    if (t.error) {
+      card.appendChild(el('div', { }, [
+        el('details', {}, [
+          el('summary', { text: 'Ver error' }),
+          el('pre', {}, [document.createTextNode(t.error)])
+        ])
+      ]));
+    }
+
+    if (t.steps && t.steps.length) {
+      const det = el('details', {}, [
+        el('summary', { text: 'Ver pasos' })
+      ]);
+      const cont = el('div');
+      t.steps.forEach(s => renderSteps(s, cont));
+      det.appendChild(cont);
+      card.appendChild(det);
+    }
+
+    if (t.videoPath && (t.status !== 'passed')) {
+      // Incrusta el video WebM solo en fallos
+      const video = el('video', { class: 'video', controls: '', src: t.videoPath });
+      card.appendChild(video);
+    }
+
+    root.appendChild(card);
+  });
+}
+
+renderMeta();
+renderChart();
+renderTests();
+</script>
+</body>
+</html>

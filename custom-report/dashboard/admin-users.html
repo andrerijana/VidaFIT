@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gestión de Usuarios - VidaFIT QA</title>
+  <title>Gestión de Usuarios - QA</title>
 
   <style>
     body {
@@ -169,7 +169,7 @@
 <div id="sidebarOverlay"></div>
 
 <nav class="sidebar" id="sidebar">
-  <h2>VidaFIT QA</h2>
+  <h2> QA</h2>
 
   <ul class="menu-list">
     <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
@@ -443,7 +443,7 @@ document.getElementById("btnCreateUser").onclick = async () => {
   const role = document.getElementById("newRole").value;
 
   // VALIDACIONES LOCALES
-  if (!nombre || !apellido || !correo || !password || !password2) {
+  if (!nombre || !apellido || !correo || !password ) {
     msg.textContent = "Todos los campos son obligatorios.";
     return;
   }

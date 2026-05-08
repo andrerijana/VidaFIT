@@ -12,7 +12,7 @@ export default defineConfig({
     headless: true,
     slowMo: 250,
     screenshot: 'only-on-failure',
-    video: 'on',
+    video: 'retain-on-failure',
     trace: 'on-first-retry',
     storageState: undefined
   },
@@ -34,7 +34,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    }
+    },
 
   ],
 
@@ -46,6 +46,6 @@ export default defineConfig({
   // ===============================
   // 🔄 Retries para mayor estabilidad
   // ===============================
-  retries: 1,
+
 });
 

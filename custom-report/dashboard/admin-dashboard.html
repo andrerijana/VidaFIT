@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel Administrativo - VidaFIT QA</title>
+  <title>Panel Administrativo - QA</title>
 
   <style>
     body {
@@ -46,7 +46,6 @@
       font-size: 14px;
     }
 
-    /* ========== SIDEBAR ========== */
     .menu-toggle {
       background: transparent;
       border: none;
@@ -86,496 +85,565 @@
       display: block;
     }
 
-    .menu-list { padding:0; margin:0; list-style:none; }
+    .menu-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
     .menu-link, .menu-button {
-      display:block;
-      padding:10px 12px;
-      border-radius:6px;
-      background:transparent;
-      color:#e5e7eb;
-      text-decoration:none;
-      margin-bottom:10px;
-      cursor:pointer;
+      display: block;
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: transparent;
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
+
     .menu-link:hover, .menu-button:hover {
-      background:#2563eb;
+      background: #2563eb;
     }
+
     .page-btn {
-  padding: 8px 14px;
-  margin: 0 5px;
-  font-size: 14px;
-  background: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
+      padding: 8px 14px;
+      margin: 0 5px;
+      font-size: 14px;
+      background: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-.page-btn:disabled {
-  background: #90a4ae;
-  cursor: not-allowed;
-}
+    .page-btn:disabled {
+      background: #90a4ae;
+      cursor: not-allowed;
+    }
 
-
-    /* ========== RESUMEN ========== */
     .summary {
-      display:flex;
-      justify-content:space-around;
-      margin:20px 0;
-      flex-wrap:wrap;
-      gap:15px;
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      gap: 15px;
     }
+
     .summary div {
-      background:#fff;
-      padding:20px;
-      border-radius:10px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      min-width:200px;
-      flex:1;
-      text-align:center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      min-width: 200px;
+      flex: 1;
+      text-align: center;
     }
 
-    /* ========== BOTONES ========== */
     .btn-container {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:15px;
-      margin-bottom:20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
+
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 10px 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-container label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .filter-container select {
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 15px;
+      min-width: 220px;
+      background: white;
+      cursor: pointer;
+    }
+
     .btn {
-      background-color:#1976d2;
-      color:white;
-      padding:10px 20px;
-      border:none;
-      border-radius:5px;
-      cursor:pointer;
-      font-size:16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
+      background-color: #1976d2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
     }
-    .btn:hover { background:#145ca1; }
 
-    /* Loader dentro del botón */
+    .btn:hover {
+      background: #145ca1;
+    }
+
     .loader-btn {
-      width:16px;
-      height:16px;
-      border:3px solid #ffffff60;
-      border-top:3px solid white;
-      border-radius:50%;
-      animation:spin 0.8s linear infinite;
-      display:none;
+      width: 16px;
+      height: 16px;
+      border: 3px solid #ffffff60;
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: none;
     }
-    @keyframes spin { to { transform:rotate(360deg); } }
 
-    /* ========== TABLA ========== */
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
     table {
-      width:100%;
-      background:white;
-      border-collapse:collapse;
-      border-radius:8px;
-      overflow:hidden;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      background: white;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     th {
-      background:#1976d2;
-      color:white;
-      padding:12px;
+      background: #1976d2;
+      color: white;
+      padding: 12px;
     }
+
     td {
-      padding:10px;
-      text-align:center;
-      border-bottom:1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
     }
 
-    tr:hover { background:#f1f1f1; }
+    tr:hover {
+      background: #f1f1f1;
+    }
 
-    /* Loader de la tabla */
     #tableLoader {
-      display:none;
-      text-align:center;
-      padding:20px;
-      font-size:18px;
-      font-weight:bold;
+      display: none;
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-/* Hace que button.menu-link se vea igual a a.menu-link */
-.menu-button-link {
-  all: unset;
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #e5e7eb;
-}
+    .menu-button-link {
+      all: unset;
+      display: block;
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #e5e7eb;
+    }
 
-.menu-button-link:hover {
-  background: #2563eb;
-  color: #fff;
-}
+    .menu-button-link:hover {
+      background: #2563eb;
+      color: #fff;
+    }
 
-/* Caja de versión */
-.version-box {
-  margin-top: 25px;
-  padding-left: 4px;
-  font-size: 12px;
-  opacity: 0.85;
-  color: #e5e7eb;
-}
-
-
-
+    .version-box {
+      margin-top: 25px;
+      padding-left: 4px;
+      font-size: 12px;
+      opacity: 0.85;
+      color: #e5e7eb;
+    }
   </style>
 </head>
 
 <body>
+  <div id="sidebarOverlay"></div>
 
-<div id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar">
+    <h2>QA</h2>
 
-<nav class="sidebar" id="sidebar">
-  <h2>VidaFIT QA</h2>
+    <ul class="menu-list">
+      <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+      <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
 
-  <ul class="menu-list">
+      <li id="menuUsersItem" style="display:none;">
+        <a href="./admin-users.html" class="menu-link">Gestión de usuarios</a>
+      </li>
 
-    <li><a href="./admin-dashboard.html" class="menu-link">Panel de resultados</a></li>
+      <li>
+        <button id="menuLogout" class="menu-link menu-button-link">
+          Cerrar sesión
+        </button>
+      </li>
+    </ul>
 
-    <li><a href="./charts.html" class="menu-link">Ver gráficas</a></li>
+    <div class="version-box">
+      <strong>Versión:</strong> v2.4 – Dic 2025
+    </div>
+  </nav>
 
-    <!-- SOLO ADMIN -->
-    <li id="menuUsersItem" style="display:none;">
-      <a href="./admin-users.html" class="menu-link">Gestión de usuarios</a>
-    </li>
+  <header>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <h1>Panel Administrativo - QA</h1>
+    </div>
 
-    <li>
-      <button id="menuLogout" class="menu-link menu-button-link">
-        Cerrar sesión
+    <div style="display:flex;align-items:center;gap:20px;">
+      <span id="userInfo"></span>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="summary">
+      <div><h3>Total de Ejecuciones</h3><p id="totalRuns">0</p></div>
+      <div><h3>Última Ejecución</h3><p id="lastRun">-</p></div>
+      <div><h3>Promedio de Éxito</h3><p id="avgSuccess">0%</p></div>
+    </div>
+
+    <div class="btn-container">
+      <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
+
+      <button id="btnEjecutar" class="btn" style="background:#2ecc71;">
+        <span id="btnText">Ejecutar ahora</span>
+        <div id="btnLoader" class="loader-btn"></div>
       </button>
-    </li>
+    </div>
 
-  </ul>
+    <div class="filter-container">
+      <label for="moduleFilter">Módulo:</label>
+    <select id="moduleFilter">
+      <option value="all">Todos los módulos</option>
+      <option value="login">Login</option>
+      <option value="registro">Registro</option>
+    </select>
+    </div>
 
-  <div class="version-box">
-    <strong>Versión:</strong> v2.3 – Nov 2025
-  </div>
-</nav>
+    <div id="tableLoader">Cargando resultados...</div>
 
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Módulo</th>
+          <th>Tests Totales</th>
+          <th>Exitosos</th>
+          <th>Fallidos</th>
+          <th>Duración (s)</th>
+          <th>Reporte</th>
+          <th>Reporte PDF</th>
+          <th>Ejecutado por</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody"></tbody>
+    </table>
 
+    <div id="paginationControls" style="margin: 20px 0; text-align: center;">
+      <button id="prevPage" class="page-btn">⟨ Anterior</button>
+      <span id="pageInfo" style="margin: 0 10px; font-weight: bold;"></span>
+      <button id="nextPage" class="page-btn">Siguiente ⟩</button>
+    </div>
+  </main>
 
-<header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <h1>Panel Administrativo - VidaFIT QA</h1>
-  </div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      getDocs,
+      orderBy,
+      query
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import {
+      getAuth,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-  <div style="display:flex;align-items:center;gap:20px;">
-    <span id="userInfo"></span>
-    <button id="logoutBtn">Cerrar sesión</button>
-  </div>
-</header>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
+      authDomain: "app-gestion-de-pruebas.firebaseapp.com",
+      projectId: "app-gestion-de-pruebas",
+      storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
+      messagingSenderId: "580009585775",
+      appId: "1:580009585775:web:e086fb73d1381cb4edb19a"
+    };
 
-<main>
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
 
-  <div class="summary">
-    <div><h3>Total de Ejecuciones</h3><p id="totalRuns">0</p></div>
-    <div><h3>Última Ejecución</h3><p id="lastRun">-</p></div>
-    <div><h3>Promedio de Éxito</h3><p id="avgSuccess">0%</p></div>
-  </div>
+    document.getElementById("userInfo").textContent =
+      `${localStorage.getItem("nombre") || ""} ${localStorage.getItem("apellido") || ""} (${localStorage.getItem("userRole") || "qa"})`;
 
-  <div class="btn-container">
-    <a id="btnDescargar" class="btn" href="#" target="_blank">Descargar último reporte PDF</a>
+    const currentRole = (localStorage.getItem("userRole") || "qa").toLowerCase();
+    const btnEjecutar = document.getElementById("btnEjecutar");
+    const btnText = document.getElementById("btnText");
+    const btnLoader = document.getElementById("btnLoader");
+    const moduleFilter = document.getElementById("moduleFilter");
 
-    <button id="btnEjecutar" class="btn" style="background:#2ecc71;">
-      <span id="btnText">Ejecutar ahora</span>
-      <div id="btnLoader" class="loader-btn"></div>
-    </button>
-  </div>
+    let lastKnownDate = null;
+    let allReports = [];
+    let filteredReports = [];
+    let currentPage = 1;
+    const rowsPerPage = 10;
+    let selectedModule = "all";
 
-  <div id="tableLoader">Cargando resultados...</div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Fecha</th><th>Tests Totales</th><th>Exitosos</th>
-        <th>Fallidos</th><th>Duración (s)</th><th>Reporte</th><th>Reporte PDF</th>
-      </tr>
-    </thead>
-    <tbody id="historyBody"></tbody>
-  </table>
-
-  <div id="paginationControls" style="margin: 20px 0; text-align: center;">
-  <button id="prevPage" class="page-btn">⟨ Anterior</button>
-  <span id="pageInfo" style="margin: 0 10px; font-weight: bold;"></span>
-  <button id="nextPage" class="page-btn">Siguiente ⟩</button>
-</div>
-
-
-</main>
-
-<script type="module">
-
-/* FIREBASE */
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getFirestore, collection, getDocs, orderBy, query } 
-  from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-import { getAuth, onAuthStateChanged, signOut }
-  from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBqRF7sgFP-1JP9QIyOJ3b4Z3tnFLDgQ5Y",
-  authDomain: "app-gestion-de-pruebas.firebaseapp.com",
-  projectId: "app-gestion-de-pruebas",
-  storageBucket: "app-gestion-de-pruebas.firebasestorage.app",
-  messagingSenderId: "580009585775",
-  appId: "1:580009585775:web:e086fb73d1381cb4edb19a"
+    const moduleLabels = {
+  login: "Login",
+  registro: "Registro",
+  general: "General"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+    window.addEventListener("DOMContentLoaded", () => {
+      const menuUsersItem = document.getElementById("menuUsersItem");
 
-/* Mostrar nombre */
-/* Mostrar nombre */
-document.getElementById("userInfo").textContent =
-  `${localStorage.getItem("nombre")} ${localStorage.getItem("apellido")} (${localStorage.getItem("userRole")})`;
+      if (currentRole === "admin") {
+        if (menuUsersItem) menuUsersItem.style.display = "block";
+        if (btnEjecutar) btnEjecutar.style.display = "none";
+      }
 
-/* ===== CONTROL DE ROLES ===== */
-const currentRole = (localStorage.getItem("userRole") || "qa").toLowerCase();
-
-window.addEventListener("DOMContentLoaded", () => {
-    const menuUsersItem = document.getElementById("menuUsersItem");
-    const btnEjecutar = document.getElementById("btnEjecutar");
-
-    console.log("ROL DETECTADO:", currentRole);
-
-if (currentRole === "admin") {
-  // Mostrar gestión de usuarios
-  if (menuUsersItem) menuUsersItem.style.display = "block";
-
-  // Ocultar botón Ejecutar ahora
-  if (btnEjecutar) {
-    btnEjecutar.style.display = "none";
-  }
-}
-
-
-    if (currentRole === "qa") {
+      if (currentRole === "qa") {
         if (menuUsersItem) menuUsersItem.style.display = "none";
         if (btnEjecutar) {
-            btnEjecutar.disabled = false;
-            btnEjecutar.style.opacity = "1";
-            btnEjecutar.style.cursor = "pointer";
+          btnEjecutar.disabled = false;
+          btnEjecutar.style.opacity = "1";
+          btnEjecutar.style.cursor = "pointer";
         }
-    }
-});
-
-
-
-
-/* Sidebar */
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("sidebarOverlay");
-document.getElementById("menuToggle").onclick = () => {
-  sidebar.classList.toggle("open");
-  overlay.classList.toggle("show");
-};
-overlay.onclick = () => {
-  sidebar.classList.remove("open");
-  overlay.classList.remove("show");
-};
-
-/* Cerrar sesión */
-async function cerrarSesion() {
-  await signOut(auth);
-  localStorage.clear();
-  window.location.href = "./login.html";
-}
-document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
-document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
-
-/* ======== CARGAR REPORTES ======== */
-
-let lastKnownDate = null;
-
-let allReports = [];
-let currentPage = 1;
-const rowsPerPage = 10;
-
-
-async function cargarReportes() {
-  document.getElementById("tableLoader").style.display = "block";
-
-  const q = query(collection(db, "reports"), orderBy("date", "desc"));
-  const snap = await getDocs(q);
-  const data = snap.docs.map(d => d.data());
-
-  if (data.length > 0) {
-    lastKnownDate = data[0].date;
-  }
-
-  // Guardamos todo para paginación
-  allReports = data;
-
-  // Renderizar primera página
-  renderTablePage();
-
-  // Datos resumen
-  document.getElementById("totalRuns").textContent = data.length;
-  // Actualizar botón de descarga del último PDF
-const btnPDF = document.getElementById("btnDescargar");
-
-if (data[0]?.pdfFile) {
-  btnPDF.href = data[0].pdfFile;
-  btnPDF.style.display = "inline-block";
-} else {
-  btnPDF.href = "#";
-  btnPDF.style.display = "none"; // Si no hay PDF, ocultamos el botón
-}
-
-
-  document.getElementById("lastRun").textContent =
-    data[0]
-      ? new Date(data[0].date).toLocaleString("es-VE", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: true
-        })
-      : "-";
-
-  const totalPassed = data.reduce((acc, r) => acc + (r.passed || 0), 0);
-  const totalTests = data.reduce((acc, r) => acc + (r.total || 0), 0);
-  const avg = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
-
-  document.getElementById("avgSuccess").textContent = `${avg}%`;
-
-  document.getElementById("tableLoader").style.display = "none";
-}
-
-function renderTablePage() {
-  const tbody = document.getElementById("historyBody");
-  tbody.innerHTML = "";
-
-  const start = (currentPage - 1) * rowsPerPage;
-  const end = start + rowsPerPage;
-
-  const pageData = allReports.slice(start, end);
-
-  pageData.forEach(run => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${new Date(run.date).toLocaleString("es-VE")}</td>
-      <td>${run.total}</td>
-      <td style="color:green;">${run.passed}</td>
-      <td style="color:red;">${run.failed}</td>
-      <td>${run.duration}</td>
-      <td>${run.htmlFile ? `<a href="${run.htmlFile}" target="_blank">Ver Reporte</a>` : "-"}</td>
-      <td>${run.pdfFile ? `<a href="${run.pdfFile}" target="_blank">Descargar</a>` : "-"}</td>
-    `;
-    tbody.appendChild(row);
-  });
-
-  const totalPages = Math.ceil(allReports.length / rowsPerPage);
-  document.getElementById("pageInfo").textContent =
-    `Página ${currentPage} de ${totalPages}`;
-
-  document.getElementById("prevPage").disabled = currentPage === 1;
-  document.getElementById("nextPage").disabled = currentPage === totalPages;
-}
-
-
-/* ==== POLLING (SOLO DETECTAR CAMBIO, NO REFRESCAR) ==== */
-async function esperarNuevoReporte() {
-  return new Promise(resolve => {
-    const check = setInterval(async () => {
-      const q = query(collection(db, "reports"), orderBy("date", "desc"));
-      const snap = await getDocs(q);
-      const data = snap.docs.map(d => d.data());
-
-      if (!data.length) return;
-      if (data[0].date !== lastKnownDate) {
-        lastKnownDate = data[0].date;
-        clearInterval(check);
-        resolve();
       }
-    }, 5000);
-  });
-}
-
-/* ==== BOTÓN EJECUTAR ==== */
-const btnText = document.getElementById("btnText");
-const btnLoader = document.getElementById("btnLoader");
-
-btnEjecutar.onclick = async () => {
-  if (!confirm("¿Deseas ejecutar las pruebas ahora?")) return;
-
-  const uid = localStorage.getItem("uid");
-  const role = localStorage.getItem("userRole") || "qa";
-
-  // Activar loader
-  btnText.textContent = "Ejecutando...";
-  btnLoader.style.display = "inline-block";
-  btnEjecutar.disabled = true;
-  btnEjecutar.style.background = "#43a047";
-
-  try {
-    await fetch("http://localhost:5000/run-tests", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-User-Role": role
-      },
-      body: JSON.stringify({ by: uid })
     });
 
-    alert("Pruebas iniciadas… esperando finalización.");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
 
-    /* Esperar FINAL REAL */
-    await esperarNuevoReporte();
+    document.getElementById("menuToggle").onclick = () => {
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("show");
+    };
 
-    /* Solo refrescar tabla una vez (NO PARPADEA) */
-    await cargarReportes();
+    overlay.onclick = () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+    };
 
-    alert("✔ Ejecución finalizada.");
+    async function cerrarSesion() {
+      await signOut(auth);
+      localStorage.clear();
+      window.location.href = "./login.html";
+    }
 
-  } catch (err) {
-    alert("Error ejecutando pruebas.");
-    console.error(err);
+    document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+    document.getElementById("menuLogout").addEventListener("click", cerrarSesion);
+
+    async function cargarReportes() {
+      document.getElementById("tableLoader").style.display = "block";
+
+      try {
+        const q = query(collection(db, "reports"), orderBy("date", "desc"));
+        const snap = await getDocs(q);
+        const data = snap.docs.map(d => d.data());
+
+        if (data.length > 0) {
+          lastKnownDate = data[0].date;
+        }
+
+        allReports = data;
+        aplicarFiltroModulo();
+      } catch (error) {
+        console.error("Error cargando reportes:", error);
+      } finally {
+        document.getElementById("tableLoader").style.display = "none";
+      }
+    }
+
+    function aplicarFiltroModulo() {
+      if (selectedModule === "all") {
+        filteredReports = [...allReports];
+      } else {
+        filteredReports = allReports.filter(report =>
+          (report.module || "general").toLowerCase() === selectedModule
+        );
+      }
+
+      currentPage = 1;
+      actualizarResumen(filteredReports);
+      actualizarBotonPDF(filteredReports);
+      renderTablePage();
+    }
+
+    function actualizarResumen(data) {
+      document.getElementById("totalRuns").textContent = data.length;
+
+      document.getElementById("lastRun").textContent =
+        data[0]
+          ? new Date(data[0].date).toLocaleString("es-VE", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: true
+            })
+          : "-";
+
+      const totalPassed = data.reduce((acc, r) => acc + (r.passed || 0), 0);
+      const totalTests = data.reduce((acc, r) => acc + (r.total || 0), 0);
+      const avg = totalTests ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
+
+      document.getElementById("avgSuccess").textContent = `${avg}%`;
+    }
+
+    function actualizarBotonPDF(data) {
+      const btnPDF = document.getElementById("btnDescargar");
+
+      if (data.length > 0 && data[0].pdfFile) {
+        btnPDF.href = data[0].pdfFile;
+        btnPDF.style.display = "inline-flex";
+      } else {
+        btnPDF.href = "#";
+        btnPDF.style.display = "none";
+      }
+    }
+
+    function renderTablePage() {
+      const tbody = document.getElementById("historyBody");
+      tbody.innerHTML = "";
+
+      const start = (currentPage - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const pageData = filteredReports.slice(start, end);
+
+      pageData.forEach(run => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${new Date(run.date).toLocaleString("es-VE")}</td>
+          <td>${moduleLabels[(run.module || "general").toLowerCase()] || run.module || "General"}</td>
+          <td>${run.total ?? 0}</td>
+          <td style="color:green;">${run.passed ?? 0}</td>
+          <td style="color:red;">${run.failed ?? 0}</td>
+          <td>${run.duration ?? 0}</td>
+          <td>${run.htmlFile ? `<a href="${run.htmlFile}" target="_blank">Ver Reporte</a>` : "-"}</td>
+          <td>${run.pdfFile ? `<a href="${run.pdfFile}" target="_blank">Descargar</a>` : "-"}</td>
+          <td>${run.executedByName || "Desconocido"}</td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      const totalPages = Math.max(1, Math.ceil(filteredReports.length / rowsPerPage));
+      document.getElementById("pageInfo").textContent = `Página ${currentPage} de ${totalPages}`;
+
+      document.getElementById("prevPage").disabled = currentPage === 1;
+      document.getElementById("nextPage").disabled = currentPage >= totalPages;
+    }
+
+    async function esperarNuevoReporte() {
+      return new Promise(resolve => {
+        const check = setInterval(async () => {
+          const q = query(collection(db, "reports"), orderBy("date", "desc"));
+          const snap = await getDocs(q);
+          const data = snap.docs.map(d => d.data());
+
+          if (!data.length) return;
+
+          if (data[0].date !== lastKnownDate) {
+            lastKnownDate = data[0].date;
+            clearInterval(check);
+            resolve();
+          }
+        }, 5000);
+      });
+    }
+
+  btnEjecutar.onclick = async () => {
+  const uid = localStorage.getItem("uid");
+  const role = localStorage.getItem("userRole") || "qa";
+  const moduleToRun = moduleFilter ? moduleFilter.value : "all";
+
+  if (moduleToRun === "all") {
+    alert("Selecciona un módulo específico para ejecutar: Login o Registro.");
+    return;
   }
 
-  // Restaurar botón
-  btnText.textContent = "Ejecutar ahora";
-  btnLoader.style.display = "none";
-  btnEjecutar.disabled = false;
-  btnEjecutar.style.background = "#2ecc71";
-};
+  const moduleNames = {
+    login: "Login",
+    registro: "Registro"
+  };
 
-/* Inicializar tabla al cargar */
-onAuthStateChanged(auth, user => {
-  if (!user) return (window.location.href = "./login.html");
-  cargarReportes();
-});
+  const moduleName = moduleNames[moduleToRun] || moduleToRun;
 
-document.getElementById("prevPage").addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    renderTablePage();
-  }
-});
+  if (!confirm(`¿Deseas ejecutar las pruebas del módulo ${moduleName} ahora?`)) return;
 
-document.getElementById("nextPage").addEventListener("click", () => {
-  const totalPages = Math.ceil(allReports.length / rowsPerPage);
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderTablePage();
-  }
-});
+      btnText.textContent = "Ejecutando...";
+      btnLoader.style.display = "inline-block";
+      btnEjecutar.disabled = true;
+      btnEjecutar.style.background = "#43a047";
 
+      try {
+        await fetch("http://localhost:5000/run-tests", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-User-Role": role
+          },
+          body: JSON.stringify({
+            by: uid,
+            module: moduleToRun
+          })
+        });
 
-</script>
+        alert("Pruebas iniciadas… esperando finalización.");
+
+        await esperarNuevoReporte();
+        await cargarReportes();
+
+        alert("✔ Ejecución finalizada.");
+      } catch (err) {
+        alert("Error ejecutando pruebas.");
+        console.error(err);
+      } finally {
+        btnText.textContent = "Ejecutar ahora";
+        btnLoader.style.display = "none";
+        btnEjecutar.disabled = false;
+        btnEjecutar.style.background = "#2ecc71";
+      }
+    };
+
+    document.getElementById("prevPage").addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTablePage();
+      }
+    });
+
+    document.getElementById("nextPage").addEventListener("click", () => {
+      const totalPages = Math.max(1, Math.ceil(filteredReports.length / rowsPerPage));
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTablePage();
+      }
+    });
+
+    if (moduleFilter) {
+      moduleFilter.addEventListener("change", (e) => {
+        selectedModule = e.target.value;
+        aplicarFiltroModulo();
+      });
+    }
+
+    onAuthStateChanged(auth, user => {
+      if (!user) {
+        window.location.href = "./login.html";
+        return;
+      }
+      cargarReportes();
+    });
+  </script>
 </body>
 </html>
-

@@ -1,0 +1,239 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - textbox "Buscar"
+  - list:
+    - listitem:
+      - text: home
+      - link "Mi Inicio":
+        - /url: /
+    - listitem:
+      - text: exercise
+      - link "Rutinas":
+        - /url: /rutinas-ejercicios
+    - listitem:
+      - text: nutrition
+      - link "Recetas":
+        - /url: /cocina-fit
+      - text: add
+    - link "Navidad 🎄":
+      - /url: https://recetas-navidad.figma.site/
+    - listitem:
+      - text: shopping_bag
+      - link "Recursos":
+        - /url: /recursos
+    - listitem:
+      - text: radio_button_unchecked
+      - link "Tienda":
+        - /url: https://tienda.vida-fit.com/
+    - listitem:
+      - text: shopping_bag
+      - link "Blog":
+        - /url: /vive-fit
+    - listitem: account_circle Perfil
+- navigation:
+  - list:
+    - listitem:
+      - link "Únete":
+        - /url: /auth/signup
+    - listitem:
+      - link "Iniciar sesión":
+        - /url: /auth/login
+    - listitem:
+      - button "Prueba gratis"
+- navigation:
+  - list:
+    - listitem: Términos y Condiciones
+    - listitem:
+      - link:
+        - /url: https://www.facebook.com/people/Vidafit/100089377752090/
+      - link:
+        - /url: https://www.instagram.com/somosvidafit/
+      - link:
+        - /url: https://www.tiktok.com/@somosvidafit?lang=es
+- img
+- textbox "Buscar..."
+- button "Venezuela":
+  - img "Venezuela"
+- button
+- navigation:
+  - list:
+    - listitem:
+      - text: home
+      - link "Mi Inicio":
+        - /url: /
+    - listitem:
+      - text: exercise
+      - link "Rutinas":
+        - /url: /rutinas-ejercicios
+    - listitem:
+      - text: nutrition
+      - link "Recetas":
+        - /url: /cocina-fit
+      - text: arrow_downward
+    - listitem:
+      - text: radio_button_unchecked
+      - link "Tienda":
+        - /url: https://tienda.vida-fit.com/
+- button "Prueba gratis"
+- group "1 / 3":
+  - heading "45 MINUTOS PARA DOMINAR TU DÍA" [level=2]
+  - heading "Activa cada fibra con nuestro método Full Body. Programas estructurados para resultados que puedes medir." [level=3]:
+    - paragraph: Activa cada fibra con nuestro método Full Body. Programas estructurados para resultados que puedes medir.
+  - button "EMPEZAR"
+- group "2 / 3":
+  - heading "Potencia tu físico" [level=2]
+  - heading "¡Aumenta tu masa muscular tomando creatina!" [level=3]:
+    - heading "¡Aumenta tu masa muscular tomando creatina!" [level=3]
+  - button "Explorar"
+- group "3 / 3":
+  - heading "Las mejores recetas FIT" [level=2]
+  - heading "¡Deliciosas y saludables! recetas para una vida fit" [level=3]:
+    - heading "¡Deliciosas y saludables! recetas para una vida fit" [level=3]
+  - button "Explorar recetas"
+- text: 1 2 3
+- heading "Nuevos entrenamientos" [level=2]
+- text: Ver todo
+- group "1 / 10":
+  - 'img "Rutina #58 | Rutina de Abdomen"'
+  - 'heading "Rutina #58 | Rutina de Abdomen" [level=3]'
+  - text: 6 min
+- group "2 / 10":
+  - 'img "Rutina #57 | Rutina de Pecho"'
+  - 'heading "Rutina #57 | Rutina de Pecho" [level=3]'
+  - text: 8 min
+- group "3 / 10":
+  - 'img "Rutina #56 | Rutina de Brazos"'
+  - text: Premium
+  - 'heading "Rutina #56 | Rutina de Brazos" [level=3]'
+  - text: 12 min
+- group "4 / 10":
+  - 'img "Rutina #55 | Rutina de Core"'
+  - 'heading "Rutina #55 | Rutina de Core" [level=3]'
+  - text: 6 min
+- group "5 / 10":
+  - 'img "Rutina #54 | Rutina fullbody"'
+  - 'heading "Rutina #54 | Rutina fullbody" [level=3]'
+  - text: 8 min
+- group "6 / 10":
+  - 'img "Rutina #53 | Rutina de Abdomen"'
+  - text: Premium
+  - 'heading "Rutina #53 | Rutina de Abdomen" [level=3]'
+  - text: 10 min
+- group "7 / 10":
+  - 'img "Rutina #52 | Rutina para Quemar Grasa"'
+  - text: Premium
+  - 'heading "Rutina #52 | Rutina para Quemar Grasa" [level=3]'
+  - text: 9 min
+- group "8 / 10":
+  - 'img "Rutina #51 | Rutina de Espalda"'
+  - text: Premium
+  - 'heading "Rutina #51 | Rutina de Espalda" [level=3]'
+  - text: 10 min
+- group "9 / 10":
+  - 'img "Rutina #50 | Rutina de Pecho"'
+  - 'heading "Rutina #50 | Rutina de Pecho" [level=3]'
+  - text: 8 min
+- group "10 / 10":
+  - 'img "Rutina #49 | Rutina de Brazos"'
+  - text: Premium
+  - 'heading "Rutina #49 | Rutina de Brazos" [level=3]'
+  - text: 10 min
+- heading "Nuevas recetas" [level=2]
+- text: Ver todo
+- group "1 / 10":
+  - img "QA1 - Receta de prueba 3 luego de eliminar"
+  - paragraph: QA1 - Receta de prueba 3 luego de eliminar
+  - paragraph
+  - img
+  - paragraph: qa
+- group "2 / 10":
+  - img "Esta es una receta de prueba"
+  - paragraph: Esta es una receta de prueba
+  - paragraph: "350"
+  - img
+  - paragraph: 3 min
+- group "3 / 10":
+  - img "Galletas saludables de chocolate"
+  - paragraph: Galletas saludables de chocolate
+  - paragraph: 116 kcal
+  - img
+  - paragraph: 4 min
+- group "4 / 10":
+  - img "Torta de almendras y naranja"
+  - paragraph: Torta de almendras y naranja
+  - paragraph: 180 kcal
+  - img
+  - paragraph: 4 min
+  - img
+  - paragraph: Premium
+- group "5 / 10":
+  - img "Tres leches saludable"
+  - paragraph: Tres leches saludable
+  - paragraph: 162 kcal
+  - img
+  - paragraph: 4 min
+- group "6 / 10":
+  - img "Ensalada de pollo fría"
+  - paragraph: Ensalada de pollo fría
+  - paragraph: 143 kcal
+  - img
+  - paragraph: 20 min
+  - img
+  - paragraph: Premium
+- group "7 / 10":
+  - img "Receta de Nutella casera y saludable"
+  - paragraph: Receta de Nutella casera y saludable
+  - paragraph: 120 kcal
+  - img
+  - paragraph: 3 min
+- group "8 / 10":
+  - img "Cheesecake de chocolate"
+  - paragraph: Cheesecake de chocolate
+  - paragraph: 148 kcal
+  - img
+  - paragraph: 3 min
+- group "9 / 10":
+  - img "Ponquecitos express para niños"
+  - paragraph: Ponquecitos express para niños
+  - paragraph: 190 kcal
+  - img
+  - paragraph: 3 min
+- group "10 / 10":
+  - img "Pancitos de espinaca"
+  - paragraph: Pancitos de espinaca
+  - paragraph: 127 kcal
+  - img
+  - paragraph: 4 min
+- heading "PREGUNTAS FRECUENTES" [level=2]
+- paragraph: Lo que necesitas saber de VidaFIT
+- button "¿Qué es Vida Fit y cómo funciona?"
+- button "¿Puedo entrenar desde cualquier lugar?"
+- button "¿La plataforma ofrece una prueba gratis?"
+- button "¿Qué tipo de entrenamientos hay?"
+- button "¿Vida Fit está disponible en mi país?"
+- button "¿Recibiré correcciones mientras entreno?"
+- button "¿Qué más incluye la suscripción?"
+- button "¿Cómo me registro y empiezo?"
+- img
+- button
+- button
+- button
+- heading "Legal" [level=3]
+- list:
+  - listitem: Términos y Condiciones
+  - listitem: Políticas de privacidad
+  - listitem: Política de Cookies
+- text: Powered by
+- link "conectium":
+  - /url: https://conectium.com/
+  - img "conectium"
+- text: ©VidaFit 2025
+- img
+- menu:
+  - button "Únete"
+  - button "Iniciar sesión"
+  - separator
+  - button "Prueba gratis"
+```

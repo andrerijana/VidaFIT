@@ -138,10 +138,10 @@ app.post("/admin/create-user", async (req, res) => {
 
     const { nombre, apellido, correo, password, role } = req.body || {};
 
-    // --------------------------
+        // --------------------------
     // VALIDACIONES DE CAMPOS
  
-    if (!nombre || !apellido || !correo || !password) {
+    if (!nombre || !apellido || !correo || !password ) {
       return res.status(400).json({
         ok: false,
         message: "Todos los campos son obligatorios."
@@ -211,6 +211,7 @@ app.post("/admin/create-user", async (req, res) => {
       nombre,
       apellido,
       correo,
+      contraseña:password,
       role: finalRole,
       status: "active",
       createdAt: new Date().toISOString(),
@@ -340,8 +341,9 @@ app.delete("/admin/delete-user", async (req, res) => {
 // ===============================
 app.post("/run-tests", async (req, res) => {
   try {
-    const { by } = req.body || {};
+    const { by, module } = req.body || {};
     const roleHeader = req.headers["x-user-role"] || "unknown";
+    const selectedModule = (module || "login").toLowerCase();
 
     if (roleHeader.toLowerCase() !== "qa") {
       console.warn(`[${new Date().toLocaleTimeString()}] Acceso denegado: rol ${roleHeader}`);
@@ -351,7 +353,24 @@ app.post("/run-tests", async (req, res) => {
       });
     }
 
-    console.log(`[${new Date().toLocaleTimeString()}] Solicitud recibida por UID: ${by || "desconocido"} (rol ${roleHeader})`);
+    const moduleCommands = {
+      login: "npx playwright test login",
+      registro: "npx playwright test registro"
+    };
+
+    const testCommand = moduleCommands[selectedModule];
+
+    if (!testCommand) {
+      return res.status(400).json({
+        ok: false,
+        message: `Módulo no soportado: ${selectedModule}`
+      });
+    }
+
+    console.log(
+      `[${new Date().toLocaleTimeString()}] Solicitud recibida por UID: ${by || "desconocido"} ` +
+      `(rol ${roleHeader}) módulo: ${selectedModule}`
+    );
 
     res.json({
       ok: true,
@@ -360,15 +379,27 @@ app.post("/run-tests", async (req, res) => {
 
     (async () => {
       try {
-        const code = await run("npx playwright test", "Ejecución de pruebas (Solo Login)");
+        const code = await run(testCommand, `Ejecución de pruebas (${selectedModule})`);
+
         if (code !== 0) {
-          console.warn(`[${new Date().toLocaleTimeString()}] Algunos tests fallaron (código ${code}). Continuando con guardado...`);
+          console.warn(
+            `[${new Date().toLocaleTimeString()}] Algunos tests fallaron (código ${code}). Continuando con guardado...`
+          );
         }
 
-        await run("node save-results.js", "Guardado de resultados en Firestore");
-        console.log(`[${new Date().toLocaleTimeString()}] Ejecución manual completada correctamente.`);
+        await run(
+          `node save-results.js --by=${by} --module=${selectedModule}`,
+          "Guardado de resultados en Firestore"
+        );
+
+        console.log(
+          `[${new Date().toLocaleTimeString()}] Ejecución manual completada correctamente.`
+        );
       } catch (err) {
-        console.error(`[${new Date().toLocaleTimeString()}] Error interno en ejecución manual:`, err.message || err);
+        console.error(
+          `[${new Date().toLocaleTimeString()}] Error interno en ejecución manual:`,
+          err.message || err
+        );
       }
     })();
 
@@ -381,6 +412,7 @@ app.post("/run-tests", async (req, res) => {
     });
   }
 });
+
 
 // ===============================
 // INICIO DEL SERVIDOR
